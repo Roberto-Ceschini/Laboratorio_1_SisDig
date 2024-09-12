@@ -7,4 +7,4 @@
 
 #Site do Professauro https://sites.google.com/poli.ufrj.br/jsouza/port/del/labsdp
 
-#Site de testes VHDL: https://www.edaplayground.com/
+#Download ModelSim: https://www.intel.com/content/www/us/en/software-kit/750368/modelsim-intel-fpgas-standard-edition-software-version-18-1.html
