@@ -6,3 +6,5 @@
 #Curso do Ola pessual, tudo bem https://www.youtube.com/watch?v=wEeouZbg7CE
 
 #Site do Professauro https://sites.google.com/poli.ufrj.br/jsouza/port/del/labsdp
+
+#Site de testes VHDL: https://www.edaplayground.com/

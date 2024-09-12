@@ -1,1 +1,0 @@
---vou fazer o cdigo da and
