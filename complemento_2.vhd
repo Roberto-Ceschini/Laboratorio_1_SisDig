@@ -14,5 +14,5 @@ end complemento_2;
 architecture comportamento of complemento_2 is -- Funcao: realiza o complemento a 2 de um numero
 
     begin
-     --falta fazer a entidade
+     --falta fazer a architeture
     end comportamento;
