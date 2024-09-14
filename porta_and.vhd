@@ -5,20 +5,20 @@ entity porta_and is
 
     port(
 
-        in1, in2 : in std_logic_vector (3 downto 0); --Entradas: dois vetores de 4 bits
-        saida : out std_logic_vector (3 downto 0) --Saida: um vetor de 4 bits, resultado da operacao logica AND bit a bit das entradas
+        in1_and, in2_and : in std_logic_vector (3 downto 0); --Entradas: dois vetores de 4 bits
+        saida_and : out std_logic_vector (3 downto 0) --Saida: um vetor de 4 bits, resultado da operacao logica AND bit a bit das entradas
 
     );
     
     end porta_and;
 
-architecture comportamento of porta_and is --Funcao: Realizar a operacao logica AND bit a bit das entradas (in1 AND in2)
+architecture comportamento of porta_and is --Funcao: Realizar a operacao logica AND bit a bit das entradas (in1_and AND in2_and)
 
     begin
 
-        saida (0) <= in1 (0) and in2 (0);
-        saida (1) <= in1 (1) and in2 (1); 
-        saida (2) <= in1 (2) and in2 (2); 
-        saida (3) <= in1 (3) and in2 (3);  
+        saida_and (0) <= in1_and (0) and in2_and (0);
+        saida_and (1) <= in1_and (1) and in2_and (1); 
+        saida_and (2) <= in1_and (2) and in2_and (2); 
+        saida_and (3) <= in1_and (3) and in2_and (3);  
  
     end comportamento;
