@@ -5,20 +5,20 @@ entity porta_or is
 
     port(
 
-        in1_not, in2_not : in std_logic_vector (3 downto 0); --Entrada: dois vetores de 4 bits
-        saida_not : out std_logic_vector (3 downto 0) --Saida_not: um vetor de 4 bits, resultado da operacao logica OR bit a bit das entradas
+        in1_or, in2_or : in std_logic_vector (3 downto 0); --Entrada: dois vetores de 4 bits
+        saida_or : out std_logic_vector (3 downto 0) --Saida_or: um vetor de 4 bits, resultado da operacao logica OR bit a bit das entradas
            
     );
 
     end porta_or;
 
-architecture comportamento of porta_or is -- Funcao: Realizar a operacao logica OR bit a bit das entradas (in1_not OR in2_not)
+architecture comportamento of porta_or is -- Funcao: Realizar a operacao logica OR bit a bit das entradas (in1_or OR in2_or)
 
     begin
 
-        saida_not (0) <= in1_not (0) or in2_not (0);
-        saida_not (1) <= in1_not (1) or in2_not (1);
-        saida_not (2) <= in1_not (2) or in2_not (2);
-        saida_not (3) <= in1_not (3) or in2_not (3);
+        saida_or (0) <= in1_or (0) or in2_or (0);
+        saida_or (1) <= in1_or (1) or in2_or (1);
+        saida_or (2) <= in1_or (2) or in2_or (2);
+        saida_or (3) <= in1_or (3) or in2_or (3);
 
     end comportamento; 
