@@ -60,7 +60,7 @@ architecture comportamento of maquina_estados is
                             estadoAtual <= receber_b;
                     end if;              
                     
-                    when receber_op =>
+                    when receber_op => -- caralho que bizarro
                         if botao = '1' then
                             operacao <= switch;
                             if operacao = '0000' then
