@@ -83,3 +83,4 @@ architecture comportamento of maquina_estados is
                     
 
     end comportamento;
+    --luca squebrou o github
