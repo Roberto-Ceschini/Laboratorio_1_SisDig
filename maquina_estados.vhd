@@ -44,7 +44,7 @@ architecture comportamento of maquina_estados is
                 else
                     
                 case estadoAtual is
-                    when receber_a => --recebe o numero A
+                    when receber_a => --Estado recebe o numero A
                         if botao = '1' then
                             num_a <= switch;
                             estadoAtual <= receber_b;
@@ -52,7 +52,7 @@ architecture comportamento of maquina_estados is
                             estadoAtual <= receber_a;
                         end if;              
                         
-                    when receber_b =>
+                    when receber_b => --Estado recebe o numero B
                         if botao = '1' then
                             num_b <= switch;
                             estadoAtual <= receber_op;
