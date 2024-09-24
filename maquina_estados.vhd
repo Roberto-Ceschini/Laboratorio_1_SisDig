@@ -65,7 +65,22 @@ architecture comportamento of maquina_estados is
                             operacao <= switch;
                             if operacao = '0000' then
                                 estadoAtual <= show_and;
-                    
+                            elsif operacao = '0000' then
+                                estadoAtual <= show_and;
+                            elsif operacao = '0000' then
+                                estadoAtual <= show_and;
+                            elsif operacao = '0000' then
+                                estadoAtual <= show_and; 
+                            elsif operacao = '0000' then
+                                estadoAtual <= show_and;
+                            elsif operacao = '0000' then
+                                estadoAtual <= show_and;
+                            elsif operacao = '0000' then
+                                estadoAtual <= show_and;
+                            elsif operacao = '0000' then
+                                estadoAtual <= show_and;   
+                            end if;     
+
                     when show_and =>
                                 --contador
                                 entrada_ula <= '000';
