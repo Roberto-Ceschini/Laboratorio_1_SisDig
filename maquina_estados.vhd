@@ -87,6 +87,8 @@ architecture comportamento of maquina_estados is
 
                             elsif operacao = '0111' then -- Operacao COMPLEMENTO A 2 escolhida
                                 estadoAtual <= show_complemento_2;   
+                            
+                            end if;
                                 
                         end if;     
 
