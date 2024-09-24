@@ -26,6 +26,7 @@ architecture comportamento of maquina_estados is
 
     signal estadoAtual : estado;
     signal entrada_ula, num_a, num_b, operacao, resultado_ula : std_logic_vector (3 downto 0);
+    signal entrada_ula : std_logic_vector (2 downto 0);
 
     begin
 
@@ -67,9 +68,18 @@ architecture comportamento of maquina_estados is
                                 estadoAtual <= show_and;
                     
                     when show_and =>
-                                --contador
-                                entrada_ula <= '000';
-                                leds_direita <= resultado_ula;
+                        --contador (deve mostrar os numeros A, B e o Estado pelos LEDS ESQUERDA)
+                        entrada_ula <= '000';
+                        leds_direita <= resultado_ula;
+                        estado_atual <= show_or;
+            
+                    when show_or =>
+                        --contador (deve mostrar os numeros A, B e o Estado pelos LEDS ESQUERDA)
+                        entrada_ula <= '001';
+                        leds_direita <= resultado_ula;
+                        estado_atual <= show_not;
+                        
+                                
 
                 end if;              
                 
