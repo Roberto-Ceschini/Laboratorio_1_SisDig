@@ -66,7 +66,30 @@ architecture comportamento of maquina_estados is
                             operacao <= switch;
                             if operacao = '0000' then
                                 estadoAtual <= show_and;
-                    
+
+                            elsif operacao = '0001' then
+                                estadoAtual <= show_or;
+
+                            elsif operacao = '0010' then
+                                estadoAtual <= show_not;
+
+                            elsif operacao = '0011' then
+                                estadoAtual <= show_xor; 
+
+                            elsif operacao = '0100' then
+                                estadoAtual <= show_soma;
+
+                            elsif operacao = '0101' then
+                                estadoAtual <= show_multiplicacao;
+
+                            elsif operacao = '0110' then
+                                estadoAtual <= show_subtracao;
+
+                            elsif operacao = '0111' then
+                                estadoAtual <= show_complemento_2;   
+                                
+                            end if;     
+
                     when show_and =>
                         --contador (deve mostrar os numeros A, B e o Estado pelos LEDS ESQUERDA)
                         entrada_ula <= '000';
