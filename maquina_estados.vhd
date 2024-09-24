@@ -141,3 +141,4 @@ architecture comportamento of maquina_estados is
     -- resultado_subtrador when "110", OP6
     -- saida_complementador when "111", --complemento do numB_ula OP7
     -- "0000" when others
+    ---01010
