@@ -38,7 +38,7 @@ architecture comportamento of maquina_estados is
         );
 
         controller: process (clck)
-            begin 
+        begin 
             if clck'event and clck = '1' then
                 if rst = '1' then 
                     estadoAtual <= receber_a;
@@ -64,31 +64,29 @@ architecture comportamento of maquina_estados is
                     when receber_op => --Estado recebe operacao
                         if botao = '1' then
                             operacao <= switch;
-                            if operacao = '0000' then -- Operacao AND escolhida
+                            if operacao = '0000' then
                                 estadoAtual <= show_and;
 
-                            elsif operacao = '0001' then -- Operacao OR escolhida
+                            elsif operacao = '0001' then
                                 estadoAtual <= show_or;
 
-                            elsif operacao = '0010' then -- Operacao NOT escolhida
+                            elsif operacao = '0010' then
                                 estadoAtual <= show_not;
 
-                            elsif operacao = '0011' then -- Operacao XOR escolhida
+                            elsif operacao = '0011' then
                                 estadoAtual <= show_xor; 
 
-                            elsif operacao = '0100' then -- Operacao SOMA escolhida
+                            elsif operacao = '0100' then
                                 estadoAtual <= show_soma;
 
-                            elsif operacao = '0101' then -- Operacao MULTIPLICACAO escolhida
+                            elsif operacao = '0101' then
                                 estadoAtual <= show_multiplicacao;
 
-                            elsif operacao = '0110' then -- Operacao SUBTRACAO escolhida
+                            elsif operacao = '0110' then
                                 estadoAtual <= show_subtracao;
 
-                            elsif operacao = '0111' then -- Operacao COMPLEMENTO A 2 escolhida
+                            elsif operacao = '0111' then
                                 estadoAtual <= show_complemento_2;   
-                            
-                            end if;
                                 
                         end if;     
 
@@ -115,9 +113,9 @@ architecture comportamento of maquina_estados is
 
             end if; 
         end process;           
-                    
 
     end comportamento;
+
    --resultado_ula <= 
    --saida_and when "000", OP0
     -- saida_or when "001", OP1
