@@ -60,7 +60,7 @@ architecture comportamento of maquina_estados is
                             estadoAtual <= receber_b;
                     end if;              
                     
-                    when receber_op => -- caralho que bizarro
+                    when receber_op => --Estado recebe operacao
                         if botao = '1' then
                             operacao <= switch;
                             if operacao = '0000' then
@@ -83,4 +83,13 @@ architecture comportamento of maquina_estados is
                     
 
     end comportamento;
-    --luca squebrou o github para caralho2fasfasdsdfgdag
+   --resultado_ula <= 
+   --saida_and when "000", OP0
+    -- saida_or when "001", OP1
+    --saida_not when "010", --Not do numA_ula OP2
+    --saida_xor when "011", OP3
+    -- resultado_somador when "100", OP4
+    --resultado_multiplicador when "101", OP5
+    -- resultado_subtrador when "110", OP6
+    -- saida_complementador when "111", --complemento do numB_ula OP7
+    -- "0000" when others; 
