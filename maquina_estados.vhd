@@ -63,28 +63,28 @@ architecture comportamento of maquina_estados is
                     when receber_op => --Estado recebe operacao
                         if botao = '1' then
                             operacao <= switch;
-                            if operacao = '0000' then
+                            if operacao = '0000' then -- Operacao AND escolhida
                                 estadoAtual <= show_and;
 
-                            elsif operacao = '0001' then
+                            elsif operacao = '0001' then -- Operacao OR escolhida
                                 estadoAtual <= show_or;
 
-                            elsif operacao = '0010' then
+                            elsif operacao = '0010' then -- Operacao NOT escolhida
                                 estadoAtual <= show_not;
 
-                            elsif operacao = '0011' then
+                            elsif operacao = '0011' then -- Operacao XOR escolhida
                                 estadoAtual <= show_xor; 
 
-                            elsif operacao = '0100' then
+                            elsif operacao = '0100' then -- Operacao SOMA escolhida
                                 estadoAtual <= show_soma;
 
-                            elsif operacao = '0101' then
+                            elsif operacao = '0101' then -- Operacao MULTIPLICACAO escolhida
                                 estadoAtual <= show_multiplicacao;
 
-                            elsif operacao = '0110' then
+                            elsif operacao = '0110' then -- Operacao SUBTRACAO escolhida
                                 estadoAtual <= show_subtracao;
 
-                            elsif operacao = '0111' then
+                            elsif operacao = '0111' then -- Operacao COMPLEMENTO A 2 escolhida
                                 estadoAtual <= show_complemento_2;   
                                 
                             end if;     
