@@ -38,84 +38,99 @@ architecture comportamento of maquina_estados is
         );
 
         controller: process (clck)
-            begin 
+        begin 
             if clck'event and clck = '1' then
                 if rst = '1' then 
                     estadoAtual <= receber_a;
                 else
                     
-                case estadoAtual is
-                    when receber_a => --Estado recebe o numero A
-                        if botao = '1' then
-                            num_a <= switch;
-                            estadoAtual <= receber_b;
-                        elsif botao = '0' then
-                            estadoAtual <= receber_a;
-                        end if;              
-                        
-                    when receber_b => --Estado recebe o numero B
-                        if botao = '1' then
-                            num_b <= switch;
-                            estadoAtual <= receber_op;
-                        elsif botao = '0' then
-                            estadoAtual <= receber_b;
-                    end if;              
+                    case estadoAtual is
+                        when receber_a => --Estado recebe o numero A
+                            if botao = '1' then
+                                num_a <= switch;
+                                estadoAtual <= receber_b;
+                            elsif botao = '0' then
+                                estadoAtual <= receber_a;
+                            end if;              
+
+                        when receber_b => --Estado recebe o numero B
+                            if botao = '1' then
+                                num_b <= switch;
+                                estadoAtual <= receber_op;
+                            elsif botao = '0' then
+                                estadoAtual <= receber_b;
+                            end if;              
+
+                        when receber_op => --Estado recebe operacao
+                            if botao = '1' then
+                                operacao <= switch;
+                                if operacao = '0000' then
+                                    estadoAtual <= show_and;
+                                elsif operacao = '0001' then
+                                    estadoAtual <= show_or;
+                                elsif operacao = '0010' then
+                                    estadoAtual <= show_not;
+                                elsif operacao = '0011' then
+                                    estadoAtual <= show_xor; 
+                                elsif operacao = '0100' then
+                                    estadoAtual <= show_soma;
+                                elsif operacao = '0101' then
+                                    estadoAtual <= show_multiplicacao;
+                                elsif operacao = '0110' then
+                                    estadoAtual <= show_subtracao;
+                                elsif operacao = '0111' then
+                                    estadoAtual <= show_complemento_2;   
+                                end if;    
+                            end if;   
+                            
+                        when show_and =>
+                            entrada_ula <= '000';
+                            leds_direita <= resultado_ula;
+                            estado_atual <= show_or;
+
+                        when show_or =>
+                            entrada_ula <= '001';
+                            leds_direita <= resultado_ula;
+                            estado_atual <= show_not;
+
+                        when show_not =>
+                            entrada_ula <= '010';
+                            leds_direita <= resultado_ula;
+                            estado_atual <= show_xor;
                     
-                    when receber_op => --Estado recebe operacao
-                        if botao = '1' then
-                            operacao <= switch;
-                            if operacao = '0000' then
-                                estadoAtual <= show_and;
+                        when show_xor =>
+                            entrada_ula <= '011';
+                            leds_direita <= resultado_ula;
+                            estado_atual <= show_soma;
 
-                            elsif operacao = '0001' then
-                                estadoAtual <= show_or;
+                        when show_soma =>
+                            entrada_ula <= '100';
+                            leds_direita <= resultado_ula;
+                            estado_atual <= show_multiplicacao;
 
-                            elsif operacao = '0010' then
-                                estadoAtual <= show_not;
+                        when show_multiplicacao =>
+                            entrada_ula <= '101';
+                            leds_direita <= resultado_ula;
+                            estado_atual <= show_subtracao;
 
-                            elsif operacao = '0011' then
-                                estadoAtual <= show_xor; 
+                        when show_subtracao =>
+                            entrada_ula <= '110';
+                            leds_direita <= resultado_ula;
+                            estado_atual <= show_complemento_2;
 
-                            elsif operacao = '0100' then
-                                estadoAtual <= show_soma;
-
-                            elsif operacao = '0101' then
-                                estadoAtual <= show_multiplicacao;
-
-                            elsif operacao = '0110' then
-                                estadoAtual <= show_subtracao;
-
-                            elsif operacao = '0111' then
-                                estadoAtual <= show_complemento_2;   
-                                
-                        end if;     
-
-                    when show_and =>
-                        --contador (deve mostrar os numeros A, B e o Estado pelos LEDS ESQUERDA)
-                        entrada_ula <= '000';
-                        leds_direita <= resultado_ula;
-                        estado_atual <= show_or;
-            
-                    when show_or =>
-                        --contador (deve mostrar os numeros A, B e o Estado pelos LEDS ESQUERDA)
-                        entrada_ula <= '001';
-                        leds_direita <= resultado_ula;
-                        estado_atual <= show_not;
-                        
-                                
-
-                end if;              
-                
-                        estadoAtual <= receber_op;
-                end case;
+                        when show_complemento_2 =>
+                            entrada_ula <= '111';
+                            leds_direita <= resultado_ula;
+                            estado_atual <= show_and;
+                    end case;
 
                 end if;
 
             end if; 
         end process;           
-                    
 
     end comportamento;
+
    --resultado_ula <= 
    --saida_and when "000", OP0
     -- saida_or when "001", OP1
