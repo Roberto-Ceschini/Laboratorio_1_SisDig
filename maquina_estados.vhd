@@ -4,7 +4,7 @@ use IEEE.std_logic_1164.all;
 entity maquina_estados is 
 
     port (
-        clck, rst, botao : in std_logic;
+        clk, rst, botao : in std_logic;
         switch : in std_logic_vector (3 downto 0);
         leds_direita, leds_esquerda : out std_logic_vector (3 downto 0);
 
@@ -22,11 +22,19 @@ architecture comportamento of maquina_estados is
         );
     end component;
 
+    component prolongador_clock is
+        port (
+            clk : in std_logic;
+            clk_prolongado : out std_logic;
+        );
+    end component;
+
     type estado is (receber_a, receber_b, receber_op, show_and, show_or, show_not, show_xor, show_soma, show_subtracao, show_multiplicacao, show_complemento_2);
 
     signal estadoAtual : estado;
     signal entrada_ula, num_a, num_b, operacao, resultado_ula : std_logic_vector (3 downto 0);
     signal entrada_ula : std_logic_vector (2 downto 0);
+    signal clk_prolongado : std_logic;
 
     begin
 
@@ -37,7 +45,12 @@ architecture comportamento of maquina_estados is
             resultado_ula => resultado_ula
         );
 
-        controller: process (clck)
+        prolongador_clk : prolongador_clock port map (
+            clk => clk,
+            clk_prolongado => clk_prolongado
+        );
+
+        controller: process (clk)
         begin 
             if clck'event and clck = '1' then
                 if rst = '1' then 
