@@ -25,7 +25,7 @@ architecture comportamento of maquina_estados is
     component prolongador_clock is
         port (
             clk : in std_logic;
-            clk_prolongado : out std_logic;
+            timer : out std_logic_vector (2 downto 0);
         );
     end component;
 
@@ -34,7 +34,7 @@ architecture comportamento of maquina_estados is
     signal estadoAtual : estado;
     signal entrada_ula, num_a, num_b, operacao, resultado_ula : std_logic_vector (3 downto 0);
     signal entrada_ula : std_logic_vector (2 downto 0);
-    signal clk_prolongado : std_logic;
+    signal timer : std_logic_vector (2 downto 0);
 
     begin
 
@@ -45,9 +45,9 @@ architecture comportamento of maquina_estados is
             resultado_ula => resultado_ula
         );
 
-        prolongador_clk : prolongador_clock port map (
+         : prolongador_clock port map (
             clk => clk,
-            clk_prolongado => clk_prolongado
+            timer => timer
         );
 
         controller: process (clk)
@@ -98,8 +98,21 @@ architecture comportamento of maquina_estados is
                             
                         when show_and =>
                             entrada_ula <= '000';
-                            leds_direita <= resultado_ula;
-                            estado_atual <= show_or;
+                            if timer = '000' then
+                                leds_direita <= num_a;
+                                leds_esquerda <= '1000';
+                            elsif timer = '001' then
+                                leds_direita <= num_b;
+                                leds_esquerda <= '0100';
+                            elsif timer = '010' then
+                                leds_direita <= '0000';
+                                leds_esquerda <= '0010';
+                            elsif timer = '011' then
+                                leds_direita <= resultado_ula;
+                                leds_esquerda <= '0001';
+                            elsif timer = '100' then
+                                estado_atual <= show_or;
+                            end if;
 
                         when show_or =>
                             entrada_ula <= '001';
@@ -154,4 +167,4 @@ architecture comportamento of maquina_estados is
     -- resultado_subtrador when "110", OP6
     -- saida_complementador when "111", --complemento do numB_ula OP7
     -- "0000" when others
-    ---01010a
+    ---01010
