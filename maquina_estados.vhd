@@ -6,11 +6,11 @@ entity maquina_estados is
     port (
         clk, rst, botao : in std_logic;
         switch : in std_logic_vector (3 downto 0);
-        leds_direita, leds_esquerda : out std_logic_vector (3 downto 0);
-
+        leds_direita, leds_esquerda : out std_logic_vector (3 downto 0)
     );
 
 end maquina_estados;
+
 
 architecture comportamento of maquina_estados is
 
@@ -25,14 +25,16 @@ architecture comportamento of maquina_estados is
     component prolongador_clock is
         port (
             clk : in std_logic;
-            timer : out std_logic_vector (2 downto 0);
+            timer : out std_logic_vector (2 downto 0)
         );
     end component;
 
+    --Define os estados da maquina de estados
     type estado is (receber_a, receber_b, receber_op, show_and, show_or, show_not, show_xor, show_soma, show_subtracao, show_multiplicacao, show_complemento_2);
 
-    signal estadoAtual : estado;
-    signal entrada_ula, num_a, num_b, operacao, resultado_ula : std_logic_vector (3 downto 0);
+    --SINAIS
+    signal estadoAtual : estado; 
+    signal num_a, num_b, operacao, resultado_ula : std_logic_vector (3 downto 0);
     signal entrada_ula : std_logic_vector (2 downto 0);
     signal timer : std_logic_vector (2 downto 0);
 
@@ -45,14 +47,14 @@ architecture comportamento of maquina_estados is
             resultado_ula => resultado_ula
         );
 
-         : prolongador_clock port map (
+         contador : prolongador_clock port map (
             clk => clk,
             timer => timer
         );
 
         controller: process (clk)
         begin 
-            if clck'event and clck = '1' then
+            if clk'event and clk = '1' then
                 if rst = '1' then 
                     estadoAtual <= receber_a;
                 else
@@ -75,79 +77,228 @@ architecture comportamento of maquina_estados is
                             end if;              
 
                         when receber_op => --Estado recebe operacao
+
                             if botao = '1' then
                                 operacao <= switch;
-                                if operacao = '0000' then
-                                    estadoAtual <= show_and;
-                                elsif operacao = '0001' then
+
+                                if operacao = "0000" then
+                                    estadoAtual <= show_and; --Operacao inicial AND
+
+                                elsif operacao = "0001" then --Operacao inicial OR
                                     estadoAtual <= show_or;
-                                elsif operacao = '0010' then
+
+                                elsif operacao = "0010" then --Operacao inicial NOT
                                     estadoAtual <= show_not;
-                                elsif operacao = '0011' then
+
+                                elsif operacao = "0011" then --Operacao inicial XOR
                                     estadoAtual <= show_xor; 
-                                elsif operacao = '0100' then
+
+                                elsif operacao = "0100" then --Operacao inicial SOMADOR
                                     estadoAtual <= show_soma;
-                                elsif operacao = '0101' then
+
+                                elsif operacao = "0101" then --Operacao inicial MULTIPLICADOR
                                     estadoAtual <= show_multiplicacao;
-                                elsif operacao = '0110' then
+
+                                elsif operacao = "0110" then --Operacao inicial SUBTRADOR
                                     estadoAtual <= show_subtracao;
-                                elsif operacao = '0111' then
+
+                                elsif operacao = "0111" then --Operacao inicial COMPLEMENTO_2
                                     estadoAtual <= show_complemento_2;   
                                 end if;    
                             end if;   
                             
-                        when show_and =>
-                            entrada_ula <= '000';
-                            if timer = '000' then
+                        when show_and => 
+
+                            entrada_ula <= "000"; --seleciona a operacao AND na ula
+
+                            if timer = "000" then --mostra o numero A por 2 segundos
                                 leds_direita <= num_a;
-                                leds_esquerda <= '1000';
-                            elsif timer = '001' then
+                                leds_esquerda <= "1000";
+
+                            elsif timer = "001" then --mostra o numero B por 2 segundos
                                 leds_direita <= num_b;
-                                leds_esquerda <= '0100';
-                            elsif timer = '010' then
-                                leds_direita <= '0000';
-                                leds_esquerda <= '0010';
-                            elsif timer = '011' then
+                                leds_esquerda <= "0100";
+
+                            elsif timer = "010" then --mostra a operacao por 2 segundos
+                                leds_direita <= "0000"; 
+                                leds_esquerda <= "0010";
+
+                            elsif timer = "011" then --mostra o resultado da ula por 2 segundos
                                 leds_direita <= resultado_ula;
-                                leds_esquerda <= '0001';
-                            elsif timer = '100' then
-                                estado_atual <= show_or;
+                                leds_esquerda <= "0001";
+
+                            elsif timer = "100" then --muda o estado
+                                estadoAtual <= show_or;
                             end if;
 
                         when show_or =>
-                            entrada_ula <= '001';
-                            leds_direita <= resultado_ula;
-                            estado_atual <= show_not;
+
+                            entrada_ula <= "001"; --seleciona a operacao OR na ula
+
+                            if timer = "000" then --mostra o numero A por 2 segundos
+                                leds_direita <= num_a;
+                                leds_esquerda <= "1000";
+
+                            elsif timer = "001" then --mostra o numero B por 2 segundos
+                                leds_direita <= num_b;
+                                leds_esquerda <= "0100";
+
+                            elsif timer = "010" then --mostra a operacao por 2 segundos
+                                leds_direita <= "0001"; 
+                                leds_esquerda <= "0010";
+
+                            elsif timer = "011" then --mostra o resultado da ula por 2 segundos
+                                leds_direita <= resultado_ula;
+                                leds_esquerda <= "0001";
+
+                            elsif timer = "100" then --muda o estado
+                                estadoAtual <= show_not;
+                            end if;
 
                         when show_not =>
-                            entrada_ula <= '010';
-                            leds_direita <= resultado_ula;
-                            estado_atual <= show_xor;
-                    
+
+                            entrada_ula <= "010"; --seleciona a operacao NOT na ula
+
+                            if timer = "000" then --mostra o numero A por 2 segundos
+                                leds_direita <= num_a;
+                                leds_esquerda <= "1000";
+
+                            elsif timer = "001" then --mostra o numero B por 2 segundos
+                                leds_direita <= num_b;
+                                leds_esquerda <= "0100";
+
+                            elsif timer = "010" then --mostra a operacao por 2 segundos
+                                leds_direita <= "0010"; 
+                                leds_esquerda <= "0010";
+
+                            elsif timer = "011" then --mostra o resultado da ula por 2 segundos
+                                leds_direita <= resultado_ula;
+                                leds_esquerda <= "0001";
+
+                            elsif timer = "100" then --muda o estado
+                                estadoAtual <= show_xor;
+                            end if;
+                        
                         when show_xor =>
-                            entrada_ula <= '011';
-                            leds_direita <= resultado_ula;
-                            estado_atual <= show_soma;
+
+                            entrada_ula <= "011"; --seleciona a operacao XOR na ula
+
+                            if timer = "000" then --mostra o numero A por 2 segundos
+                                leds_direita <= num_a;
+                                leds_esquerda <= "1000";
+
+                            elsif timer = "001" then --mostra o numero B por 2 segundos
+                                leds_direita <= num_b;
+                                leds_esquerda <= "0100";
+
+                            elsif timer = "010" then --mostra a operacao por 2 segundos
+                                leds_direita <= "0011"; 
+                                leds_esquerda <= "0010";
+
+                            elsif timer = "011" then --mostra o resultado da ula por 2 segundos
+                                leds_direita <= resultado_ula;
+                                leds_esquerda <= "0001";
+
+                            elsif timer = "100" then --muda o estado
+                                estadoAtual <= show_soma;
+                            end if;
 
                         when show_soma =>
-                            entrada_ula <= '100';
-                            leds_direita <= resultado_ula;
-                            estado_atual <= show_multiplicacao;
+                           
+                            entrada_ula <= "100"; --seleciona a operacao SOMA na ula
+
+                            if timer = "000" then --mostra o numero A por 2 segundos
+                                leds_direita <= num_a;
+                                leds_esquerda <= "1000";
+
+                            elsif timer = "001" then --mostra o numero B por 2 segundos
+                                leds_direita <= num_b;
+                                leds_esquerda <= "0100";
+
+                            elsif timer = "010" then --mostra a operacao por 2 segundos
+                                leds_direita <= "0100"; 
+                                leds_esquerda <= "0010";
+
+                            elsif timer = "011" then --mostra o resultado da ula por 2 segundos
+                                leds_direita <= resultado_ula;
+                                leds_esquerda <= "0001";
+
+                            elsif timer = "100" then --muda o estado
+                                estadoAtual <= show_multiplicacao;
+                            end if;
 
                         when show_multiplicacao =>
-                            entrada_ula <= '101';
-                            leds_direita <= resultado_ula;
-                            estado_atual <= show_subtracao;
+                           
+                            entrada_ula <= "101"; --seleciona a operacao MULTIPLICACAO na ula
+
+                            if timer = "000" then --mostra o numero A por 2 segundos
+                                leds_direita <= num_a;
+                                leds_esquerda <= "1000";
+
+                            elsif timer = "001" then --mostra o numero B por 2 segundos
+                                leds_direita <= num_b;
+                                leds_esquerda <= "0100";
+
+                            elsif timer = "010" then --mostra a operacao por 2 segundos
+                                leds_direita <= "0101"; 
+                                leds_esquerda <= "0010";
+
+                            elsif timer = "011" then --mostra o resultado da ula por 2 segundos
+                                leds_direita <= resultado_ula;
+                                leds_esquerda <= "0001";
+
+                            elsif timer = "100" then --muda o estado
+                                estadoAtual <= show_subtracao;
+                            end if;
 
                         when show_subtracao =>
-                            entrada_ula <= '110';
-                            leds_direita <= resultado_ula;
-                            estado_atual <= show_complemento_2;
+                            
+                            entrada_ula <= "110"; --seleciona a operacao SUBTRACAO na ula
+
+                                if timer = "000" then --mostra o numero A por 2 segundos
+                                    leds_direita <= num_a;
+                                    leds_esquerda <= "1000";
+
+                                elsif timer = "001" then --mostra o numero B por 2 segundos
+                                    leds_direita <= num_b;
+                                    leds_esquerda <= "0100";
+
+                                elsif timer = "010" then --mostra a operacao por 2 segundos
+                                    leds_direita <= "0110"; 
+                                    leds_esquerda <= "0010";
+
+                                elsif timer = "011" then --mostra o resultado da ula por 2 segundos
+                                    leds_direita <= resultado_ula;
+                                    leds_esquerda <= "0001";
+
+                                elsif timer = "100" then --muda o estado
+                                    estadoAtual <= show_complemento_2;
+                                end if;
 
                         when show_complemento_2 =>
-                            entrada_ula <= '111';
-                            leds_direita <= resultado_ula;
-                            estado_atual <= show_and;
+                          
+                            entrada_ula <= "111"; --seleciona a operacao COMPLEMENTO_2 na ula
+
+                            if timer = "000" then --mostra o numero A por 2 segundos
+                                leds_direita <= num_a;
+                                leds_esquerda <= "1000";
+
+                            elsif timer = "001" then --mostra o numero B por 2 segundos
+                                leds_direita <= num_b;
+                                leds_esquerda <= "0100";
+
+                            elsif timer = "010" then --mostra a operacao por 2 segundos
+                                leds_direita <= "0111"; 
+                                leds_esquerda <= "0010";
+
+                            elsif timer = "011" then --mostra o resultado da ula por 2 segundos
+                                leds_direita <= resultado_ula;
+                                leds_esquerda <= "0001";
+
+                            elsif timer = "100" then --muda o estado
+                                estadoAtual <= show_and;
+                            end if;
+
                     end case;
 
                 end if;
@@ -156,15 +307,3 @@ architecture comportamento of maquina_estados is
         end process;           
 
     end comportamento;
-
-   --resultado_ula <= 
-   --saida_and when "000", OP0
-    -- saida_or when "001", OP1
-    --saida_not when "010", --Not do numA_ula OP2
-    --saida_xor when "011", OP3
-    -- resultado_somador when "100", OP4
-    --resultado_multiplicador when "101", OP5
-    -- resultado_subtrador when "110", OP6
-    -- saida_complementador when "111", --complemento do numB_ula OP7
-    -- "0000" when others
-    ---01010

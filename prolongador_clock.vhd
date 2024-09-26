@@ -9,8 +9,10 @@ entity prolongador_clock is
 end prolongador_clock;
 
 architecture Behavioral of prolongador_clock is
+
     signal contador: integer := 1;
-    signal contador2: integer := 0;
+    signal contador2: integer range 0 to 4 := 0;
+
 begin
     process(clk)
     begin
@@ -27,7 +29,7 @@ begin
         end if;
     end process;
 
-    -- Atribuição da saída  "timer" de acordo com o valor de contador2
+    -- Atribuição da saída "timer" de acordo com o valor de contador2
     process(contador2)
     begin
         case contador2 is
@@ -40,7 +42,7 @@ begin
             when 3 =>
                 timer <= "011"; -- Mostrar Resultado
             when 4 =>
-                timer <= '100' -- Mudar Estado
+                timer <= "100"; -- Mudar Estado
             when others =>
                 timer <= "000";  -- Condição de fallback (não deveria acontecer)
         end case;
