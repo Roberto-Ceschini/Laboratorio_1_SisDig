@@ -6,7 +6,8 @@ entity maquina_estados is
     port (
         clk, rst, botao : in std_logic;
         switch : in std_logic_vector (3 downto 0);
-        leds_direita, leds_esquerda : out std_logic_vector (3 downto 0)
+        leds_direita : out std_logic_vector (3 downto 0) := "0000";
+        leds_esquerda : out std_logic_vector (3 downto 0)
     );
 
 end maquina_estados;
@@ -24,6 +25,7 @@ architecture comportamento of maquina_estados is
 
     component prolongador_clock is
         port (
+            aux : in std_logic;
             clk : in std_logic;
             timer : out std_logic_vector (2 downto 0)
         );
@@ -37,6 +39,8 @@ architecture comportamento of maquina_estados is
     signal num_a, num_b, operacao, resultado_ula : std_logic_vector (3 downto 0);
     signal entrada_ula : std_logic_vector (2 downto 0);
     signal timer : std_logic_vector (2 downto 0);
+    signal aux : std_logic := '0';
+
 
     begin
 
@@ -48,6 +52,7 @@ architecture comportamento of maquina_estados is
         );
 
          contador : prolongador_clock port map (
+            aux => aux,
             clk => clk,
             timer => timer
         );
@@ -57,27 +62,40 @@ architecture comportamento of maquina_estados is
             if clk'event and clk = '1' then
                 if rst = '1' then 
                     estadoAtual <= receber_a;
+                    aux <= '0';
                 else
                     
                     case estadoAtual is
                         when receber_a => --Estado recebe o numero A
+                            leds_esquerda <= "1000";
                             if botao = '1' then
                                 num_a <= switch;
                                 estadoAtual <= receber_b;
                             elsif botao = '0' then
                                 estadoAtual <= receber_a;
-                            end if;              
+                            end if;
+                        
+                        --when intermediario1 =>
+                        --        if botao = '0' then
+                        --            estadoAtual <= receber_b; SE FOR TIRAR O COMENTARIO DISSO, ADD OS ESTADOS LA EM CIMA
+--                          end if;
 
                         when receber_b => --Estado recebe o numero B
+                                leds_esquerda <= "0100";
                             if botao = '1' then
                                 num_b <= switch;
                                 estadoAtual <= receber_op;
                             elsif botao = '0' then
                                 estadoAtual <= receber_b;
-                            end if;              
+                            end if;   
+                        
+                      --  when intermediario2 =>
+                       --     if botao = '0' then
+--                          estadoAtual <= receber_op;
+                     --       end if;
 
                         when receber_op => --Estado recebe operacao
-
+                            leds_esquerda <= "0010";
                             if botao = '1' then
                                 operacao <= switch;
 
@@ -108,7 +126,7 @@ architecture comportamento of maquina_estados is
                             end if;   
                             
                         when show_and => 
-
+                            aux <= '1';
                             entrada_ula <= "000"; --seleciona a operacao AND na ula
 
                             if timer = "000" then --mostra o numero A por 2 segundos
@@ -132,7 +150,7 @@ architecture comportamento of maquina_estados is
                             end if;
 
                         when show_or =>
-
+                            aux <= '1';
                             entrada_ula <= "001"; --seleciona a operacao OR na ula
 
                             if timer = "000" then --mostra o numero A por 2 segundos
@@ -156,7 +174,7 @@ architecture comportamento of maquina_estados is
                             end if;
 
                         when show_not =>
-
+                            aux <= '1';
                             entrada_ula <= "010"; --seleciona a operacao NOT na ula
 
                             if timer = "000" then --mostra o numero A por 2 segundos
@@ -180,7 +198,7 @@ architecture comportamento of maquina_estados is
                             end if;
                         
                         when show_xor =>
-
+                            aux <= '1';
                             entrada_ula <= "011"; --seleciona a operacao XOR na ula
 
                             if timer = "000" then --mostra o numero A por 2 segundos
@@ -204,7 +222,7 @@ architecture comportamento of maquina_estados is
                             end if;
 
                         when show_soma =>
-                           
+                            aux <= '1';
                             entrada_ula <= "100"; --seleciona a operacao SOMA na ula
 
                             if timer = "000" then --mostra o numero A por 2 segundos
@@ -228,7 +246,7 @@ architecture comportamento of maquina_estados is
                             end if;
 
                         when show_multiplicacao =>
-                           
+                            aux <= '1';
                             entrada_ula <= "101"; --seleciona a operacao MULTIPLICACAO na ula
 
                             if timer = "000" then --mostra o numero A por 2 segundos
@@ -252,7 +270,7 @@ architecture comportamento of maquina_estados is
                             end if;
 
                         when show_subtracao =>
-                            
+                            aux <= '1';
                             entrada_ula <= "110"; --seleciona a operacao SUBTRACAO na ula
 
                                 if timer = "000" then --mostra o numero A por 2 segundos
@@ -276,7 +294,7 @@ architecture comportamento of maquina_estados is
                                 end if;
 
                         when show_complemento_2 =>
-                          
+                            aux <= '1';
                             entrada_ula <= "111"; --seleciona a operacao COMPLEMENTO_2 na ula
 
                             if timer = "000" then --mostra o numero A por 2 segundos

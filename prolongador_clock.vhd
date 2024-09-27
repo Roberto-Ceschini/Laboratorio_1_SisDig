@@ -3,6 +3,7 @@ use IEEE.std_logic_1164.all;
 
 entity prolongador_clock is
     port(
+        aux : in std_logic;
         clk : in std_logic;
         timer : out std_logic_vector(2 downto 0)
     );
@@ -17,13 +18,18 @@ begin
     process(clk)
     begin
         if rising_edge(clk) then
-            if contador = 100000000 then
-                contador <= 1;
-                contador2 <= contador2 + 1;
-            elsif contador2 = 4 then
+            if aux = '0' then  
                 contador2 <= 0;
-            else
-                contador <= contador + 1;
+            end if;
+            if aux = '1' then 
+                if contador = 100000000 then
+                    contador <= 1;
+                    contador2 <= contador2 + 1;
+                elsif contador2 = 4 then
+                    contador2 <= 0;
+                else
+                    contador <= contador + 1;
+                end if;
             end if;
         end if;
     end process;
@@ -48,3 +54,4 @@ begin
     end process;
 
 end Behavioral;
+
