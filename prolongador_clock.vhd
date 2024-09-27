@@ -20,9 +20,8 @@ begin
             if contador = 100000000 then
                 contador <= 1;
                 contador2 <= contador2 + 1;
-                if contador2 = 4 then
-                    contador2 <= 0;
-                end if;    
+            elsif contador2 = 4 then
+                contador2 <= 0;
             else
                 contador <= contador + 1;
             end if;
