@@ -20,6 +20,7 @@ begin
         if rising_edge(clk) then
             if aux = '0' then  
                 contador2 <= 0;
+                contador <= 1;
             end if;
             if aux = '1' then 
                 if contador = 100000000 then
