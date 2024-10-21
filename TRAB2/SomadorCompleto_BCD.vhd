@@ -1,10 +1,12 @@
 library IEEE;
 use IEEE.STD_lOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
 
 
 entity SomadorCompleto_BCD is
     Port ( A0, A1, A2, A3 : in  UNSIGNED (3 downto 0);
            B0, B1, B2, B3 : in  UNSIGNED (3 downto 0);
+		   CarryIn : in UNSIGNED (3 downto 0);
            Z0, Z1, Z2, Z3, Z4 : out  UNSIGNED (3 downto 0));
 end SomadorCompleto_BCD;
 
@@ -24,7 +26,7 @@ architecture Behavioral of SomadorCompleto_BCD is
 begin
 
 	somador1 : somador1Alg port map (
-						CarryIn => "0000", 
+						CarryIn => CarryIn,
 						A => A0,
 						B => B0,
 						Resultado => Z0,
