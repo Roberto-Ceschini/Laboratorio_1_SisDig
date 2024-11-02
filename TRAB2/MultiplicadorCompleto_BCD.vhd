@@ -6,7 +6,7 @@ use IEEE.NUMERIC_STD.ALL;
 entity MultiplicadorCompleto_BCD is
     Port ( A0, A1, A2, A3 : in  UNSIGNED (3 downto 0);                  -- Entradas: 2 números de 4 algarismos A0..A3 e B0..B3 todos em BCD.
            B0, B1, B2, B3 : in  UNSIGNED (3 downto 0);
-           Z0, Z1, Z2, Z3, Z4, Z5, Z6, Z7 : out  UNSIGNED (3 downto 0)  -- Saídas: Resultado da soma em BCD separado em 5 variáveis Z0..Z4.
+           Z0, Z1, Z2, Z3, Z4, Z5, Z6, Z7 : out  UNSIGNED (3 downto 0)  -- Saídas: Resultado da soma em BCD separado em 5 variáveis Z0..Z7.
            );
 end MultiplicadorCompleto_BCD;
 
@@ -28,7 +28,7 @@ architecture Behavioral of MultiplicadorCompleto_BCD is
     signal resultadoMultiplicacoes : matriz_4x4_BCDs; -- Matriz para armazenar os resultados das multiplicações de algarismos. 
     signal carrysMult : matriz_4x5_BCDs; -- Matriz para armazenar e propagar os carrys das multiplicações.
     signal numerosDaSoma : matriz_4x8_BCDs; -- Matriz onde serão organizados os resultados das multiplicações individuais para realizar a soma deles depois.
-    signal somaParcial1, somaParcial2, somaFinal : vetor_de_8_BCDs; -- Vetores para armazenar os resultados parciais e final das somas.
+    signal somaParcial1, somaParcial2 : vetor_de_8_BCDs; -- Vetores para armazenar os resultados parciais e final das somas.
     signal carrySoma1, carrySoma2 , carrySoma3 : UNSIGNED (3 downto 0); -- BCDs para armazenar e propagar os carrys das somas.
 
 

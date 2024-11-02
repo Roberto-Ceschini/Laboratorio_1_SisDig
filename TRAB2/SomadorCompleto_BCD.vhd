@@ -23,7 +23,7 @@ architecture Behavioral of SomadorCompleto_BCD is
     );
 	end component;
 
-begin		-- A soma é feita algarismo a algarismo com a instância do somador simples, e propagação de carry entre eles. O resultado já é armazenado direto nas saídas Zs.
+begin		-- A soma é feita algarismo a algarismo com a instância do somador simples e propagação de carry entre eles. O resultado já é armazenado direto nas saídas Zs.
 
 	somador1 : somador1Alg port map (
 						CarryIn => CarryIn,
