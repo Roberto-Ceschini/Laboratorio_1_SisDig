@@ -7,8 +7,8 @@ entity controlador is
         codigo_teclado : in std_logic_vector (7 downto 0); -- entradas do teclado
         clk : in std_logic;
         operacao : in std_logic;
-        a0, a1, a2, a3, b0, b1, b2, b3 : out UNSIGNED (3 downto 0); --numeros A e B (serao exibidos no display)
-        z0, z1, z2, z3, z4, z5, z6, z7 : out UNSIGNED (3 downto 0) -- saida dos resultados
+        la0, la1, la2, la3, lb0, lb1, lb2, lb3 : out UNSIGNED (3 downto 0); --numeros A e B (serao exibidos no display)
+        sz0, sz1, sz2, sz3, sz4, sz5, sz6, sz7 : out UNSIGNED (3 downto 0) -- saida dos resultados
     );
 
 end controlador;
@@ -18,12 +18,15 @@ architecture comportamento of controlador is
 
 
 type estado_type is (receber_A, receber_B, mostrar_res);
-signal estado, proximo_estado : estado_type;
-signal numeroIntermediario, a3, a2, a1, a0, b3, b2, b1, b0, z3, z2, z1, z0 : UNSIGNED (3 downto 0);
+type vetor_bcd is array (0 to 7) of unsigned (3 downto 0);
+signal estado: estado_type := receber_A;
+signal proximo_estado: estado_type;
+signal numeroIntermediario : vetor_bcd;
+signal a3, a2, a1, a0, b3, b2, b1, b0, z7, z6, z5, z4, z3, z2, z1, z0 : UNSIGNED (3 downto 0);
 
 begin
 
-numeros : entity work.Numeros_teclado(comportamento)
+numeros : entity work.Numeros_teclado(Behavioral)
     port map (codigo_teclado => codigo_teclado, a0 => numeroIntermediario(3), a1 => numeroIntermediario(2), a2 => numerointermediario(1), a3 => numerointermediario(0));
 
 seletor : entity work.SeletorOperacao(Behavioral)
@@ -44,28 +47,29 @@ seletor : entity work.SeletorOperacao(Behavioral)
         begin
             case estado is
                 when receber_A =>
-                    a3 <= numeroIntermediario(0)
-                    a2 <= numeroIntermediario(1)
-                    a1 <= numeroIntermediario(2)
-                    a0 <= numeroIntermediario(3)
+                    a3 <= numeroIntermediario(0);
+                    a2 <= numeroIntermediario(1);
+                    a1 <= numeroIntermediario(2);
+                    a0 <= numeroIntermediario(3);
                     proximo_estado <= receber_B;
                 
                 when receber_B =>
-                    b3 <= numeroIntermediario(0)
-                    b2 <= numeroIntermediario(1)
-                    b1 <= numeroIntermediario(2)
-                    b0 <= numeroIntermediario(3)
-                    proximo_estado <= mostrar_res
+                    b3 <= numeroIntermediario(4);
+                    b2 <= numeroIntermediario(5);
+                    b1 <= numeroIntermediario(6);
+                    b0 <= numeroIntermediario(7);
+                    proximo_estado <= mostrar_res;
         
                 when mostrar_res =>
-                    z0 <= z0
-                    z1 <= z1
-                    z2 <= z2
-                    z3 <= z3
-                    z4 <= z4
-                    z5 <= z5
-                    z6 <= z6
-                    z7 <= z7
+                    sz0 <= z0;
+                    sz1 <= z1;
+                    sz2 <= z2;
+                    sz3 <= z3;
+                    sz4 <= z4;
+                    sz5 <= z5;
+                    sz6 <= z6;
+                    sz7 <= z7;
+                    proximo_estado <= receber_a;
             end case;
     end process;
 
