@@ -18,14 +18,14 @@ architecture Behavioral of Numeros_teclado is
 
     -- Contador para monitorar a posição atual
     signal contador_enter : integer := 0;
-    signal auxiliar : std_logic:='0';
+    --signal auxiliar : std_logic:='0';
 
 begin
 
     process(codigo_teclado) -- 0000 0000 0000 0000
     begin
         if codigo_teclado = "11111111" then
-            auxiliar <= '1';
+            --auxiliar <= '1';
             contador_enter <= contador_enter + 1;
 
         elsif contador_enter = 0 then
@@ -40,7 +40,11 @@ begin
             numeros(4) <= numeros(5);
             numeros(5) <= numeros(6);
             numeros(6) <= numeros(7);
-            numeros(7) <= UNSIGNED(codigo_teclado(3 downto 0)); -- Novo número entra na posição menos significativa    
+            numeros(7) <= UNSIGNED(codigo_teclado(3 downto 0)); -- Novo número entra na posição menos significativa  
+        
+        elsif contador_enter = 2 then
+            contador_enter <= 0;
+            numeros <= (others => (others => '0'));
             
         end if;
     end process;
@@ -50,5 +54,10 @@ begin
     a1 <= numeros(2);
     a2 <= numeros(1);
     a3 <= numeros(0);
+
+    b3 <= numeros(4);
+    b2 <= numeros(5);
+    b1 <= numeros(6);
+    b0 <= numeros(7);
 
 end Behavioral;
