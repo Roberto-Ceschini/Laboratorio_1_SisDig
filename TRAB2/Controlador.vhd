@@ -19,6 +19,7 @@ architecture comportamento of controlador is
 
 type estado_type is (receber_A, receber_B, mostrar_res);
 signal estado, proximo_estado : estado_type;
+signal numeroIntermediario, a3, a2, a1, a0, b3, b2, b1, b0, z3, z2, z1, z0 : UNSIGNED (3 downto 0);
 
 begin
 

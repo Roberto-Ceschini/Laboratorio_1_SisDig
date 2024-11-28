@@ -26,7 +26,7 @@ begin
     process(codigo_teclado)
     begin
         if codigo_teclado = "11111111" then
-            auxiliar = '1';
+            auxiliar <= '1';
 
         elsif auxiliar = '0' then
 
