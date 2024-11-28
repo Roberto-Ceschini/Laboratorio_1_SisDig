@@ -6,7 +6,7 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 entity Numeros_teclado is
     Port (
         codigo_teclado : in STD_LOGIC_VECTOR(7 downto 0); -- Código do teclado (8 bits)
-        a0, a1, a2, a3: out STD_LOGIC_VECTOR(3 downto 0); -- números em BCD
+        a0, a1, a2, a3: out STD_LOGIC_VECTOR(3 downto 0) -- números em BCD
     );
 end Numeros_teclado;
 
