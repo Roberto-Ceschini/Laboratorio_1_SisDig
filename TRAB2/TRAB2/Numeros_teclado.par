@@ -1,0 +1,305 @@
+Release 14.7 par P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+localhost.localdomain::  Fri Dec 06 03:44:56 2024
+
+par -w -intstyle ise -ol high -t 1 Numeros_teclado_map.ncd Numeros_teclado.ncd
+Numeros_teclado.pcf 
+
+
+Constraints file: Numeros_teclado.pcf.
+Loading device for application Rf_Device from file '3s700a.nph' in environment /opt/Xilinx/14.7/ISE_DS/ISE/.
+   "Numeros_teclado" is an NCD, version 3.2, device xc3s700an, package fgg484, speed -4
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+INFO:Security:54 - 'xc3s700an' is a WebPack part.
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue
+to function, but you no longer qualify for Xilinx software updates or new releases.
+
+----------------------------------------------------------------------
+
+Initializing temperature to 85.000 Celsius. (default - Range: 0.000 to 85.000 Celsius)
+Initializing voltage to 1.140 Volts. (default - Range: 1.140 to 1.260 Volts)
+
+
+Device speed data version:  "PRODUCTION 1.42 2013-10-13".
+
+
+Design Summary Report:
+
+ Number of External IOBs                          38 out of 372    10%
+
+   Number of External Input IOBs                  6
+
+      Number of External Input IBUFs              6
+        Number of LOCed External Input IBUFs      6 out of 6     100%
+
+
+   Number of External Output IOBs                32
+
+      Number of External Output IOBs             32
+        Number of LOCed External Output IOBs      8 out of 32     25%
+
+
+   Number of External Bidir IOBs                  0
+
+
+   Number of BUFGMUXs                        1 out of 24      4%
+   Number of MULT18X18SIOs                  16 out of 20     80%
+   Number of Slices                        704 out of 5888   11%
+      Number of SLICEMs                      0 out of 2944    0%
+
+
+
+Overall effort level (-ol):   High 
+Placer effort level (-pl):    High 
+Placer cost table entry (-t): 1
+Router effort level (-rl):    High 
+
+Starting initial Timing Analysis.  REAL time: 4 secs 
+Finished initial Timing Analysis.  REAL time: 4 secs 
+
+WARNING:Par:288 - The signal reset_IBUF has no load.  PAR will not attempt to route this signal.
+
+Starting Placer
+Total REAL time at the beginning of Placer: 4 secs 
+Total CPU  time at the beginning of Placer: 4 secs 
+
+Phase 1.1  Initial Placement Analysis
+Phase 1.1  Initial Placement Analysis (Checksum:6c0a9970) REAL time: 5 secs 
+
+Phase 2.7  Design Feasibility Check
+INFO:Place:834 - Only a subset of IOs are locked. Out of 32 IOs, 8 are locked and 24 are not locked. If you would like
+   to print the names of these IOs, please set the environment variable XIL_PAR_DESIGN_CHECK_VERBOSE to 1. 
+Phase 2.7  Design Feasibility Check (Checksum:6c0a9970) REAL time: 5 secs 
+
+Phase 3.31  Local Placement Optimization
+Phase 3.31  Local Placement Optimization (Checksum:6c0a9970) REAL time: 5 secs 
+
+Phase 4.2  Initial Clock and IO Placement
+....
+Phase 4.2  Initial Clock and IO Placement (Checksum:d1297db6) REAL time: 13 secs 
+
+Phase 5.30  Global Clock Region Assignment
+Phase 5.30  Global Clock Region Assignment (Checksum:d1297db6) REAL time: 13 secs 
+
+Phase 6.36  Local Placement Optimization
+Phase 6.36  Local Placement Optimization (Checksum:d1297db6) REAL time: 13 secs 
+
+Phase 7.3  Local Placement Optimization
+....
+Phase 7.3  Local Placement Optimization (Checksum:7545067a) REAL time: 14 secs 
+
+Phase 8.5  Local Placement Optimization
+Phase 8.5  Local Placement Optimization (Checksum:57ca3d55) REAL time: 14 secs 
+
+Phase 9.8  Global Placement
+.............................................
+.......
+Phase 9.8  Global Placement (Checksum:459fd9c1) REAL time: 15 secs 
+
+Phase 10.5  Local Placement Optimization
+Phase 10.5  Local Placement Optimization (Checksum:459fd9c1) REAL time: 15 secs 
+
+Phase 11.18  Placement Optimization
+Phase 11.18  Placement Optimization (Checksum:e6af4540) REAL time: 21 secs 
+
+Phase 12.5  Local Placement Optimization
+Phase 12.5  Local Placement Optimization (Checksum:e6af4540) REAL time: 21 secs 
+
+Total REAL time to Placer completion: 21 secs 
+Total CPU  time to Placer completion: 19 secs 
+Writing design to file Numeros_teclado.ncd
+
+
+
+Starting Router
+
+
+Phase  1  : 5800 unrouted;      REAL time: 33 secs 
+
+Phase  2  : 5380 unrouted;      REAL time: 36 secs 
+
+Phase  3  : 1277 unrouted;      REAL time: 37 secs 
+
+Phase  4  : 1277 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 38 secs 
+
+Phase  5  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 39 secs 
+
+Updating file: Numeros_teclado.ncd with current fully routed design.
+
+Phase  6  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 40 secs 
+
+Phase  7  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 40 secs 
+
+Phase  8  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 40 secs 
+WARNING:Route:455 - CLK Net:seletor1/multiplicacao/numerosA[1].numerosB[0].multiplicacoes/Unidade_cmp_lt0000 may have
+   excessive skew because 
+      1 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+
+Total REAL time to Router completion: 40 secs 
+Total CPU time to Router completion: 38 secs 
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Generating "PAR" statistics.
+
+**************************
+Generating Clock Report
+**************************
+
++---------------------+--------------+------+------+------------+-------------+
+|        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
++---------------------+--------------+------+------+------------+-------------+
+|           clk_BUFGP | BUFGMUX_X2Y11| No   |   99 |  0.066     |  1.042      |
++---------------------+--------------+------+------+------------+-------------+
+|seletor1/multiplicac |              |      |      |            |             |
+|ao/numerosA[1].numer |              |      |      |            |             |
+|osB[3].multiplicacoe |              |      |      |            |             |
+|s/Unidade_cmp_lt0000 |              |      |      |            |             |
+|                     |         Local|      |    8 |  0.093     |  2.122      |
++---------------------+--------------+------+------+------------+-------------+
+|seletor1/multiplicac |              |      |      |            |             |
+|ao/numerosA[2].numer |              |      |      |            |             |
+|osB[1].multiplicacoe |              |      |      |            |             |
+|s/Unidade_cmp_lt0000 |              |      |      |            |             |
+|                     |         Local|      |    8 |  0.078     |  2.145      |
++---------------------+--------------+------+------+------------+-------------+
+|seletor1/multiplicac |              |      |      |            |             |
+|ao/numerosA[2].numer |              |      |      |            |             |
+|osB[2].multiplicacoe |              |      |      |            |             |
+|s/Unidade_cmp_lt0000 |              |      |      |            |             |
+|                     |         Local|      |    8 |  0.106     |  2.110      |
++---------------------+--------------+------+------+------------+-------------+
+|seletor1/multiplicac |              |      |      |            |             |
+|ao/numerosA[2].numer |              |      |      |            |             |
+|osB[3].multiplicacoe |              |      |      |            |             |
+|s/Unidade_cmp_lt0000 |              |      |      |            |             |
+|                     |         Local|      |    8 |  0.049     |  1.965      |
++---------------------+--------------+------+------+------------+-------------+
+|seletor1/multiplicac |              |      |      |            |             |
+|ao/numerosA[3].numer |              |      |      |            |             |
+|osB[1].multiplicacoe |              |      |      |            |             |
+|s/Unidade_cmp_lt0000 |              |      |      |            |             |
+|                     |         Local|      |    8 |  0.048     |  2.204      |
++---------------------+--------------+------+------+------------+-------------+
+|seletor1/multiplicac |              |      |      |            |             |
+|ao/numerosA[3].numer |              |      |      |            |             |
+|osB[2].multiplicacoe |              |      |      |            |             |
+|s/Unidade_cmp_lt0000 |              |      |      |            |             |
+|                     |         Local|      |    8 |  0.032     |  2.123      |
++---------------------+--------------+------+------+------------+-------------+
+|seletor1/multiplicac |              |      |      |            |             |
+|ao/numerosA[3].numer |              |      |      |            |             |
+|osB[3].multiplicacoe |              |      |      |            |             |
+|s/Unidade_cmp_lt0000 |              |      |      |            |             |
+|                     |         Local|      |    8 |  0.623     |  2.515      |
++---------------------+--------------+------+------+------------+-------------+
+|seletor1/multiplicac |              |      |      |            |             |
+|ao/numerosA[0].numer |              |      |      |            |             |
+|osB[0].multiplicacoe |              |      |      |            |             |
+|s/Unidade_cmp_lt0000 |              |      |      |            |             |
+|                     |         Local|      |    8 |  0.068     |  1.732      |
++---------------------+--------------+------+------+------------+-------------+
+|seletor1/multiplicac |              |      |      |            |             |
+|ao/numerosA[0].numer |              |      |      |            |             |
+|osB[1].multiplicacoe |              |      |      |            |             |
+|s/Unidade_cmp_lt0000 |              |      |      |            |             |
+|                     |         Local|      |    8 |  0.066     |  2.019      |
++---------------------+--------------+------+------+------------+-------------+
+|seletor1/multiplicac |              |      |      |            |             |
+|ao/numerosA[0].numer |              |      |      |            |             |
+|osB[2].multiplicacoe |              |      |      |            |             |
+|s/Unidade_cmp_lt0000 |              |      |      |            |             |
+|                     |         Local|      |    8 |  0.062     |  2.059      |
++---------------------+--------------+------+------+------------+-------------+
+|seletor1/multiplicac |              |      |      |            |             |
+|ao/numerosA[0].numer |              |      |      |            |             |
+|osB[3].multiplicacoe |              |      |      |            |             |
+|s/Unidade_cmp_lt0000 |              |      |      |            |             |
+|                     |         Local|      |    8 |  0.104     |  2.030      |
++---------------------+--------------+------+------+------------+-------------+
+|seletor1/multiplicac |              |      |      |            |             |
+|ao/numerosA[1].numer |              |      |      |            |             |
+|osB[0].multiplicacoe |              |      |      |            |             |
+|s/Unidade_cmp_lt0000 |              |      |      |            |             |
+|                     |         Local|      |    8 |  0.642     |  1.520      |
++---------------------+--------------+------+------+------------+-------------+
+|seletor1/multiplicac |              |      |      |            |             |
+|ao/numerosA[1].numer |              |      |      |            |             |
+|osB[1].multiplicacoe |              |      |      |            |             |
+|s/Unidade_cmp_lt0000 |              |      |      |            |             |
+|                     |         Local|      |    8 |  0.077     |  1.682      |
++---------------------+--------------+------+------+------------+-------------+
+|seletor1/multiplicac |              |      |      |            |             |
+|ao/numerosA[1].numer |              |      |      |            |             |
+|osB[2].multiplicacoe |              |      |      |            |             |
+|s/Unidade_cmp_lt0000 |              |      |      |            |             |
+|                     |         Local|      |    8 |  0.064     |  2.023      |
++---------------------+--------------+------+------+------------+-------------+
+|seletor1/multiplicac |              |      |      |            |             |
+|ao/numerosA[2].numer |              |      |      |            |             |
+|osB[0].multiplicacoe |              |      |      |            |             |
+|s/Unidade_cmp_lt0000 |              |      |      |            |             |
+|                     |         Local|      |    8 |  0.194     |  2.281      |
++---------------------+--------------+------+------+------------+-------------+
+|seletor1/multiplicac |              |      |      |            |             |
+|ao/numerosA[3].numer |              |      |      |            |             |
+|osB[0].multiplicacoe |              |      |      |            |             |
+|s/Unidade_cmp_lt0000 |              |      |      |            |             |
+|                     |         Local|      |    8 |  0.153     |  2.104      |
++---------------------+--------------+------+------+------------+-------------+
+
+* Net Skew is the difference between the minimum and maximum routing
+only delays for the net. Note this is different from Clock Skew which
+is reported in TRCE timing report. Clock Skew is the difference between
+the minimum and maximum path delays which includes logic delays.
+
+* The fanout is the number of component pins not the individual BEL loads,
+for example SLICE loads not FF loads.
+
+Timing Score: 0 (Setup: 0, Hold: 0, Component Switching Limit: 0)
+
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+----------------------------------------------------------------------------------------------------------
+  Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
+                                            |             |    Slack   | Achievable | Errors |    Score   
+----------------------------------------------------------------------------------------------------------
+  NET "clk_BUFGP/IBUFG" PERIOD = 20 ns HIGH | SETUP       |     2.255ns|    17.745ns|       0|           0
+   50%                                      | HOLD        |     0.941ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Generating Pad Report.
+
+All signals are completely routed.
+
+WARNING:Par:283 - There are 1 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
+
+Total REAL time to PAR completion: 44 secs 
+Total CPU time to PAR completion: 41 secs 
+
+Peak Memory Usage:  714 MB
+
+Placement: Completed - No errors found.
+Routing: Completed - No errors found.
+Timing: Completed - No errors found.
+
+Number of error messages: 0
+Number of warning messages: 4
+Number of info messages: 1
+
+Writing design to file Numeros_teclado.ncd
+
+
+
+PAR done!

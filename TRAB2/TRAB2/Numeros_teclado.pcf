@@ -1,0 +1,22 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Fri Dec 06 03:44:50 2024
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "clk" LOCATE = SITE "E12" LEVEL 1;
+COMP "ps2c" LOCATE = SITE "W12" LEVEL 1;
+COMP "ps2d" LOCATE = SITE "V11" LEVEL 1;
+COMP "reset" LOCATE = SITE "T16" LEVEL 1;
+COMP "seletor" LOCATE = SITE "U10" LEVEL 1;
+COMP "lz0<0>" LOCATE = SITE "R20" LEVEL 1;
+COMP "lz0<1>" LOCATE = SITE "T19" LEVEL 1;
+COMP "lz0<2>" LOCATE = SITE "U20" LEVEL 1;
+COMP "lz0<3>" LOCATE = SITE "U19" LEVEL 1;
+COMP "lz1<0>" LOCATE = SITE "V19" LEVEL 1;
+COMP "lz1<1>" LOCATE = SITE "V20" LEVEL 1;
+COMP "lz1<2>" LOCATE = SITE "Y22" LEVEL 1;
+COMP "lz1<3>" LOCATE = SITE "W21" LEVEL 1;
+COMP "rd_key_code" LOCATE = SITE "T15" LEVEL 1;
+NET "clk_BUFGP/IBUFG" PERIOD = 20 ns HIGH 50%;
+SCHEMATIC END;
+

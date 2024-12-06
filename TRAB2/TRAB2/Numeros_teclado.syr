@@ -1,0 +1,1079 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> 
+Reading design: Numeros_teclado.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Numeros_teclado.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Numeros_teclado"
+Output Format                      : NGC
+Target Device                      : xc3s700an-4-fgg484
+
+---- Source Options
+Top Module Name                    : Numeros_teclado
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+WARNING:HDLParsers:3607 - Unit work/Numeros_teclado is now defined in a different file.  It was defined in "/home/ise/TRAB2/Numeros_teclado.vhd", and is now defined in "/home/ise/compart/TRAB2/Numeros_teclado.vhd".
+WARNING:HDLParsers:3607 - Unit work/Numeros_teclado/Behavioral is now defined in a different file.  It was defined in "/home/ise/TRAB2/Numeros_teclado.vhd", and is now defined in "/home/ise/compart/TRAB2/Numeros_teclado.vhd".
+WARNING:HDLParsers:3607 - Unit work/kb_code is now defined in a different file.  It was defined in "/home/ise/TRAB2/CODIGO_TOP_LEVEL_TECLADO.vhd", and is now defined in "/home/ise/compart/TRAB2/CODIGO_TOP_LEVEL_TECLADO.vhd".
+WARNING:HDLParsers:3607 - Unit work/kb_code/arch is now defined in a different file.  It was defined in "/home/ise/TRAB2/CODIGO_TOP_LEVEL_TECLADO.vhd", and is now defined in "/home/ise/compart/TRAB2/CODIGO_TOP_LEVEL_TECLADO.vhd".
+WARNING:HDLParsers:3607 - Unit work/SeletorOperacao is now defined in a different file.  It was defined in "/home/ise/TRAB2/SeletorOperacao.vhd", and is now defined in "/home/ise/compart/TRAB2/SeletorOperacao.vhd".
+WARNING:HDLParsers:3607 - Unit work/SeletorOperacao/Behavioral is now defined in a different file.  It was defined in "/home/ise/TRAB2/SeletorOperacao.vhd", and is now defined in "/home/ise/compart/TRAB2/SeletorOperacao.vhd".
+WARNING:HDLParsers:3607 - Unit work/fifo is now defined in a different file.  It was defined in "/home/ise/TRAB2/fifo.vhd", and is now defined in "/home/ise/compart/TRAB2/fifo.vhd".
+WARNING:HDLParsers:3607 - Unit work/fifo/arch is now defined in a different file.  It was defined in "/home/ise/TRAB2/fifo.vhd", and is now defined in "/home/ise/compart/TRAB2/fifo.vhd".
+WARNING:HDLParsers:3607 - Unit work/ps2_rx is now defined in a different file.  It was defined in "/home/ise/TRAB2/list_ch08_01_ps2_rx.vhd", and is now defined in "/home/ise/compart/TRAB2/list_ch08_01_ps2_rx.vhd".
+WARNING:HDLParsers:3607 - Unit work/ps2_rx/arch is now defined in a different file.  It was defined in "/home/ise/TRAB2/list_ch08_01_ps2_rx.vhd", and is now defined in "/home/ise/compart/TRAB2/list_ch08_01_ps2_rx.vhd".
+WARNING:HDLParsers:3607 - Unit work/key2ascii is now defined in a different file.  It was defined in "/home/ise/TRAB2/list_ch08_04_key2ascii.vhd", and is now defined in "/home/ise/compart/TRAB2/list_ch08_04_key2ascii.vhd".
+WARNING:HDLParsers:3607 - Unit work/key2ascii/arch is now defined in a different file.  It was defined in "/home/ise/TRAB2/list_ch08_04_key2ascii.vhd", and is now defined in "/home/ise/compart/TRAB2/list_ch08_04_key2ascii.vhd".
+WARNING:HDLParsers:3607 - Unit work/MultiplicadorCompleto_BCD is now defined in a different file.  It was defined in "/home/ise/TRAB2/MultiplicadorCompleto_BCD.vhd", and is now defined in "/home/ise/compart/TRAB2/MultiplicadorCompleto_BCD.vhd".
+WARNING:HDLParsers:3607 - Unit work/MultiplicadorCompleto_BCD/Behavioral is now defined in a different file.  It was defined in "/home/ise/TRAB2/MultiplicadorCompleto_BCD.vhd", and is now defined in "/home/ise/compart/TRAB2/MultiplicadorCompleto_BCD.vhd".
+WARNING:HDLParsers:3607 - Unit work/Multiplicador1Alg is now defined in a different file.  It was defined in "/home/ise/TRAB2/Multiplicador1Alg.vhd", and is now defined in "/home/ise/compart/TRAB2/Multiplicador1Alg.vhd".
+WARNING:HDLParsers:3607 - Unit work/Multiplicador1Alg/Behavioral is now defined in a different file.  It was defined in "/home/ise/TRAB2/Multiplicador1Alg.vhd", and is now defined in "/home/ise/compart/TRAB2/Multiplicador1Alg.vhd".
+WARNING:HDLParsers:3607 - Unit work/SomadorCompleto_BCD is now defined in a different file.  It was defined in "/home/ise/TRAB2/SomadorCompleto_BCD.vhd", and is now defined in "/home/ise/compart/TRAB2/SomadorCompleto_BCD.vhd".
+WARNING:HDLParsers:3607 - Unit work/SomadorCompleto_BCD/Behavioral is now defined in a different file.  It was defined in "/home/ise/TRAB2/SomadorCompleto_BCD.vhd", and is now defined in "/home/ise/compart/TRAB2/SomadorCompleto_BCD.vhd".
+WARNING:HDLParsers:3607 - Unit work/somador1Alg is now defined in a different file.  It was defined in "/home/ise/TRAB2/somador1Alg.vhd", and is now defined in "/home/ise/compart/TRAB2/somador1Alg.vhd".
+WARNING:HDLParsers:3607 - Unit work/somador1Alg/comportamento is now defined in a different file.  It was defined in "/home/ise/TRAB2/somador1Alg.vhd", and is now defined in "/home/ise/compart/TRAB2/somador1Alg.vhd".
+Compiling vhdl file "/home/ise/compart/TRAB2/somador1Alg.vhd" in Library work.
+Architecture comportamento of Entity somador1alg is up to date.
+Compiling vhdl file "/home/ise/compart/TRAB2/Multiplicador1Alg.vhd" in Library work.
+Architecture behavioral of Entity multiplicador1alg is up to date.
+Compiling vhdl file "/home/ise/compart/TRAB2/SomadorCompleto_BCD.vhd" in Library work.
+Architecture behavioral of Entity somadorcompleto_bcd is up to date.
+Compiling vhdl file "/home/ise/compart/TRAB2/MultiplicadorCompleto_BCD.vhd" in Library work.
+Architecture behavioral of Entity multiplicadorcompleto_bcd is up to date.
+Compiling vhdl file "/home/ise/compart/TRAB2/list_ch08_01_ps2_rx.vhd" in Library work.
+Architecture arch of Entity ps2_rx is up to date.
+Compiling vhdl file "/home/ise/compart/TRAB2/fifo.vhd" in Library work.
+Architecture arch of Entity fifo is up to date.
+Compiling vhdl file "/home/ise/compart/TRAB2/list_ch08_04_key2ascii.vhd" in Library work.
+Architecture arch of Entity key2ascii is up to date.
+Compiling vhdl file "/home/ise/compart/TRAB2/CODIGO_TOP_LEVEL_TECLADO.vhd" in Library work.
+Architecture arch of Entity kb_code is up to date.
+Compiling vhdl file "/home/ise/compart/TRAB2/SeletorOperacao.vhd" in Library work.
+Architecture behavioral of Entity seletoroperacao is up to date.
+Compiling vhdl file "/home/ise/compart/TRAB2/Numeros_teclado.vhd" in Library work.
+Architecture behavioral of Entity numeros_teclado is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <Numeros_teclado> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <kb_code> in library <work> (architecture <arch>) with generics.
+	W_SIZE = 1
+
+Analyzing hierarchy for entity <SeletorOperacao> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <ps2_rx> in library <work> (architecture <arch>).
+
+Analyzing hierarchy for entity <fifo> in library <work> (architecture <arch>) with generics.
+	B = 8
+	W = 1
+
+Analyzing hierarchy for entity <key2ascii> in library <work> (architecture <arch>).
+
+Analyzing hierarchy for entity <SomadorCompleto_BCD> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <MultiplicadorCompleto_BCD> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <somador1Alg> in library <work> (architecture <comportamento>).
+
+Analyzing hierarchy for entity <Multiplicador1Alg> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <SomadorCompleto_BCD> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <somador1Alg> in library <work> (architecture <comportamento>).
+
+Analyzing hierarchy for entity <somador1Alg> in library <work> (architecture <comportamento>).
+
+Analyzing hierarchy for entity <somador1Alg> in library <work> (architecture <comportamento>).
+
+Analyzing hierarchy for entity <somador1Alg> in library <work> (architecture <comportamento>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <Numeros_teclado> in library <work> (Architecture <behavioral>).
+Entity <Numeros_teclado> analyzed. Unit <Numeros_teclado> generated.
+
+Analyzing generic Entity <kb_code> in library <work> (Architecture <arch>).
+	W_SIZE = 1
+WARNING:Xst:753 - "/home/ise/compart/TRAB2/CODIGO_TOP_LEVEL_TECLADO.vhd" line 36: Unconnected output port 'full' of component 'fifo'.
+Entity <kb_code> analyzed. Unit <kb_code> generated.
+
+Analyzing Entity <ps2_rx> in library <work> (Architecture <arch>).
+Entity <ps2_rx> analyzed. Unit <ps2_rx> generated.
+
+Analyzing generic Entity <fifo> in library <work> (Architecture <arch>).
+	B = 8
+	W = 1
+Entity <fifo> analyzed. Unit <fifo> generated.
+
+Analyzing Entity <key2ascii> in library <work> (Architecture <arch>).
+Entity <key2ascii> analyzed. Unit <key2ascii> generated.
+
+Analyzing Entity <SeletorOperacao> in library <work> (Architecture <behavioral>).
+Entity <SeletorOperacao> analyzed. Unit <SeletorOperacao> generated.
+
+Analyzing Entity <SomadorCompleto_BCD> in library <work> (Architecture <behavioral>).
+Entity <SomadorCompleto_BCD> analyzed. Unit <SomadorCompleto_BCD> generated.
+
+Analyzing Entity <somador1Alg> in library <work> (Architecture <comportamento>).
+Entity <somador1Alg> analyzed. Unit <somador1Alg> generated.
+
+Analyzing Entity <MultiplicadorCompleto_BCD> in library <work> (Architecture <behavioral>).
+WARNING:Xst:753 - "/home/ise/compart/TRAB2/MultiplicadorCompleto_BCD.vhd" line 127: Unconnected output port 'Z4' of component 'SomadorCompleto_BCD'.
+WARNING:Xst:753 - "/home/ise/compart/TRAB2/MultiplicadorCompleto_BCD.vhd" line 158: Unconnected output port 'Z4' of component 'SomadorCompleto_BCD'.
+WARNING:Xst:753 - "/home/ise/compart/TRAB2/MultiplicadorCompleto_BCD.vhd" line 190: Unconnected output port 'Z4' of component 'SomadorCompleto_BCD'.
+Entity <MultiplicadorCompleto_BCD> analyzed. Unit <MultiplicadorCompleto_BCD> generated.
+
+Analyzing Entity <Multiplicador1Alg> in library <work> (Architecture <behavioral>).
+Entity <Multiplicador1Alg> analyzed. Unit <Multiplicador1Alg> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <ps2_rx>.
+    Related source file is "/home/ise/compart/TRAB2/list_ch08_01_ps2_rx.vhd".
+WARNING:Xst:646 - Signal <b_reg<0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found finite state machine <FSM_0> for signal <state_reg>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 6                                              |
+    | Inputs             | 2                                              |
+    | Outputs            | 3                                              |
+    | Clock              | clk                       (rising_edge)        |
+    | Reset              | reset                     (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | idle                                           |
+    | Power Up State     | idle                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 11-bit register for signal <b_reg>.
+    Found 1-bit register for signal <f_ps2c_reg>.
+    Found 8-bit register for signal <filter_reg>.
+    Found 4-bit register for signal <n_reg>.
+    Found 4-bit subtractor for signal <n_reg$addsub0000> created at line 82.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred  24 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <ps2_rx> synthesized.
+
+
+Synthesizing Unit <fifo>.
+    Related source file is "/home/ise/compart/TRAB2/fifo.vhd".
+    Found 16-bit register for signal <array_reg>.
+    Found 1-bit register for signal <empty_reg>.
+    Found 1-bit 4-to-1 multiplexer for signal <empty_reg$mux0000> created at line 83.
+    Found 1-bit xor2 for signal <empty_reg$xor0000> created at line 89.
+    Found 1-bit register for signal <full_reg>.
+    Found 1-bit 4-to-1 multiplexer for signal <full_reg$mux0000> created at line 83.
+    Found 1-bit xor2 for signal <full_reg$xor0000> created at line 97.
+    Found 1-bit register for signal <r_ptr_reg<0>>.
+    Found 1-bit 4-to-1 multiplexer for signal <r_ptr_reg_0$mux0000> created at line 83.
+    Found 1-bit adder for signal <r_ptr_succ<0>>.
+    Found 1-bit register for signal <w_ptr_reg<0>>.
+    Found 1-bit 4-to-1 multiplexer for signal <w_ptr_reg_0$mux0000> created at line 83.
+    Found 1-bit adder for signal <w_ptr_succ<0>>.
+    Summary:
+	inferred  20 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred   4 Multiplexer(s).
+Unit <fifo> synthesized.
+
+
+Synthesizing Unit <key2ascii>.
+    Related source file is "/home/ise/compart/TRAB2/list_ch08_04_key2ascii.vhd".
+Unit <key2ascii> synthesized.
+
+
+Synthesizing Unit <somador1Alg>.
+    Related source file is "/home/ise/compart/TRAB2/somador1Alg.vhd".
+    Found 5-bit adder for signal <parcial>.
+    Found 5-bit adder for signal <parcial$addsub0000> created at line 21.
+    Found 4-bit adder for signal <Unidade$addsub0000> created at line 25.
+    Found 5-bit comparator greater for signal <Unidade$cmp_gt0000> created at line 24.
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+Unit <somador1Alg> synthesized.
+
+
+Synthesizing Unit <Multiplicador1Alg>.
+    Related source file is "/home/ise/compart/TRAB2/Multiplicador1Alg.vhd".
+WARNING:Xst:737 - Found 4-bit latch for signal <Unidade>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 4-bit latch for signal <Dezena>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 8-bit comparator less for signal <Dezena$cmp_lt0000> created at line 25.
+    Found 8-bit comparator less for signal <Dezena$cmp_lt0001> created at line 27.
+    Found 8-bit comparator less for signal <Dezena$or0000>.
+    Found 4-bit subtractor for signal <mux0000$addsub0000>.
+    Found 8-bit comparator less for signal <mux0001$cmp_lt0000> created at line 30.
+    Found 8-bit comparator less for signal <mux0001$cmp_lt0001> created at line 33.
+    Found 8-bit comparator less for signal <mux0001$cmp_lt0002> created at line 36.
+    Found 8-bit comparator less for signal <mux0001$cmp_lt0003> created at line 39.
+    Found 8-bit comparator less for signal <mux0001$cmp_lt0004> created at line 42.
+    Found 8-bit adder for signal <parcial>.
+    Found 4x4-bit multiplier for signal <parcial$mult0000> created at line 19.
+    Found 8-bit comparator less for signal <Unidade$cmp_lt0000> created at line 48.
+    Found 8-bit comparator less for signal <Unidade$or0000>.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred   1 Multiplier(s).
+	inferred  10 Comparator(s).
+Unit <Multiplicador1Alg> synthesized.
+
+
+Synthesizing Unit <kb_code>.
+    Related source file is "/home/ise/compart/TRAB2/CODIGO_TOP_LEVEL_TECLADO.vhd".
+WARNING:Xst:1780 - Signal <w_data> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Found 1-bit register for signal <state_reg<0>>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <kb_code> synthesized.
+
+
+Synthesizing Unit <SomadorCompleto_BCD>.
+    Related source file is "/home/ise/compart/TRAB2/SomadorCompleto_BCD.vhd".
+Unit <SomadorCompleto_BCD> synthesized.
+
+
+Synthesizing Unit <MultiplicadorCompleto_BCD>.
+    Related source file is "/home/ise/compart/TRAB2/MultiplicadorCompleto_BCD.vhd".
+Unit <MultiplicadorCompleto_BCD> synthesized.
+
+
+Synthesizing Unit <SeletorOperacao>.
+    Related source file is "/home/ise/compart/TRAB2/SeletorOperacao.vhd".
+Unit <SeletorOperacao> synthesized.
+
+
+Synthesizing Unit <Numeros_teclado>.
+    Related source file is "/home/ise/compart/TRAB2/Numeros_teclado.vhd".
+WARNING:Xst:647 - Input <reset> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found finite state machine <FSM_1> for signal <estado>.
+    -----------------------------------------------------------------------
+    | States             | 9                                              |
+    | Transitions        | 24                                             |
+    | Inputs             | 2                                              |
+    | Outputs            | 10                                             |
+    | Clock              | clk                       (rising_edge)        |
+    | Power Up State     | receber_a0                                     |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 4-bit register for signal <lz0>.
+    Found 4-bit register for signal <lz1>.
+    Found 4-bit register for signal <lz2>.
+    Found 4-bit register for signal <lz3>.
+    Found 4-bit register for signal <lz4>.
+    Found 4-bit register for signal <lz5>.
+    Found 4-bit register for signal <lz6>.
+    Found 4-bit register for signal <lz7>.
+    Found 4-bit register for signal <a0>.
+    Found 4-bit register for signal <a1>.
+    Found 4-bit register for signal <a2>.
+    Found 4-bit register for signal <a3>.
+    Found 4-bit register for signal <b0>.
+    Found 4-bit register for signal <b1>.
+    Found 4-bit register for signal <b2>.
+    Found 4-bit register for signal <b3>.
+    Found 1-bit register for signal <limpar_teclado>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred  65 D-type flip-flop(s).
+Unit <Numeros_teclado> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 16
+ 4x4-bit multiplier                                    : 16
+# Adders/Subtractors                                   : 119
+ 1-bit adder                                           : 2
+ 4-bit adder                                           : 28
+ 4-bit subtractor                                      : 17
+ 5-bit adder                                           : 56
+ 8-bit adder                                           : 16
+# Registers                                            : 28
+ 1-bit register                                        : 7
+ 11-bit register                                       : 1
+ 4-bit register                                        : 17
+ 8-bit register                                        : 3
+# Latches                                              : 32
+ 4-bit latch                                           : 32
+# Comparators                                          : 188
+ 5-bit comparator greater                              : 28
+ 8-bit comparator less                                 : 160
+# Multiplexers                                         : 4
+ 1-bit 4-to-1 multiplexer                              : 4
+# Xors                                                 : 2
+ 1-bit xor2                                            : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_1> for best encoding.
+Optimizing FSM <estado/FSM> on signal <estado[1:4]> with user encoding.
+-------------------------
+ State       | Encoding
+-------------------------
+ receber_a0  | 0000
+ receber_a1  | 0001
+ receber_a2  | 0010
+ receber_a3  | 0011
+ receber_b0  | 0100
+ receber_b1  | 0101
+ receber_b2  | 0110
+ receber_b3  | 0111
+ mostrar_res | 1000
+-------------------------
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <teclado/ps2_rx_unit/state_reg/FSM> on signal <state_reg[1:2]> with gray encoding.
+-------------------
+ State | Encoding
+-------------------
+ idle  | 00
+ dps   | 01
+ load  | 11
+-------------------
+WARNING:Xst:2677 - Node <b_reg_0> of sequential type is unconnected in block <ps2_rx_unit>.
+
+Synthesizing (advanced) Unit <Numeros_teclado>.
+	Found pipelined multiplier on signal <seletor1/multiplicacao/numerosA[3].numerosB[3].multiplicacoes/parcial_mult0000>:
+		- 1 pipeline level(s) found in a register on signal <a3>.
+		Pushing register(s) into the multiplier macro.
+
+		- 1 pipeline level(s) found in a register on signal <b3>.
+		Pushing register(s) into the multiplier macro.
+	Found pipelined multiplier on signal <seletor1/multiplicacao/numerosA[3].numerosB[2].multiplicacoes/parcial_mult0000>:
+		- 1 pipeline level(s) found in a register on signal <a3>.
+		Pushing register(s) into the multiplier macro.
+
+		- 1 pipeline level(s) found in a register on signal <b2>.
+		Pushing register(s) into the multiplier macro.
+	Found pipelined multiplier on signal <seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/parcial_mult0000>:
+		- 1 pipeline level(s) found in a register on signal <a3>.
+		Pushing register(s) into the multiplier macro.
+
+		- 1 pipeline level(s) found in a register on signal <b1>.
+		Pushing register(s) into the multiplier macro.
+	Found pipelined multiplier on signal <seletor1/multiplicacao/numerosA[3].numerosB[0].multiplicacoes/parcial_mult0000>:
+		- 1 pipeline level(s) found in a register on signal <a3>.
+		Pushing register(s) into the multiplier macro.
+
+		- 1 pipeline level(s) found in a register on signal <b0>.
+		Pushing register(s) into the multiplier macro.
+	Found pipelined multiplier on signal <seletor1/multiplicacao/numerosA[2].numerosB[3].multiplicacoes/parcial_mult0000>:
+		- 1 pipeline level(s) found in a register on signal <a2>.
+		Pushing register(s) into the multiplier macro.
+
+		- 1 pipeline level(s) found in a register on signal <b3>.
+		Pushing register(s) into the multiplier macro.
+	Found pipelined multiplier on signal <seletor1/multiplicacao/numerosA[2].numerosB[2].multiplicacoes/parcial_mult0000>:
+		- 1 pipeline level(s) found in a register on signal <a2>.
+		Pushing register(s) into the multiplier macro.
+
+		- 1 pipeline level(s) found in a register on signal <b2>.
+		Pushing register(s) into the multiplier macro.
+	Found pipelined multiplier on signal <seletor1/multiplicacao/numerosA[2].numerosB[1].multiplicacoes/parcial_mult0000>:
+		- 1 pipeline level(s) found in a register on signal <a2>.
+		Pushing register(s) into the multiplier macro.
+
+		- 1 pipeline level(s) found in a register on signal <b1>.
+		Pushing register(s) into the multiplier macro.
+	Found pipelined multiplier on signal <seletor1/multiplicacao/numerosA[2].numerosB[0].multiplicacoes/parcial_mult0000>:
+		- 1 pipeline level(s) found in a register on signal <a2>.
+		Pushing register(s) into the multiplier macro.
+
+		- 1 pipeline level(s) found in a register on signal <b0>.
+		Pushing register(s) into the multiplier macro.
+	Found pipelined multiplier on signal <seletor1/multiplicacao/numerosA[1].numerosB[3].multiplicacoes/parcial_mult0000>:
+		- 1 pipeline level(s) found in a register on signal <a1>.
+		Pushing register(s) into the multiplier macro.
+
+		- 1 pipeline level(s) found in a register on signal <b3>.
+		Pushing register(s) into the multiplier macro.
+	Found pipelined multiplier on signal <seletor1/multiplicacao/numerosA[1].numerosB[2].multiplicacoes/parcial_mult0000>:
+		- 1 pipeline level(s) found in a register on signal <a1>.
+		Pushing register(s) into the multiplier macro.
+
+		- 1 pipeline level(s) found in a register on signal <b2>.
+		Pushing register(s) into the multiplier macro.
+	Found pipelined multiplier on signal <seletor1/multiplicacao/numerosA[1].numerosB[1].multiplicacoes/parcial_mult0000>:
+		- 1 pipeline level(s) found in a register on signal <a1>.
+		Pushing register(s) into the multiplier macro.
+
+		- 1 pipeline level(s) found in a register on signal <b1>.
+		Pushing register(s) into the multiplier macro.
+	Found pipelined multiplier on signal <seletor1/multiplicacao/numerosA[1].numerosB[0].multiplicacoes/parcial_mult0000>:
+		- 1 pipeline level(s) found in a register on signal <a1>.
+		Pushing register(s) into the multiplier macro.
+
+		- 1 pipeline level(s) found in a register on signal <b0>.
+		Pushing register(s) into the multiplier macro.
+	Found pipelined multiplier on signal <seletor1/multiplicacao/numerosA[0].numerosB[3].multiplicacoes/parcial_mult0000>:
+		- 1 pipeline level(s) found in a register on signal <a0>.
+		Pushing register(s) into the multiplier macro.
+
+		- 1 pipeline level(s) found in a register on signal <b3>.
+		Pushing register(s) into the multiplier macro.
+	Found pipelined multiplier on signal <seletor1/multiplicacao/numerosA[0].numerosB[2].multiplicacoes/parcial_mult0000>:
+		- 1 pipeline level(s) found in a register on signal <a0>.
+		Pushing register(s) into the multiplier macro.
+
+		- 1 pipeline level(s) found in a register on signal <b2>.
+		Pushing register(s) into the multiplier macro.
+	Found pipelined multiplier on signal <seletor1/multiplicacao/numerosA[0].numerosB[1].multiplicacoes/parcial_mult0000>:
+		- 1 pipeline level(s) found in a register on signal <a0>.
+		Pushing register(s) into the multiplier macro.
+
+		- 1 pipeline level(s) found in a register on signal <b1>.
+		Pushing register(s) into the multiplier macro.
+	Found pipelined multiplier on signal <seletor1/multiplicacao/numerosA[0].numerosB[0].multiplicacoes/parcial_mult0000>:
+		- 1 pipeline level(s) found in a register on signal <a0>.
+		Pushing register(s) into the multiplier macro.
+
+		- 1 pipeline level(s) found in a register on signal <b0>.
+		Pushing register(s) into the multiplier macro.
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier seletor1/multiplicacao/numerosA[3].numerosB[3].multiplicacoes/Mmult_parcial_mult0000 by adding 1 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier seletor1/multiplicacao/numerosA[3].numerosB[2].multiplicacoes/Mmult_parcial_mult0000 by adding 1 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Mmult_parcial_mult0000 by adding 1 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier seletor1/multiplicacao/numerosA[3].numerosB[0].multiplicacoes/Mmult_parcial_mult0000 by adding 1 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier seletor1/multiplicacao/numerosA[2].numerosB[3].multiplicacoes/Mmult_parcial_mult0000 by adding 1 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier seletor1/multiplicacao/numerosA[2].numerosB[2].multiplicacoes/Mmult_parcial_mult0000 by adding 1 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier seletor1/multiplicacao/numerosA[2].numerosB[1].multiplicacoes/Mmult_parcial_mult0000 by adding 1 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier seletor1/multiplicacao/numerosA[2].numerosB[0].multiplicacoes/Mmult_parcial_mult0000 by adding 1 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier seletor1/multiplicacao/numerosA[1].numerosB[3].multiplicacoes/Mmult_parcial_mult0000 by adding 1 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier seletor1/multiplicacao/numerosA[1].numerosB[2].multiplicacoes/Mmult_parcial_mult0000 by adding 1 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier seletor1/multiplicacao/numerosA[1].numerosB[1].multiplicacoes/Mmult_parcial_mult0000 by adding 1 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier seletor1/multiplicacao/numerosA[1].numerosB[0].multiplicacoes/Mmult_parcial_mult0000 by adding 1 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier seletor1/multiplicacao/numerosA[0].numerosB[3].multiplicacoes/Mmult_parcial_mult0000 by adding 1 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier seletor1/multiplicacao/numerosA[0].numerosB[2].multiplicacoes/Mmult_parcial_mult0000 by adding 1 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier seletor1/multiplicacao/numerosA[0].numerosB[1].multiplicacoes/Mmult_parcial_mult0000 by adding 1 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier seletor1/multiplicacao/numerosA[0].numerosB[0].multiplicacoes/Mmult_parcial_mult0000 by adding 1 register level(s).
+Unit <Numeros_teclado> synthesized (advanced).
+WARNING:Xst:2677 - Node <b_reg_0> of sequential type is unconnected in block <ps2_rx>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 16
+ 4x4-bit registered multiplier                         : 16
+# Adders/Subtractors                                   : 119
+ 1-bit adder                                           : 2
+ 4-bit adder                                           : 28
+ 4-bit subtractor                                      : 17
+ 5-bit adder                                           : 56
+ 8-bit adder                                           : 16
+# Registers                                            : 115
+ Flip-Flops                                            : 115
+# Latches                                              : 32
+ 4-bit latch                                           : 32
+# Comparators                                          : 188
+ 5-bit comparator greater                              : 28
+ 8-bit comparator less                                 : 160
+# Multiplexers                                         : 4
+ 1-bit 4-to-1 multiplexer                              : 4
+# Xors                                                 : 2
+ 1-bit xor2                                            : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <Numeros_teclado> ...
+
+Optimizing unit <ps2_rx> ...
+
+Optimizing unit <fifo> ...
+
+Optimizing unit <somador1Alg> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Numeros_teclado, actual ratio is 13.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 115
+ Flip-Flops                                            : 115
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : Numeros_teclado.ngr
+Top Level Output File Name         : Numeros_teclado
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 38
+
+Cell Usage :
+# BELS                             : 1526
+#      GND                         : 1
+#      LUT1                        : 36
+#      LUT2                        : 230
+#      LUT2_D                      : 2
+#      LUT3                        : 129
+#      LUT3_D                      : 9
+#      LUT4                        : 847
+#      LUT4_D                      : 14
+#      LUT4_L                      : 11
+#      MUXCY                       : 84
+#      MUXF5                       : 66
+#      VCC                         : 1
+#      XORCY                       : 96
+# FlipFlops/Latches                : 243
+#      FD                          : 33
+#      FDC                         : 29
+#      FDCE                        : 16
+#      FDE                         : 32
+#      FDP                         : 1
+#      FDR                         : 1
+#      FDRS                        : 1
+#      FDS                         : 2
+#      LDCP                        : 128
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 36
+#      IBUF                        : 4
+#      OBUF                        : 32
+# MULTs                            : 16
+#      MULT18X18SIO                : 16
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s700anfgg484-4 
+
+ Number of Slices:                      726  out of   5888    12%  
+ Number of Slice Flip Flops:            243  out of  11776     2%  
+ Number of 4 input LUTs:               1278  out of  11776    10%  
+ Number of IOs:                          38
+ Number of bonded IOBs:                  37  out of    372     9%  
+ Number of MULT18X18SIOs:                16  out of     20    80%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------+-------+
+Clock Signal                                                                                                                                                         | Clock buffer(FF name)                                                          | Load  |
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------+-------+
+clk                                                                                                                                                                  | BUFGP                                                                          | 131   |
+seletor1/multiplicacao/numerosA[3].numerosB[3].multiplicacoes/Unidade_cmp_lt0000(seletor1/multiplicacao/numerosA[3].numerosB[3].multiplicacoes/Unidade_cmp_lt00001:O)| NONE(*)(seletor1/multiplicacao/numerosA[3].numerosB[3].multiplicacoes/Dezena_0)| 8     |
+seletor1/multiplicacao/numerosA[3].numerosB[2].multiplicacoes/Unidade_cmp_lt0000(seletor1/multiplicacao/numerosA[3].numerosB[2].multiplicacoes/Unidade_cmp_lt00001:O)| NONE(*)(seletor1/multiplicacao/numerosA[3].numerosB[2].multiplicacoes/Dezena_0)| 8     |
+seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Unidade_cmp_lt0000(seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Unidade_cmp_lt00001:O)| NONE(*)(seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Dezena_0)| 8     |
+seletor1/multiplicacao/numerosA[3].numerosB[0].multiplicacoes/Unidade_cmp_lt0000(seletor1/multiplicacao/numerosA[3].numerosB[0].multiplicacoes/Unidade_cmp_lt00001:O)| NONE(*)(seletor1/multiplicacao/numerosA[3].numerosB[0].multiplicacoes/Dezena_0)| 8     |
+seletor1/multiplicacao/numerosA[2].numerosB[3].multiplicacoes/Unidade_cmp_lt0000(seletor1/multiplicacao/numerosA[2].numerosB[3].multiplicacoes/Unidade_cmp_lt00001:O)| NONE(*)(seletor1/multiplicacao/numerosA[2].numerosB[3].multiplicacoes/Dezena_0)| 8     |
+seletor1/multiplicacao/numerosA[2].numerosB[2].multiplicacoes/Unidade_cmp_lt0000(seletor1/multiplicacao/numerosA[2].numerosB[2].multiplicacoes/Unidade_cmp_lt00001:O)| NONE(*)(seletor1/multiplicacao/numerosA[2].numerosB[2].multiplicacoes/Dezena_0)| 8     |
+seletor1/multiplicacao/numerosA[2].numerosB[1].multiplicacoes/Unidade_cmp_lt0000(seletor1/multiplicacao/numerosA[2].numerosB[1].multiplicacoes/Unidade_cmp_lt00001:O)| NONE(*)(seletor1/multiplicacao/numerosA[2].numerosB[1].multiplicacoes/Dezena_0)| 8     |
+seletor1/multiplicacao/numerosA[2].numerosB[0].multiplicacoes/Unidade_cmp_lt0000(seletor1/multiplicacao/numerosA[2].numerosB[0].multiplicacoes/Unidade_cmp_lt00001:O)| NONE(*)(seletor1/multiplicacao/numerosA[2].numerosB[0].multiplicacoes/Dezena_0)| 8     |
+seletor1/multiplicacao/numerosA[1].numerosB[3].multiplicacoes/Unidade_cmp_lt0000(seletor1/multiplicacao/numerosA[1].numerosB[3].multiplicacoes/Unidade_cmp_lt00001:O)| NONE(*)(seletor1/multiplicacao/numerosA[1].numerosB[3].multiplicacoes/Dezena_0)| 8     |
+seletor1/multiplicacao/numerosA[1].numerosB[2].multiplicacoes/Unidade_cmp_lt0000(seletor1/multiplicacao/numerosA[1].numerosB[2].multiplicacoes/Unidade_cmp_lt00001:O)| NONE(*)(seletor1/multiplicacao/numerosA[1].numerosB[2].multiplicacoes/Dezena_0)| 8     |
+seletor1/multiplicacao/numerosA[1].numerosB[1].multiplicacoes/Unidade_cmp_lt0000(seletor1/multiplicacao/numerosA[1].numerosB[1].multiplicacoes/Unidade_cmp_lt00001:O)| NONE(*)(seletor1/multiplicacao/numerosA[1].numerosB[1].multiplicacoes/Dezena_0)| 8     |
+seletor1/multiplicacao/numerosA[1].numerosB[0].multiplicacoes/Unidade_cmp_lt0000(seletor1/multiplicacao/numerosA[1].numerosB[0].multiplicacoes/Unidade_cmp_lt00001:O)| NONE(*)(seletor1/multiplicacao/numerosA[1].numerosB[0].multiplicacoes/Dezena_0)| 8     |
+seletor1/multiplicacao/numerosA[0].numerosB[3].multiplicacoes/Unidade_cmp_lt0000(seletor1/multiplicacao/numerosA[0].numerosB[3].multiplicacoes/Unidade_cmp_lt00001:O)| NONE(*)(seletor1/multiplicacao/numerosA[0].numerosB[3].multiplicacoes/Dezena_0)| 8     |
+seletor1/multiplicacao/numerosA[0].numerosB[2].multiplicacoes/Unidade_cmp_lt0000(seletor1/multiplicacao/numerosA[0].numerosB[2].multiplicacoes/Unidade_cmp_lt00001:O)| NONE(*)(seletor1/multiplicacao/numerosA[0].numerosB[2].multiplicacoes/Dezena_0)| 8     |
+seletor1/multiplicacao/numerosA[0].numerosB[1].multiplicacoes/Unidade_cmp_lt0000(seletor1/multiplicacao/numerosA[0].numerosB[1].multiplicacoes/Unidade_cmp_lt00001:O)| NONE(*)(seletor1/multiplicacao/numerosA[0].numerosB[1].multiplicacoes/Dezena_0)| 8     |
+seletor1/multiplicacao/numerosA[0].numerosB[0].multiplicacoes/Unidade_cmp_lt0000(seletor1/multiplicacao/numerosA[0].numerosB[0].multiplicacoes/Unidade_cmp_lt00001:O)| NONE(*)(seletor1/multiplicacao/numerosA[0].numerosB[0].multiplicacoes/Dezena_0)| 8     |
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------+-------+
+(*) These 16 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------+-------+
+Control Signal                                                                                                                                                       | Buffer(FF name)                                                              | Load  |
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------+-------+
+limpar_teclado(limpar_teclado:Q)                                                                                                                                     | NONE(teclado/fifo_key_unit/array_reg_0_0)                                    | 46    |
+N0(XST_GND:G)                                                                                                                                                        | NONE(seletor1/multiplicacao/numerosA[0].numerosB[0].multiplicacoes/Dezena_3) | 16    |
+seletor1/multiplicacao/numerosA[0].numerosB[0].multiplicacoes/Dezena_0__or0000(seletor1/multiplicacao/numerosA[0].numerosB[0].multiplicacoes/Dezena_0__or00001:O)    | NONE(seletor1/multiplicacao/numerosA[0].numerosB[0].multiplicacoes/Dezena_0) | 1     |
+seletor1/multiplicacao/numerosA[0].numerosB[0].multiplicacoes/Dezena_0__or0001(seletor1/multiplicacao/numerosA[0].numerosB[0].multiplicacoes/Dezena_0__or00011:O)    | NONE(seletor1/multiplicacao/numerosA[0].numerosB[0].multiplicacoes/Dezena_0) | 1     |
+seletor1/multiplicacao/numerosA[0].numerosB[0].multiplicacoes/Dezena_1__and0000(seletor1/multiplicacao/numerosA[0].numerosB[0].multiplicacoes/Dezena_mux0008<2>2:O)  | NONE(seletor1/multiplicacao/numerosA[0].numerosB[0].multiplicacoes/Dezena_1) | 1     |
+seletor1/multiplicacao/numerosA[0].numerosB[0].multiplicacoes/Dezena_1__or0000(seletor1/multiplicacao/numerosA[0].numerosB[0].multiplicacoes/Dezena_1__or00001:O)    | NONE(seletor1/multiplicacao/numerosA[0].numerosB[0].multiplicacoes/Dezena_1) | 1     |
+seletor1/multiplicacao/numerosA[0].numerosB[0].multiplicacoes/Dezena_2__and0000(seletor1/multiplicacao/numerosA[0].numerosB[0].multiplicacoes/Dezena_mux0008<1>1:O)  | NONE(seletor1/multiplicacao/numerosA[0].numerosB[0].multiplicacoes/Dezena_2) | 1     |
+seletor1/multiplicacao/numerosA[0].numerosB[0].multiplicacoes/Dezena_2__or0000(seletor1/multiplicacao/numerosA[0].numerosB[0].multiplicacoes/Dezena_2__or00001:O)    | NONE(seletor1/multiplicacao/numerosA[0].numerosB[0].multiplicacoes/Dezena_2) | 1     |
+seletor1/multiplicacao/numerosA[0].numerosB[0].multiplicacoes/Dezena_3__or0000(seletor1/multiplicacao/numerosA[0].numerosB[0].multiplicacoes/Dezena_or00051:O)       | NONE(seletor1/multiplicacao/numerosA[0].numerosB[0].multiplicacoes/Dezena_3) | 1     |
+seletor1/multiplicacao/numerosA[0].numerosB[0].multiplicacoes/Unidade_0__and0000(seletor1/multiplicacao/numerosA[0].numerosB[0].multiplicacoes/Unidade_0__and00001:O)| NONE(seletor1/multiplicacao/numerosA[0].numerosB[0].multiplicacoes/Unidade_0)| 1     |
+seletor1/multiplicacao/numerosA[0].numerosB[0].multiplicacoes/Unidade_0__and0001(seletor1/multiplicacao/numerosA[0].numerosB[0].multiplicacoes/Unidade_0__and00011:O)| NONE(seletor1/multiplicacao/numerosA[0].numerosB[0].multiplicacoes/Unidade_0)| 1     |
+seletor1/multiplicacao/numerosA[0].numerosB[0].multiplicacoes/Unidade_1__and0000(seletor1/multiplicacao/numerosA[0].numerosB[0].multiplicacoes/Unidade_1__and00001:O)| NONE(seletor1/multiplicacao/numerosA[0].numerosB[0].multiplicacoes/Unidade_1)| 1     |
+seletor1/multiplicacao/numerosA[0].numerosB[0].multiplicacoes/Unidade_1__and0001(seletor1/multiplicacao/numerosA[0].numerosB[0].multiplicacoes/Unidade_1__and00011:O)| NONE(seletor1/multiplicacao/numerosA[0].numerosB[0].multiplicacoes/Unidade_1)| 1     |
+seletor1/multiplicacao/numerosA[0].numerosB[0].multiplicacoes/Unidade_2__and0000(seletor1/multiplicacao/numerosA[0].numerosB[0].multiplicacoes/Unidade_2__and00001:O)| NONE(seletor1/multiplicacao/numerosA[0].numerosB[0].multiplicacoes/Unidade_2)| 1     |
+seletor1/multiplicacao/numerosA[0].numerosB[0].multiplicacoes/Unidade_2__and0001(seletor1/multiplicacao/numerosA[0].numerosB[0].multiplicacoes/Unidade_2__and00011:O)| NONE(seletor1/multiplicacao/numerosA[0].numerosB[0].multiplicacoes/Unidade_2)| 1     |
+seletor1/multiplicacao/numerosA[0].numerosB[0].multiplicacoes/Unidade_3__and0000(seletor1/multiplicacao/numerosA[0].numerosB[0].multiplicacoes/Unidade_3__and00001:O)| NONE(seletor1/multiplicacao/numerosA[0].numerosB[0].multiplicacoes/Unidade_3)| 1     |
+seletor1/multiplicacao/numerosA[0].numerosB[0].multiplicacoes/Unidade_3__and0001(seletor1/multiplicacao/numerosA[0].numerosB[0].multiplicacoes/Unidade_3__and00011:O)| NONE(seletor1/multiplicacao/numerosA[0].numerosB[0].multiplicacoes/Unidade_3)| 1     |
+seletor1/multiplicacao/numerosA[0].numerosB[1].multiplicacoes/Dezena_0__or0000(seletor1/multiplicacao/numerosA[0].numerosB[1].multiplicacoes/Dezena_0__or00001:O)    | NONE(seletor1/multiplicacao/numerosA[0].numerosB[1].multiplicacoes/Dezena_0) | 1     |
+seletor1/multiplicacao/numerosA[0].numerosB[1].multiplicacoes/Dezena_0__or0001(seletor1/multiplicacao/numerosA[0].numerosB[1].multiplicacoes/Dezena_0__or00011:O)    | NONE(seletor1/multiplicacao/numerosA[0].numerosB[1].multiplicacoes/Dezena_0) | 1     |
+seletor1/multiplicacao/numerosA[0].numerosB[1].multiplicacoes/Dezena_1__and0000(seletor1/multiplicacao/numerosA[0].numerosB[1].multiplicacoes/Dezena_mux0008<2>2:O)  | NONE(seletor1/multiplicacao/numerosA[0].numerosB[1].multiplicacoes/Dezena_1) | 1     |
+seletor1/multiplicacao/numerosA[0].numerosB[1].multiplicacoes/Dezena_1__or0000(seletor1/multiplicacao/numerosA[0].numerosB[1].multiplicacoes/Dezena_1__or00001:O)    | NONE(seletor1/multiplicacao/numerosA[0].numerosB[1].multiplicacoes/Dezena_1) | 1     |
+seletor1/multiplicacao/numerosA[0].numerosB[1].multiplicacoes/Dezena_2__and0000(seletor1/multiplicacao/numerosA[0].numerosB[1].multiplicacoes/Dezena_mux0008<1>1:O)  | NONE(seletor1/multiplicacao/numerosA[0].numerosB[1].multiplicacoes/Dezena_2) | 1     |
+seletor1/multiplicacao/numerosA[0].numerosB[1].multiplicacoes/Dezena_2__or0000(seletor1/multiplicacao/numerosA[0].numerosB[1].multiplicacoes/Dezena_2__or00001:O)    | NONE(seletor1/multiplicacao/numerosA[0].numerosB[1].multiplicacoes/Dezena_2) | 1     |
+seletor1/multiplicacao/numerosA[0].numerosB[1].multiplicacoes/Dezena_3__or0000(seletor1/multiplicacao/numerosA[0].numerosB[1].multiplicacoes/Dezena_or00051:O)       | NONE(seletor1/multiplicacao/numerosA[0].numerosB[1].multiplicacoes/Dezena_3) | 1     |
+seletor1/multiplicacao/numerosA[0].numerosB[1].multiplicacoes/Unidade_0__and0000(seletor1/multiplicacao/numerosA[0].numerosB[1].multiplicacoes/Unidade_0__and00001:O)| NONE(seletor1/multiplicacao/numerosA[0].numerosB[1].multiplicacoes/Unidade_0)| 1     |
+seletor1/multiplicacao/numerosA[0].numerosB[1].multiplicacoes/Unidade_0__and0001(seletor1/multiplicacao/numerosA[0].numerosB[1].multiplicacoes/Unidade_0__and00011:O)| NONE(seletor1/multiplicacao/numerosA[0].numerosB[1].multiplicacoes/Unidade_0)| 1     |
+seletor1/multiplicacao/numerosA[0].numerosB[1].multiplicacoes/Unidade_1__and0000(seletor1/multiplicacao/numerosA[0].numerosB[1].multiplicacoes/Unidade_1__and00001:O)| NONE(seletor1/multiplicacao/numerosA[0].numerosB[1].multiplicacoes/Unidade_1)| 1     |
+seletor1/multiplicacao/numerosA[0].numerosB[1].multiplicacoes/Unidade_1__and0001(seletor1/multiplicacao/numerosA[0].numerosB[1].multiplicacoes/Unidade_1__and00011:O)| NONE(seletor1/multiplicacao/numerosA[0].numerosB[1].multiplicacoes/Unidade_1)| 1     |
+seletor1/multiplicacao/numerosA[0].numerosB[1].multiplicacoes/Unidade_2__and0000(seletor1/multiplicacao/numerosA[0].numerosB[1].multiplicacoes/Unidade_2__and00001:O)| NONE(seletor1/multiplicacao/numerosA[0].numerosB[1].multiplicacoes/Unidade_2)| 1     |
+seletor1/multiplicacao/numerosA[0].numerosB[1].multiplicacoes/Unidade_2__and0001(seletor1/multiplicacao/numerosA[0].numerosB[1].multiplicacoes/Unidade_2__and00011:O)| NONE(seletor1/multiplicacao/numerosA[0].numerosB[1].multiplicacoes/Unidade_2)| 1     |
+seletor1/multiplicacao/numerosA[0].numerosB[1].multiplicacoes/Unidade_3__and0000(seletor1/multiplicacao/numerosA[0].numerosB[1].multiplicacoes/Unidade_3__and00001:O)| NONE(seletor1/multiplicacao/numerosA[0].numerosB[1].multiplicacoes/Unidade_3)| 1     |
+seletor1/multiplicacao/numerosA[0].numerosB[1].multiplicacoes/Unidade_3__and0001(seletor1/multiplicacao/numerosA[0].numerosB[1].multiplicacoes/Unidade_3__and00011:O)| NONE(seletor1/multiplicacao/numerosA[0].numerosB[1].multiplicacoes/Unidade_3)| 1     |
+seletor1/multiplicacao/numerosA[0].numerosB[2].multiplicacoes/Dezena_0__or0000(seletor1/multiplicacao/numerosA[0].numerosB[2].multiplicacoes/Dezena_0__or00001:O)    | NONE(seletor1/multiplicacao/numerosA[0].numerosB[2].multiplicacoes/Dezena_0) | 1     |
+seletor1/multiplicacao/numerosA[0].numerosB[2].multiplicacoes/Dezena_0__or0001(seletor1/multiplicacao/numerosA[0].numerosB[2].multiplicacoes/Dezena_0__or00011:O)    | NONE(seletor1/multiplicacao/numerosA[0].numerosB[2].multiplicacoes/Dezena_0) | 1     |
+seletor1/multiplicacao/numerosA[0].numerosB[2].multiplicacoes/Dezena_1__and0000(seletor1/multiplicacao/numerosA[0].numerosB[2].multiplicacoes/Dezena_mux0008<2>2:O)  | NONE(seletor1/multiplicacao/numerosA[0].numerosB[2].multiplicacoes/Dezena_1) | 1     |
+seletor1/multiplicacao/numerosA[0].numerosB[2].multiplicacoes/Dezena_1__or0000(seletor1/multiplicacao/numerosA[0].numerosB[2].multiplicacoes/Dezena_1__or00001:O)    | NONE(seletor1/multiplicacao/numerosA[0].numerosB[2].multiplicacoes/Dezena_1) | 1     |
+seletor1/multiplicacao/numerosA[0].numerosB[2].multiplicacoes/Dezena_2__and0000(seletor1/multiplicacao/numerosA[0].numerosB[2].multiplicacoes/Dezena_mux0008<1>1:O)  | NONE(seletor1/multiplicacao/numerosA[0].numerosB[2].multiplicacoes/Dezena_2) | 1     |
+seletor1/multiplicacao/numerosA[0].numerosB[2].multiplicacoes/Dezena_2__or0000(seletor1/multiplicacao/numerosA[0].numerosB[2].multiplicacoes/Dezena_2__or00001:O)    | NONE(seletor1/multiplicacao/numerosA[0].numerosB[2].multiplicacoes/Dezena_2) | 1     |
+seletor1/multiplicacao/numerosA[0].numerosB[2].multiplicacoes/Dezena_3__or0000(seletor1/multiplicacao/numerosA[0].numerosB[2].multiplicacoes/Dezena_or00051:O)       | NONE(seletor1/multiplicacao/numerosA[0].numerosB[2].multiplicacoes/Dezena_3) | 1     |
+seletor1/multiplicacao/numerosA[0].numerosB[2].multiplicacoes/Unidade_0__and0000(seletor1/multiplicacao/numerosA[0].numerosB[2].multiplicacoes/Unidade_0__and00001:O)| NONE(seletor1/multiplicacao/numerosA[0].numerosB[2].multiplicacoes/Unidade_0)| 1     |
+seletor1/multiplicacao/numerosA[0].numerosB[2].multiplicacoes/Unidade_0__and0001(seletor1/multiplicacao/numerosA[0].numerosB[2].multiplicacoes/Unidade_0__and00011:O)| NONE(seletor1/multiplicacao/numerosA[0].numerosB[2].multiplicacoes/Unidade_0)| 1     |
+seletor1/multiplicacao/numerosA[0].numerosB[2].multiplicacoes/Unidade_1__and0000(seletor1/multiplicacao/numerosA[0].numerosB[2].multiplicacoes/Unidade_1__and00001:O)| NONE(seletor1/multiplicacao/numerosA[0].numerosB[2].multiplicacoes/Unidade_1)| 1     |
+seletor1/multiplicacao/numerosA[0].numerosB[2].multiplicacoes/Unidade_1__and0001(seletor1/multiplicacao/numerosA[0].numerosB[2].multiplicacoes/Unidade_1__and00011:O)| NONE(seletor1/multiplicacao/numerosA[0].numerosB[2].multiplicacoes/Unidade_1)| 1     |
+seletor1/multiplicacao/numerosA[0].numerosB[2].multiplicacoes/Unidade_2__and0000(seletor1/multiplicacao/numerosA[0].numerosB[2].multiplicacoes/Unidade_2__and00001:O)| NONE(seletor1/multiplicacao/numerosA[0].numerosB[2].multiplicacoes/Unidade_2)| 1     |
+seletor1/multiplicacao/numerosA[0].numerosB[2].multiplicacoes/Unidade_2__and0001(seletor1/multiplicacao/numerosA[0].numerosB[2].multiplicacoes/Unidade_2__and00011:O)| NONE(seletor1/multiplicacao/numerosA[0].numerosB[2].multiplicacoes/Unidade_2)| 1     |
+seletor1/multiplicacao/numerosA[0].numerosB[2].multiplicacoes/Unidade_3__and0000(seletor1/multiplicacao/numerosA[0].numerosB[2].multiplicacoes/Unidade_3__and00001:O)| NONE(seletor1/multiplicacao/numerosA[0].numerosB[2].multiplicacoes/Unidade_3)| 1     |
+seletor1/multiplicacao/numerosA[0].numerosB[2].multiplicacoes/Unidade_3__and0001(seletor1/multiplicacao/numerosA[0].numerosB[2].multiplicacoes/Unidade_3__and00011:O)| NONE(seletor1/multiplicacao/numerosA[0].numerosB[2].multiplicacoes/Unidade_3)| 1     |
+seletor1/multiplicacao/numerosA[0].numerosB[3].multiplicacoes/Dezena_0__or0000(seletor1/multiplicacao/numerosA[0].numerosB[3].multiplicacoes/Dezena_0__or00001:O)    | NONE(seletor1/multiplicacao/numerosA[0].numerosB[3].multiplicacoes/Dezena_0) | 1     |
+seletor1/multiplicacao/numerosA[0].numerosB[3].multiplicacoes/Dezena_0__or0001(seletor1/multiplicacao/numerosA[0].numerosB[3].multiplicacoes/Dezena_0__or00011:O)    | NONE(seletor1/multiplicacao/numerosA[0].numerosB[3].multiplicacoes/Dezena_0) | 1     |
+seletor1/multiplicacao/numerosA[0].numerosB[3].multiplicacoes/Dezena_1__and0000(seletor1/multiplicacao/numerosA[0].numerosB[3].multiplicacoes/Dezena_mux0008<2>2:O)  | NONE(seletor1/multiplicacao/numerosA[0].numerosB[3].multiplicacoes/Dezena_1) | 1     |
+seletor1/multiplicacao/numerosA[0].numerosB[3].multiplicacoes/Dezena_1__or0000(seletor1/multiplicacao/numerosA[0].numerosB[3].multiplicacoes/Dezena_1__or00001:O)    | NONE(seletor1/multiplicacao/numerosA[0].numerosB[3].multiplicacoes/Dezena_1) | 1     |
+seletor1/multiplicacao/numerosA[0].numerosB[3].multiplicacoes/Dezena_2__and0000(seletor1/multiplicacao/numerosA[0].numerosB[3].multiplicacoes/Dezena_mux0008<1>1:O)  | NONE(seletor1/multiplicacao/numerosA[0].numerosB[3].multiplicacoes/Dezena_2) | 1     |
+seletor1/multiplicacao/numerosA[0].numerosB[3].multiplicacoes/Dezena_2__or0000(seletor1/multiplicacao/numerosA[0].numerosB[3].multiplicacoes/Dezena_2__or00001:O)    | NONE(seletor1/multiplicacao/numerosA[0].numerosB[3].multiplicacoes/Dezena_2) | 1     |
+seletor1/multiplicacao/numerosA[0].numerosB[3].multiplicacoes/Dezena_3__or0000(seletor1/multiplicacao/numerosA[0].numerosB[3].multiplicacoes/Dezena_or00051:O)       | NONE(seletor1/multiplicacao/numerosA[0].numerosB[3].multiplicacoes/Dezena_3) | 1     |
+seletor1/multiplicacao/numerosA[0].numerosB[3].multiplicacoes/Unidade_0__and0000(seletor1/multiplicacao/numerosA[0].numerosB[3].multiplicacoes/Unidade_0__and00001:O)| NONE(seletor1/multiplicacao/numerosA[0].numerosB[3].multiplicacoes/Unidade_0)| 1     |
+seletor1/multiplicacao/numerosA[0].numerosB[3].multiplicacoes/Unidade_0__and0001(seletor1/multiplicacao/numerosA[0].numerosB[3].multiplicacoes/Unidade_0__and00011:O)| NONE(seletor1/multiplicacao/numerosA[0].numerosB[3].multiplicacoes/Unidade_0)| 1     |
+seletor1/multiplicacao/numerosA[0].numerosB[3].multiplicacoes/Unidade_1__and0000(seletor1/multiplicacao/numerosA[0].numerosB[3].multiplicacoes/Unidade_1__and00001:O)| NONE(seletor1/multiplicacao/numerosA[0].numerosB[3].multiplicacoes/Unidade_1)| 1     |
+seletor1/multiplicacao/numerosA[0].numerosB[3].multiplicacoes/Unidade_1__and0001(seletor1/multiplicacao/numerosA[0].numerosB[3].multiplicacoes/Unidade_1__and00011:O)| NONE(seletor1/multiplicacao/numerosA[0].numerosB[3].multiplicacoes/Unidade_1)| 1     |
+seletor1/multiplicacao/numerosA[0].numerosB[3].multiplicacoes/Unidade_2__and0000(seletor1/multiplicacao/numerosA[0].numerosB[3].multiplicacoes/Unidade_2__and00001:O)| NONE(seletor1/multiplicacao/numerosA[0].numerosB[3].multiplicacoes/Unidade_2)| 1     |
+seletor1/multiplicacao/numerosA[0].numerosB[3].multiplicacoes/Unidade_2__and0001(seletor1/multiplicacao/numerosA[0].numerosB[3].multiplicacoes/Unidade_2__and00011:O)| NONE(seletor1/multiplicacao/numerosA[0].numerosB[3].multiplicacoes/Unidade_2)| 1     |
+seletor1/multiplicacao/numerosA[0].numerosB[3].multiplicacoes/Unidade_3__and0000(seletor1/multiplicacao/numerosA[0].numerosB[3].multiplicacoes/Unidade_3__and00001:O)| NONE(seletor1/multiplicacao/numerosA[0].numerosB[3].multiplicacoes/Unidade_3)| 1     |
+seletor1/multiplicacao/numerosA[0].numerosB[3].multiplicacoes/Unidade_3__and0001(seletor1/multiplicacao/numerosA[0].numerosB[3].multiplicacoes/Unidade_3__and00011:O)| NONE(seletor1/multiplicacao/numerosA[0].numerosB[3].multiplicacoes/Unidade_3)| 1     |
+seletor1/multiplicacao/numerosA[1].numerosB[0].multiplicacoes/Dezena_0__or0000(seletor1/multiplicacao/numerosA[1].numerosB[0].multiplicacoes/Dezena_0__or00001:O)    | NONE(seletor1/multiplicacao/numerosA[1].numerosB[0].multiplicacoes/Dezena_0) | 1     |
+seletor1/multiplicacao/numerosA[1].numerosB[0].multiplicacoes/Dezena_0__or0001(seletor1/multiplicacao/numerosA[1].numerosB[0].multiplicacoes/Dezena_0__or00011:O)    | NONE(seletor1/multiplicacao/numerosA[1].numerosB[0].multiplicacoes/Dezena_0) | 1     |
+seletor1/multiplicacao/numerosA[1].numerosB[0].multiplicacoes/Dezena_1__and0000(seletor1/multiplicacao/numerosA[1].numerosB[0].multiplicacoes/Dezena_mux0008<2>2:O)  | NONE(seletor1/multiplicacao/numerosA[1].numerosB[0].multiplicacoes/Dezena_1) | 1     |
+seletor1/multiplicacao/numerosA[1].numerosB[0].multiplicacoes/Dezena_1__or0000(seletor1/multiplicacao/numerosA[1].numerosB[0].multiplicacoes/Dezena_1__or00001:O)    | NONE(seletor1/multiplicacao/numerosA[1].numerosB[0].multiplicacoes/Dezena_1) | 1     |
+seletor1/multiplicacao/numerosA[1].numerosB[0].multiplicacoes/Dezena_2__and0000(seletor1/multiplicacao/numerosA[1].numerosB[0].multiplicacoes/Dezena_mux0008<1>1:O)  | NONE(seletor1/multiplicacao/numerosA[1].numerosB[0].multiplicacoes/Dezena_2) | 1     |
+seletor1/multiplicacao/numerosA[1].numerosB[0].multiplicacoes/Dezena_2__or0000(seletor1/multiplicacao/numerosA[1].numerosB[0].multiplicacoes/Dezena_2__or00001:O)    | NONE(seletor1/multiplicacao/numerosA[1].numerosB[0].multiplicacoes/Dezena_2) | 1     |
+seletor1/multiplicacao/numerosA[1].numerosB[0].multiplicacoes/Dezena_3__or0000(seletor1/multiplicacao/numerosA[1].numerosB[0].multiplicacoes/Dezena_or00051:O)       | NONE(seletor1/multiplicacao/numerosA[1].numerosB[0].multiplicacoes/Dezena_3) | 1     |
+seletor1/multiplicacao/numerosA[1].numerosB[0].multiplicacoes/Unidade_0__and0000(seletor1/multiplicacao/numerosA[1].numerosB[0].multiplicacoes/Unidade_0__and00001:O)| NONE(seletor1/multiplicacao/numerosA[1].numerosB[0].multiplicacoes/Unidade_0)| 1     |
+seletor1/multiplicacao/numerosA[1].numerosB[0].multiplicacoes/Unidade_0__and0001(seletor1/multiplicacao/numerosA[1].numerosB[0].multiplicacoes/Unidade_0__and00011:O)| NONE(seletor1/multiplicacao/numerosA[1].numerosB[0].multiplicacoes/Unidade_0)| 1     |
+seletor1/multiplicacao/numerosA[1].numerosB[0].multiplicacoes/Unidade_1__and0000(seletor1/multiplicacao/numerosA[1].numerosB[0].multiplicacoes/Unidade_1__and00001:O)| NONE(seletor1/multiplicacao/numerosA[1].numerosB[0].multiplicacoes/Unidade_1)| 1     |
+seletor1/multiplicacao/numerosA[1].numerosB[0].multiplicacoes/Unidade_1__and0001(seletor1/multiplicacao/numerosA[1].numerosB[0].multiplicacoes/Unidade_1__and00011:O)| NONE(seletor1/multiplicacao/numerosA[1].numerosB[0].multiplicacoes/Unidade_1)| 1     |
+seletor1/multiplicacao/numerosA[1].numerosB[0].multiplicacoes/Unidade_2__and0000(seletor1/multiplicacao/numerosA[1].numerosB[0].multiplicacoes/Unidade_2__and00001:O)| NONE(seletor1/multiplicacao/numerosA[1].numerosB[0].multiplicacoes/Unidade_2)| 1     |
+seletor1/multiplicacao/numerosA[1].numerosB[0].multiplicacoes/Unidade_2__and0001(seletor1/multiplicacao/numerosA[1].numerosB[0].multiplicacoes/Unidade_2__and00011:O)| NONE(seletor1/multiplicacao/numerosA[1].numerosB[0].multiplicacoes/Unidade_2)| 1     |
+seletor1/multiplicacao/numerosA[1].numerosB[0].multiplicacoes/Unidade_3__and0000(seletor1/multiplicacao/numerosA[1].numerosB[0].multiplicacoes/Unidade_3__and00001:O)| NONE(seletor1/multiplicacao/numerosA[1].numerosB[0].multiplicacoes/Unidade_3)| 1     |
+seletor1/multiplicacao/numerosA[1].numerosB[0].multiplicacoes/Unidade_3__and0001(seletor1/multiplicacao/numerosA[1].numerosB[0].multiplicacoes/Unidade_3__and00011:O)| NONE(seletor1/multiplicacao/numerosA[1].numerosB[0].multiplicacoes/Unidade_3)| 1     |
+seletor1/multiplicacao/numerosA[1].numerosB[1].multiplicacoes/Dezena_0__or0000(seletor1/multiplicacao/numerosA[1].numerosB[1].multiplicacoes/Dezena_0__or00001:O)    | NONE(seletor1/multiplicacao/numerosA[1].numerosB[1].multiplicacoes/Dezena_0) | 1     |
+seletor1/multiplicacao/numerosA[1].numerosB[1].multiplicacoes/Dezena_0__or0001(seletor1/multiplicacao/numerosA[1].numerosB[1].multiplicacoes/Dezena_0__or00011:O)    | NONE(seletor1/multiplicacao/numerosA[1].numerosB[1].multiplicacoes/Dezena_0) | 1     |
+seletor1/multiplicacao/numerosA[1].numerosB[1].multiplicacoes/Dezena_1__and0000(seletor1/multiplicacao/numerosA[1].numerosB[1].multiplicacoes/Dezena_mux0008<2>2:O)  | NONE(seletor1/multiplicacao/numerosA[1].numerosB[1].multiplicacoes/Dezena_1) | 1     |
+seletor1/multiplicacao/numerosA[1].numerosB[1].multiplicacoes/Dezena_1__or0000(seletor1/multiplicacao/numerosA[1].numerosB[1].multiplicacoes/Dezena_1__or00001:O)    | NONE(seletor1/multiplicacao/numerosA[1].numerosB[1].multiplicacoes/Dezena_1) | 1     |
+seletor1/multiplicacao/numerosA[1].numerosB[1].multiplicacoes/Dezena_2__and0000(seletor1/multiplicacao/numerosA[1].numerosB[1].multiplicacoes/Dezena_mux0008<1>1:O)  | NONE(seletor1/multiplicacao/numerosA[1].numerosB[1].multiplicacoes/Dezena_2) | 1     |
+seletor1/multiplicacao/numerosA[1].numerosB[1].multiplicacoes/Dezena_2__or0000(seletor1/multiplicacao/numerosA[1].numerosB[1].multiplicacoes/Dezena_2__or00001:O)    | NONE(seletor1/multiplicacao/numerosA[1].numerosB[1].multiplicacoes/Dezena_2) | 1     |
+seletor1/multiplicacao/numerosA[1].numerosB[1].multiplicacoes/Dezena_3__or0000(seletor1/multiplicacao/numerosA[1].numerosB[1].multiplicacoes/Dezena_or00051:O)       | NONE(seletor1/multiplicacao/numerosA[1].numerosB[1].multiplicacoes/Dezena_3) | 1     |
+seletor1/multiplicacao/numerosA[1].numerosB[1].multiplicacoes/Unidade_0__and0000(seletor1/multiplicacao/numerosA[1].numerosB[1].multiplicacoes/Unidade_0__and00001:O)| NONE(seletor1/multiplicacao/numerosA[1].numerosB[1].multiplicacoes/Unidade_0)| 1     |
+seletor1/multiplicacao/numerosA[1].numerosB[1].multiplicacoes/Unidade_0__and0001(seletor1/multiplicacao/numerosA[1].numerosB[1].multiplicacoes/Unidade_0__and00011:O)| NONE(seletor1/multiplicacao/numerosA[1].numerosB[1].multiplicacoes/Unidade_0)| 1     |
+seletor1/multiplicacao/numerosA[1].numerosB[1].multiplicacoes/Unidade_1__and0000(seletor1/multiplicacao/numerosA[1].numerosB[1].multiplicacoes/Unidade_1__and00001:O)| NONE(seletor1/multiplicacao/numerosA[1].numerosB[1].multiplicacoes/Unidade_1)| 1     |
+seletor1/multiplicacao/numerosA[1].numerosB[1].multiplicacoes/Unidade_1__and0001(seletor1/multiplicacao/numerosA[1].numerosB[1].multiplicacoes/Unidade_1__and00011:O)| NONE(seletor1/multiplicacao/numerosA[1].numerosB[1].multiplicacoes/Unidade_1)| 1     |
+seletor1/multiplicacao/numerosA[1].numerosB[1].multiplicacoes/Unidade_2__and0000(seletor1/multiplicacao/numerosA[1].numerosB[1].multiplicacoes/Unidade_2__and00001:O)| NONE(seletor1/multiplicacao/numerosA[1].numerosB[1].multiplicacoes/Unidade_2)| 1     |
+seletor1/multiplicacao/numerosA[1].numerosB[1].multiplicacoes/Unidade_2__and0001(seletor1/multiplicacao/numerosA[1].numerosB[1].multiplicacoes/Unidade_2__and00011:O)| NONE(seletor1/multiplicacao/numerosA[1].numerosB[1].multiplicacoes/Unidade_2)| 1     |
+seletor1/multiplicacao/numerosA[1].numerosB[1].multiplicacoes/Unidade_3__and0000(seletor1/multiplicacao/numerosA[1].numerosB[1].multiplicacoes/Unidade_3__and00001:O)| NONE(seletor1/multiplicacao/numerosA[1].numerosB[1].multiplicacoes/Unidade_3)| 1     |
+seletor1/multiplicacao/numerosA[1].numerosB[1].multiplicacoes/Unidade_3__and0001(seletor1/multiplicacao/numerosA[1].numerosB[1].multiplicacoes/Unidade_3__and00011:O)| NONE(seletor1/multiplicacao/numerosA[1].numerosB[1].multiplicacoes/Unidade_3)| 1     |
+seletor1/multiplicacao/numerosA[1].numerosB[2].multiplicacoes/Dezena_0__or0000(seletor1/multiplicacao/numerosA[1].numerosB[2].multiplicacoes/Dezena_0__or00001:O)    | NONE(seletor1/multiplicacao/numerosA[1].numerosB[2].multiplicacoes/Dezena_0) | 1     |
+seletor1/multiplicacao/numerosA[1].numerosB[2].multiplicacoes/Dezena_0__or0001(seletor1/multiplicacao/numerosA[1].numerosB[2].multiplicacoes/Dezena_0__or00011:O)    | NONE(seletor1/multiplicacao/numerosA[1].numerosB[2].multiplicacoes/Dezena_0) | 1     |
+seletor1/multiplicacao/numerosA[1].numerosB[2].multiplicacoes/Dezena_1__and0000(seletor1/multiplicacao/numerosA[1].numerosB[2].multiplicacoes/Dezena_mux0008<2>2:O)  | NONE(seletor1/multiplicacao/numerosA[1].numerosB[2].multiplicacoes/Dezena_1) | 1     |
+seletor1/multiplicacao/numerosA[1].numerosB[2].multiplicacoes/Dezena_1__or0000(seletor1/multiplicacao/numerosA[1].numerosB[2].multiplicacoes/Dezena_1__or00001:O)    | NONE(seletor1/multiplicacao/numerosA[1].numerosB[2].multiplicacoes/Dezena_1) | 1     |
+seletor1/multiplicacao/numerosA[1].numerosB[2].multiplicacoes/Dezena_2__and0000(seletor1/multiplicacao/numerosA[1].numerosB[2].multiplicacoes/Dezena_mux0008<1>1:O)  | NONE(seletor1/multiplicacao/numerosA[1].numerosB[2].multiplicacoes/Dezena_2) | 1     |
+seletor1/multiplicacao/numerosA[1].numerosB[2].multiplicacoes/Dezena_2__or0000(seletor1/multiplicacao/numerosA[1].numerosB[2].multiplicacoes/Dezena_2__or00001:O)    | NONE(seletor1/multiplicacao/numerosA[1].numerosB[2].multiplicacoes/Dezena_2) | 1     |
+seletor1/multiplicacao/numerosA[1].numerosB[2].multiplicacoes/Dezena_3__or0000(seletor1/multiplicacao/numerosA[1].numerosB[2].multiplicacoes/Dezena_or00051:O)       | NONE(seletor1/multiplicacao/numerosA[1].numerosB[2].multiplicacoes/Dezena_3) | 1     |
+seletor1/multiplicacao/numerosA[1].numerosB[2].multiplicacoes/Unidade_0__and0000(seletor1/multiplicacao/numerosA[1].numerosB[2].multiplicacoes/Unidade_0__and00001:O)| NONE(seletor1/multiplicacao/numerosA[1].numerosB[2].multiplicacoes/Unidade_0)| 1     |
+seletor1/multiplicacao/numerosA[1].numerosB[2].multiplicacoes/Unidade_0__and0001(seletor1/multiplicacao/numerosA[1].numerosB[2].multiplicacoes/Unidade_0__and00011:O)| NONE(seletor1/multiplicacao/numerosA[1].numerosB[2].multiplicacoes/Unidade_0)| 1     |
+seletor1/multiplicacao/numerosA[1].numerosB[2].multiplicacoes/Unidade_1__and0000(seletor1/multiplicacao/numerosA[1].numerosB[2].multiplicacoes/Unidade_1__and00001:O)| NONE(seletor1/multiplicacao/numerosA[1].numerosB[2].multiplicacoes/Unidade_1)| 1     |
+seletor1/multiplicacao/numerosA[1].numerosB[2].multiplicacoes/Unidade_1__and0001(seletor1/multiplicacao/numerosA[1].numerosB[2].multiplicacoes/Unidade_1__and00011:O)| NONE(seletor1/multiplicacao/numerosA[1].numerosB[2].multiplicacoes/Unidade_1)| 1     |
+seletor1/multiplicacao/numerosA[1].numerosB[2].multiplicacoes/Unidade_2__and0000(seletor1/multiplicacao/numerosA[1].numerosB[2].multiplicacoes/Unidade_2__and00001:O)| NONE(seletor1/multiplicacao/numerosA[1].numerosB[2].multiplicacoes/Unidade_2)| 1     |
+seletor1/multiplicacao/numerosA[1].numerosB[2].multiplicacoes/Unidade_2__and0001(seletor1/multiplicacao/numerosA[1].numerosB[2].multiplicacoes/Unidade_2__and00011:O)| NONE(seletor1/multiplicacao/numerosA[1].numerosB[2].multiplicacoes/Unidade_2)| 1     |
+seletor1/multiplicacao/numerosA[1].numerosB[2].multiplicacoes/Unidade_3__and0000(seletor1/multiplicacao/numerosA[1].numerosB[2].multiplicacoes/Unidade_3__and00001:O)| NONE(seletor1/multiplicacao/numerosA[1].numerosB[2].multiplicacoes/Unidade_3)| 1     |
+seletor1/multiplicacao/numerosA[1].numerosB[2].multiplicacoes/Unidade_3__and0001(seletor1/multiplicacao/numerosA[1].numerosB[2].multiplicacoes/Unidade_3__and00011:O)| NONE(seletor1/multiplicacao/numerosA[1].numerosB[2].multiplicacoes/Unidade_3)| 1     |
+seletor1/multiplicacao/numerosA[1].numerosB[3].multiplicacoes/Dezena_0__or0000(seletor1/multiplicacao/numerosA[1].numerosB[3].multiplicacoes/Dezena_0__or00001:O)    | NONE(seletor1/multiplicacao/numerosA[1].numerosB[3].multiplicacoes/Dezena_0) | 1     |
+seletor1/multiplicacao/numerosA[1].numerosB[3].multiplicacoes/Dezena_0__or0001(seletor1/multiplicacao/numerosA[1].numerosB[3].multiplicacoes/Dezena_0__or00011:O)    | NONE(seletor1/multiplicacao/numerosA[1].numerosB[3].multiplicacoes/Dezena_0) | 1     |
+seletor1/multiplicacao/numerosA[1].numerosB[3].multiplicacoes/Dezena_1__and0000(seletor1/multiplicacao/numerosA[1].numerosB[3].multiplicacoes/Dezena_mux0008<2>2:O)  | NONE(seletor1/multiplicacao/numerosA[1].numerosB[3].multiplicacoes/Dezena_1) | 1     |
+seletor1/multiplicacao/numerosA[1].numerosB[3].multiplicacoes/Dezena_1__or0000(seletor1/multiplicacao/numerosA[1].numerosB[3].multiplicacoes/Dezena_1__or00001:O)    | NONE(seletor1/multiplicacao/numerosA[1].numerosB[3].multiplicacoes/Dezena_1) | 1     |
+seletor1/multiplicacao/numerosA[1].numerosB[3].multiplicacoes/Dezena_2__and0000(seletor1/multiplicacao/numerosA[1].numerosB[3].multiplicacoes/Dezena_mux0008<1>1:O)  | NONE(seletor1/multiplicacao/numerosA[1].numerosB[3].multiplicacoes/Dezena_2) | 1     |
+seletor1/multiplicacao/numerosA[1].numerosB[3].multiplicacoes/Dezena_2__or0000(seletor1/multiplicacao/numerosA[1].numerosB[3].multiplicacoes/Dezena_2__or00001:O)    | NONE(seletor1/multiplicacao/numerosA[1].numerosB[3].multiplicacoes/Dezena_2) | 1     |
+seletor1/multiplicacao/numerosA[1].numerosB[3].multiplicacoes/Dezena_3__or0000(seletor1/multiplicacao/numerosA[1].numerosB[3].multiplicacoes/Dezena_or00051:O)       | NONE(seletor1/multiplicacao/numerosA[1].numerosB[3].multiplicacoes/Dezena_3) | 1     |
+seletor1/multiplicacao/numerosA[1].numerosB[3].multiplicacoes/Unidade_0__and0000(seletor1/multiplicacao/numerosA[1].numerosB[3].multiplicacoes/Unidade_0__and00001:O)| NONE(seletor1/multiplicacao/numerosA[1].numerosB[3].multiplicacoes/Unidade_0)| 1     |
+seletor1/multiplicacao/numerosA[1].numerosB[3].multiplicacoes/Unidade_0__and0001(seletor1/multiplicacao/numerosA[1].numerosB[3].multiplicacoes/Unidade_0__and00011:O)| NONE(seletor1/multiplicacao/numerosA[1].numerosB[3].multiplicacoes/Unidade_0)| 1     |
+seletor1/multiplicacao/numerosA[1].numerosB[3].multiplicacoes/Unidade_1__and0000(seletor1/multiplicacao/numerosA[1].numerosB[3].multiplicacoes/Unidade_1__and00001:O)| NONE(seletor1/multiplicacao/numerosA[1].numerosB[3].multiplicacoes/Unidade_1)| 1     |
+seletor1/multiplicacao/numerosA[1].numerosB[3].multiplicacoes/Unidade_1__and0001(seletor1/multiplicacao/numerosA[1].numerosB[3].multiplicacoes/Unidade_1__and00011:O)| NONE(seletor1/multiplicacao/numerosA[1].numerosB[3].multiplicacoes/Unidade_1)| 1     |
+seletor1/multiplicacao/numerosA[1].numerosB[3].multiplicacoes/Unidade_2__and0000(seletor1/multiplicacao/numerosA[1].numerosB[3].multiplicacoes/Unidade_2__and00001:O)| NONE(seletor1/multiplicacao/numerosA[1].numerosB[3].multiplicacoes/Unidade_2)| 1     |
+seletor1/multiplicacao/numerosA[1].numerosB[3].multiplicacoes/Unidade_2__and0001(seletor1/multiplicacao/numerosA[1].numerosB[3].multiplicacoes/Unidade_2__and00011:O)| NONE(seletor1/multiplicacao/numerosA[1].numerosB[3].multiplicacoes/Unidade_2)| 1     |
+seletor1/multiplicacao/numerosA[1].numerosB[3].multiplicacoes/Unidade_3__and0000(seletor1/multiplicacao/numerosA[1].numerosB[3].multiplicacoes/Unidade_3__and00001:O)| NONE(seletor1/multiplicacao/numerosA[1].numerosB[3].multiplicacoes/Unidade_3)| 1     |
+seletor1/multiplicacao/numerosA[1].numerosB[3].multiplicacoes/Unidade_3__and0001(seletor1/multiplicacao/numerosA[1].numerosB[3].multiplicacoes/Unidade_3__and00011:O)| NONE(seletor1/multiplicacao/numerosA[1].numerosB[3].multiplicacoes/Unidade_3)| 1     |
+seletor1/multiplicacao/numerosA[2].numerosB[0].multiplicacoes/Dezena_0__or0000(seletor1/multiplicacao/numerosA[2].numerosB[0].multiplicacoes/Dezena_0__or00001:O)    | NONE(seletor1/multiplicacao/numerosA[2].numerosB[0].multiplicacoes/Dezena_0) | 1     |
+seletor1/multiplicacao/numerosA[2].numerosB[0].multiplicacoes/Dezena_0__or0001(seletor1/multiplicacao/numerosA[2].numerosB[0].multiplicacoes/Dezena_0__or00011:O)    | NONE(seletor1/multiplicacao/numerosA[2].numerosB[0].multiplicacoes/Dezena_0) | 1     |
+seletor1/multiplicacao/numerosA[2].numerosB[0].multiplicacoes/Dezena_1__and0000(seletor1/multiplicacao/numerosA[2].numerosB[0].multiplicacoes/Dezena_mux0008<2>2:O)  | NONE(seletor1/multiplicacao/numerosA[2].numerosB[0].multiplicacoes/Dezena_1) | 1     |
+seletor1/multiplicacao/numerosA[2].numerosB[0].multiplicacoes/Dezena_1__or0000(seletor1/multiplicacao/numerosA[2].numerosB[0].multiplicacoes/Dezena_1__or00001:O)    | NONE(seletor1/multiplicacao/numerosA[2].numerosB[0].multiplicacoes/Dezena_1) | 1     |
+seletor1/multiplicacao/numerosA[2].numerosB[0].multiplicacoes/Dezena_2__and0000(seletor1/multiplicacao/numerosA[2].numerosB[0].multiplicacoes/Dezena_mux0008<1>1:O)  | NONE(seletor1/multiplicacao/numerosA[2].numerosB[0].multiplicacoes/Dezena_2) | 1     |
+seletor1/multiplicacao/numerosA[2].numerosB[0].multiplicacoes/Dezena_2__or0000(seletor1/multiplicacao/numerosA[2].numerosB[0].multiplicacoes/Dezena_2__or00001:O)    | NONE(seletor1/multiplicacao/numerosA[2].numerosB[0].multiplicacoes/Dezena_2) | 1     |
+seletor1/multiplicacao/numerosA[2].numerosB[0].multiplicacoes/Dezena_3__or0000(seletor1/multiplicacao/numerosA[2].numerosB[0].multiplicacoes/Dezena_or00051:O)       | NONE(seletor1/multiplicacao/numerosA[2].numerosB[0].multiplicacoes/Dezena_3) | 1     |
+seletor1/multiplicacao/numerosA[2].numerosB[0].multiplicacoes/Unidade_0__and0000(seletor1/multiplicacao/numerosA[2].numerosB[0].multiplicacoes/Unidade_0__and00001:O)| NONE(seletor1/multiplicacao/numerosA[2].numerosB[0].multiplicacoes/Unidade_0)| 1     |
+seletor1/multiplicacao/numerosA[2].numerosB[0].multiplicacoes/Unidade_0__and0001(seletor1/multiplicacao/numerosA[2].numerosB[0].multiplicacoes/Unidade_0__and00011:O)| NONE(seletor1/multiplicacao/numerosA[2].numerosB[0].multiplicacoes/Unidade_0)| 1     |
+seletor1/multiplicacao/numerosA[2].numerosB[0].multiplicacoes/Unidade_1__and0000(seletor1/multiplicacao/numerosA[2].numerosB[0].multiplicacoes/Unidade_1__and00001:O)| NONE(seletor1/multiplicacao/numerosA[2].numerosB[0].multiplicacoes/Unidade_1)| 1     |
+seletor1/multiplicacao/numerosA[2].numerosB[0].multiplicacoes/Unidade_1__and0001(seletor1/multiplicacao/numerosA[2].numerosB[0].multiplicacoes/Unidade_1__and00011:O)| NONE(seletor1/multiplicacao/numerosA[2].numerosB[0].multiplicacoes/Unidade_1)| 1     |
+seletor1/multiplicacao/numerosA[2].numerosB[0].multiplicacoes/Unidade_2__and0000(seletor1/multiplicacao/numerosA[2].numerosB[0].multiplicacoes/Unidade_2__and00001:O)| NONE(seletor1/multiplicacao/numerosA[2].numerosB[0].multiplicacoes/Unidade_2)| 1     |
+seletor1/multiplicacao/numerosA[2].numerosB[0].multiplicacoes/Unidade_2__and0001(seletor1/multiplicacao/numerosA[2].numerosB[0].multiplicacoes/Unidade_2__and00011:O)| NONE(seletor1/multiplicacao/numerosA[2].numerosB[0].multiplicacoes/Unidade_2)| 1     |
+seletor1/multiplicacao/numerosA[2].numerosB[0].multiplicacoes/Unidade_3__and0000(seletor1/multiplicacao/numerosA[2].numerosB[0].multiplicacoes/Unidade_3__and00001:O)| NONE(seletor1/multiplicacao/numerosA[2].numerosB[0].multiplicacoes/Unidade_3)| 1     |
+seletor1/multiplicacao/numerosA[2].numerosB[0].multiplicacoes/Unidade_3__and0001(seletor1/multiplicacao/numerosA[2].numerosB[0].multiplicacoes/Unidade_3__and00011:O)| NONE(seletor1/multiplicacao/numerosA[2].numerosB[0].multiplicacoes/Unidade_3)| 1     |
+seletor1/multiplicacao/numerosA[2].numerosB[1].multiplicacoes/Dezena_0__or0000(seletor1/multiplicacao/numerosA[2].numerosB[1].multiplicacoes/Dezena_0__or00001:O)    | NONE(seletor1/multiplicacao/numerosA[2].numerosB[1].multiplicacoes/Dezena_0) | 1     |
+seletor1/multiplicacao/numerosA[2].numerosB[1].multiplicacoes/Dezena_0__or0001(seletor1/multiplicacao/numerosA[2].numerosB[1].multiplicacoes/Dezena_0__or00011:O)    | NONE(seletor1/multiplicacao/numerosA[2].numerosB[1].multiplicacoes/Dezena_0) | 1     |
+seletor1/multiplicacao/numerosA[2].numerosB[1].multiplicacoes/Dezena_1__and0000(seletor1/multiplicacao/numerosA[2].numerosB[1].multiplicacoes/Dezena_mux0008<2>2:O)  | NONE(seletor1/multiplicacao/numerosA[2].numerosB[1].multiplicacoes/Dezena_1) | 1     |
+seletor1/multiplicacao/numerosA[2].numerosB[1].multiplicacoes/Dezena_1__or0000(seletor1/multiplicacao/numerosA[2].numerosB[1].multiplicacoes/Dezena_1__or00001:O)    | NONE(seletor1/multiplicacao/numerosA[2].numerosB[1].multiplicacoes/Dezena_1) | 1     |
+seletor1/multiplicacao/numerosA[2].numerosB[1].multiplicacoes/Dezena_2__and0000(seletor1/multiplicacao/numerosA[2].numerosB[1].multiplicacoes/Dezena_mux0008<1>1:O)  | NONE(seletor1/multiplicacao/numerosA[2].numerosB[1].multiplicacoes/Dezena_2) | 1     |
+seletor1/multiplicacao/numerosA[2].numerosB[1].multiplicacoes/Dezena_2__or0000(seletor1/multiplicacao/numerosA[2].numerosB[1].multiplicacoes/Dezena_2__or00001:O)    | NONE(seletor1/multiplicacao/numerosA[2].numerosB[1].multiplicacoes/Dezena_2) | 1     |
+seletor1/multiplicacao/numerosA[2].numerosB[1].multiplicacoes/Dezena_3__or0000(seletor1/multiplicacao/numerosA[2].numerosB[1].multiplicacoes/Dezena_or00051:O)       | NONE(seletor1/multiplicacao/numerosA[2].numerosB[1].multiplicacoes/Dezena_3) | 1     |
+seletor1/multiplicacao/numerosA[2].numerosB[1].multiplicacoes/Unidade_0__and0000(seletor1/multiplicacao/numerosA[2].numerosB[1].multiplicacoes/Unidade_0__and00001:O)| NONE(seletor1/multiplicacao/numerosA[2].numerosB[1].multiplicacoes/Unidade_0)| 1     |
+seletor1/multiplicacao/numerosA[2].numerosB[1].multiplicacoes/Unidade_0__and0001(seletor1/multiplicacao/numerosA[2].numerosB[1].multiplicacoes/Unidade_0__and00011:O)| NONE(seletor1/multiplicacao/numerosA[2].numerosB[1].multiplicacoes/Unidade_0)| 1     |
+seletor1/multiplicacao/numerosA[2].numerosB[1].multiplicacoes/Unidade_1__and0000(seletor1/multiplicacao/numerosA[2].numerosB[1].multiplicacoes/Unidade_1__and00001:O)| NONE(seletor1/multiplicacao/numerosA[2].numerosB[1].multiplicacoes/Unidade_1)| 1     |
+seletor1/multiplicacao/numerosA[2].numerosB[1].multiplicacoes/Unidade_1__and0001(seletor1/multiplicacao/numerosA[2].numerosB[1].multiplicacoes/Unidade_1__and00011:O)| NONE(seletor1/multiplicacao/numerosA[2].numerosB[1].multiplicacoes/Unidade_1)| 1     |
+seletor1/multiplicacao/numerosA[2].numerosB[1].multiplicacoes/Unidade_2__and0000(seletor1/multiplicacao/numerosA[2].numerosB[1].multiplicacoes/Unidade_2__and00001:O)| NONE(seletor1/multiplicacao/numerosA[2].numerosB[1].multiplicacoes/Unidade_2)| 1     |
+seletor1/multiplicacao/numerosA[2].numerosB[1].multiplicacoes/Unidade_2__and0001(seletor1/multiplicacao/numerosA[2].numerosB[1].multiplicacoes/Unidade_2__and00011:O)| NONE(seletor1/multiplicacao/numerosA[2].numerosB[1].multiplicacoes/Unidade_2)| 1     |
+seletor1/multiplicacao/numerosA[2].numerosB[1].multiplicacoes/Unidade_3__and0000(seletor1/multiplicacao/numerosA[2].numerosB[1].multiplicacoes/Unidade_3__and00001:O)| NONE(seletor1/multiplicacao/numerosA[2].numerosB[1].multiplicacoes/Unidade_3)| 1     |
+seletor1/multiplicacao/numerosA[2].numerosB[1].multiplicacoes/Unidade_3__and0001(seletor1/multiplicacao/numerosA[2].numerosB[1].multiplicacoes/Unidade_3__and00011:O)| NONE(seletor1/multiplicacao/numerosA[2].numerosB[1].multiplicacoes/Unidade_3)| 1     |
+seletor1/multiplicacao/numerosA[2].numerosB[2].multiplicacoes/Dezena_0__or0000(seletor1/multiplicacao/numerosA[2].numerosB[2].multiplicacoes/Dezena_0__or00001:O)    | NONE(seletor1/multiplicacao/numerosA[2].numerosB[2].multiplicacoes/Dezena_0) | 1     |
+seletor1/multiplicacao/numerosA[2].numerosB[2].multiplicacoes/Dezena_0__or0001(seletor1/multiplicacao/numerosA[2].numerosB[2].multiplicacoes/Dezena_0__or00011:O)    | NONE(seletor1/multiplicacao/numerosA[2].numerosB[2].multiplicacoes/Dezena_0) | 1     |
+seletor1/multiplicacao/numerosA[2].numerosB[2].multiplicacoes/Dezena_1__and0000(seletor1/multiplicacao/numerosA[2].numerosB[2].multiplicacoes/Dezena_mux0008<2>2:O)  | NONE(seletor1/multiplicacao/numerosA[2].numerosB[2].multiplicacoes/Dezena_1) | 1     |
+seletor1/multiplicacao/numerosA[2].numerosB[2].multiplicacoes/Dezena_1__or0000(seletor1/multiplicacao/numerosA[2].numerosB[2].multiplicacoes/Dezena_1__or00001:O)    | NONE(seletor1/multiplicacao/numerosA[2].numerosB[2].multiplicacoes/Dezena_1) | 1     |
+seletor1/multiplicacao/numerosA[2].numerosB[2].multiplicacoes/Dezena_2__and0000(seletor1/multiplicacao/numerosA[2].numerosB[2].multiplicacoes/Dezena_mux0008<1>1:O)  | NONE(seletor1/multiplicacao/numerosA[2].numerosB[2].multiplicacoes/Dezena_2) | 1     |
+seletor1/multiplicacao/numerosA[2].numerosB[2].multiplicacoes/Dezena_2__or0000(seletor1/multiplicacao/numerosA[2].numerosB[2].multiplicacoes/Dezena_2__or00001:O)    | NONE(seletor1/multiplicacao/numerosA[2].numerosB[2].multiplicacoes/Dezena_2) | 1     |
+seletor1/multiplicacao/numerosA[2].numerosB[2].multiplicacoes/Dezena_3__or0000(seletor1/multiplicacao/numerosA[2].numerosB[2].multiplicacoes/Dezena_or00051:O)       | NONE(seletor1/multiplicacao/numerosA[2].numerosB[2].multiplicacoes/Dezena_3) | 1     |
+seletor1/multiplicacao/numerosA[2].numerosB[2].multiplicacoes/Unidade_0__and0000(seletor1/multiplicacao/numerosA[2].numerosB[2].multiplicacoes/Unidade_0__and00001:O)| NONE(seletor1/multiplicacao/numerosA[2].numerosB[2].multiplicacoes/Unidade_0)| 1     |
+seletor1/multiplicacao/numerosA[2].numerosB[2].multiplicacoes/Unidade_0__and0001(seletor1/multiplicacao/numerosA[2].numerosB[2].multiplicacoes/Unidade_0__and00011:O)| NONE(seletor1/multiplicacao/numerosA[2].numerosB[2].multiplicacoes/Unidade_0)| 1     |
+seletor1/multiplicacao/numerosA[2].numerosB[2].multiplicacoes/Unidade_1__and0000(seletor1/multiplicacao/numerosA[2].numerosB[2].multiplicacoes/Unidade_1__and00001:O)| NONE(seletor1/multiplicacao/numerosA[2].numerosB[2].multiplicacoes/Unidade_1)| 1     |
+seletor1/multiplicacao/numerosA[2].numerosB[2].multiplicacoes/Unidade_1__and0001(seletor1/multiplicacao/numerosA[2].numerosB[2].multiplicacoes/Unidade_1__and00011:O)| NONE(seletor1/multiplicacao/numerosA[2].numerosB[2].multiplicacoes/Unidade_1)| 1     |
+seletor1/multiplicacao/numerosA[2].numerosB[2].multiplicacoes/Unidade_2__and0000(seletor1/multiplicacao/numerosA[2].numerosB[2].multiplicacoes/Unidade_2__and00001:O)| NONE(seletor1/multiplicacao/numerosA[2].numerosB[2].multiplicacoes/Unidade_2)| 1     |
+seletor1/multiplicacao/numerosA[2].numerosB[2].multiplicacoes/Unidade_2__and0001(seletor1/multiplicacao/numerosA[2].numerosB[2].multiplicacoes/Unidade_2__and00011:O)| NONE(seletor1/multiplicacao/numerosA[2].numerosB[2].multiplicacoes/Unidade_2)| 1     |
+seletor1/multiplicacao/numerosA[2].numerosB[2].multiplicacoes/Unidade_3__and0000(seletor1/multiplicacao/numerosA[2].numerosB[2].multiplicacoes/Unidade_3__and00001:O)| NONE(seletor1/multiplicacao/numerosA[2].numerosB[2].multiplicacoes/Unidade_3)| 1     |
+seletor1/multiplicacao/numerosA[2].numerosB[2].multiplicacoes/Unidade_3__and0001(seletor1/multiplicacao/numerosA[2].numerosB[2].multiplicacoes/Unidade_3__and00011:O)| NONE(seletor1/multiplicacao/numerosA[2].numerosB[2].multiplicacoes/Unidade_3)| 1     |
+seletor1/multiplicacao/numerosA[2].numerosB[3].multiplicacoes/Dezena_0__or0000(seletor1/multiplicacao/numerosA[2].numerosB[3].multiplicacoes/Dezena_0__or00001:O)    | NONE(seletor1/multiplicacao/numerosA[2].numerosB[3].multiplicacoes/Dezena_0) | 1     |
+seletor1/multiplicacao/numerosA[2].numerosB[3].multiplicacoes/Dezena_0__or0001(seletor1/multiplicacao/numerosA[2].numerosB[3].multiplicacoes/Dezena_0__or00011:O)    | NONE(seletor1/multiplicacao/numerosA[2].numerosB[3].multiplicacoes/Dezena_0) | 1     |
+seletor1/multiplicacao/numerosA[2].numerosB[3].multiplicacoes/Dezena_1__and0000(seletor1/multiplicacao/numerosA[2].numerosB[3].multiplicacoes/Dezena_mux0008<2>2:O)  | NONE(seletor1/multiplicacao/numerosA[2].numerosB[3].multiplicacoes/Dezena_1) | 1     |
+seletor1/multiplicacao/numerosA[2].numerosB[3].multiplicacoes/Dezena_1__or0000(seletor1/multiplicacao/numerosA[2].numerosB[3].multiplicacoes/Dezena_1__or00001:O)    | NONE(seletor1/multiplicacao/numerosA[2].numerosB[3].multiplicacoes/Dezena_1) | 1     |
+seletor1/multiplicacao/numerosA[2].numerosB[3].multiplicacoes/Dezena_2__and0000(seletor1/multiplicacao/numerosA[2].numerosB[3].multiplicacoes/Dezena_mux0008<1>1:O)  | NONE(seletor1/multiplicacao/numerosA[2].numerosB[3].multiplicacoes/Dezena_2) | 1     |
+seletor1/multiplicacao/numerosA[2].numerosB[3].multiplicacoes/Dezena_2__or0000(seletor1/multiplicacao/numerosA[2].numerosB[3].multiplicacoes/Dezena_2__or00001:O)    | NONE(seletor1/multiplicacao/numerosA[2].numerosB[3].multiplicacoes/Dezena_2) | 1     |
+seletor1/multiplicacao/numerosA[2].numerosB[3].multiplicacoes/Dezena_3__or0000(seletor1/multiplicacao/numerosA[2].numerosB[3].multiplicacoes/Dezena_or00051:O)       | NONE(seletor1/multiplicacao/numerosA[2].numerosB[3].multiplicacoes/Dezena_3) | 1     |
+seletor1/multiplicacao/numerosA[2].numerosB[3].multiplicacoes/Unidade_0__and0000(seletor1/multiplicacao/numerosA[2].numerosB[3].multiplicacoes/Unidade_0__and00001:O)| NONE(seletor1/multiplicacao/numerosA[2].numerosB[3].multiplicacoes/Unidade_0)| 1     |
+seletor1/multiplicacao/numerosA[2].numerosB[3].multiplicacoes/Unidade_0__and0001(seletor1/multiplicacao/numerosA[2].numerosB[3].multiplicacoes/Unidade_0__and00011:O)| NONE(seletor1/multiplicacao/numerosA[2].numerosB[3].multiplicacoes/Unidade_0)| 1     |
+seletor1/multiplicacao/numerosA[2].numerosB[3].multiplicacoes/Unidade_1__and0000(seletor1/multiplicacao/numerosA[2].numerosB[3].multiplicacoes/Unidade_1__and00001:O)| NONE(seletor1/multiplicacao/numerosA[2].numerosB[3].multiplicacoes/Unidade_1)| 1     |
+seletor1/multiplicacao/numerosA[2].numerosB[3].multiplicacoes/Unidade_1__and0001(seletor1/multiplicacao/numerosA[2].numerosB[3].multiplicacoes/Unidade_1__and00011:O)| NONE(seletor1/multiplicacao/numerosA[2].numerosB[3].multiplicacoes/Unidade_1)| 1     |
+seletor1/multiplicacao/numerosA[2].numerosB[3].multiplicacoes/Unidade_2__and0000(seletor1/multiplicacao/numerosA[2].numerosB[3].multiplicacoes/Unidade_2__and00001:O)| NONE(seletor1/multiplicacao/numerosA[2].numerosB[3].multiplicacoes/Unidade_2)| 1     |
+seletor1/multiplicacao/numerosA[2].numerosB[3].multiplicacoes/Unidade_2__and0001(seletor1/multiplicacao/numerosA[2].numerosB[3].multiplicacoes/Unidade_2__and00011:O)| NONE(seletor1/multiplicacao/numerosA[2].numerosB[3].multiplicacoes/Unidade_2)| 1     |
+seletor1/multiplicacao/numerosA[2].numerosB[3].multiplicacoes/Unidade_3__and0000(seletor1/multiplicacao/numerosA[2].numerosB[3].multiplicacoes/Unidade_3__and00001:O)| NONE(seletor1/multiplicacao/numerosA[2].numerosB[3].multiplicacoes/Unidade_3)| 1     |
+seletor1/multiplicacao/numerosA[2].numerosB[3].multiplicacoes/Unidade_3__and0001(seletor1/multiplicacao/numerosA[2].numerosB[3].multiplicacoes/Unidade_3__and00011:O)| NONE(seletor1/multiplicacao/numerosA[2].numerosB[3].multiplicacoes/Unidade_3)| 1     |
+seletor1/multiplicacao/numerosA[3].numerosB[0].multiplicacoes/Dezena_0__or0000(seletor1/multiplicacao/numerosA[3].numerosB[0].multiplicacoes/Dezena_0__or00001:O)    | NONE(seletor1/multiplicacao/numerosA[3].numerosB[0].multiplicacoes/Dezena_0) | 1     |
+seletor1/multiplicacao/numerosA[3].numerosB[0].multiplicacoes/Dezena_0__or0001(seletor1/multiplicacao/numerosA[3].numerosB[0].multiplicacoes/Dezena_0__or00011:O)    | NONE(seletor1/multiplicacao/numerosA[3].numerosB[0].multiplicacoes/Dezena_0) | 1     |
+seletor1/multiplicacao/numerosA[3].numerosB[0].multiplicacoes/Dezena_1__and0000(seletor1/multiplicacao/numerosA[3].numerosB[0].multiplicacoes/Dezena_mux0008<2>2:O)  | NONE(seletor1/multiplicacao/numerosA[3].numerosB[0].multiplicacoes/Dezena_1) | 1     |
+seletor1/multiplicacao/numerosA[3].numerosB[0].multiplicacoes/Dezena_1__or0000(seletor1/multiplicacao/numerosA[3].numerosB[0].multiplicacoes/Dezena_1__or00001:O)    | NONE(seletor1/multiplicacao/numerosA[3].numerosB[0].multiplicacoes/Dezena_1) | 1     |
+seletor1/multiplicacao/numerosA[3].numerosB[0].multiplicacoes/Dezena_2__and0000(seletor1/multiplicacao/numerosA[3].numerosB[0].multiplicacoes/Dezena_mux0008<1>1:O)  | NONE(seletor1/multiplicacao/numerosA[3].numerosB[0].multiplicacoes/Dezena_2) | 1     |
+seletor1/multiplicacao/numerosA[3].numerosB[0].multiplicacoes/Dezena_2__or0000(seletor1/multiplicacao/numerosA[3].numerosB[0].multiplicacoes/Dezena_2__or00001:O)    | NONE(seletor1/multiplicacao/numerosA[3].numerosB[0].multiplicacoes/Dezena_2) | 1     |
+seletor1/multiplicacao/numerosA[3].numerosB[0].multiplicacoes/Dezena_3__or0000(seletor1/multiplicacao/numerosA[3].numerosB[0].multiplicacoes/Dezena_or00051:O)       | NONE(seletor1/multiplicacao/numerosA[3].numerosB[0].multiplicacoes/Dezena_3) | 1     |
+seletor1/multiplicacao/numerosA[3].numerosB[0].multiplicacoes/Unidade_0__and0000(seletor1/multiplicacao/numerosA[3].numerosB[0].multiplicacoes/Unidade_0__and00001:O)| NONE(seletor1/multiplicacao/numerosA[3].numerosB[0].multiplicacoes/Unidade_0)| 1     |
+seletor1/multiplicacao/numerosA[3].numerosB[0].multiplicacoes/Unidade_0__and0001(seletor1/multiplicacao/numerosA[3].numerosB[0].multiplicacoes/Unidade_0__and00011:O)| NONE(seletor1/multiplicacao/numerosA[3].numerosB[0].multiplicacoes/Unidade_0)| 1     |
+seletor1/multiplicacao/numerosA[3].numerosB[0].multiplicacoes/Unidade_1__and0000(seletor1/multiplicacao/numerosA[3].numerosB[0].multiplicacoes/Unidade_1__and00001:O)| NONE(seletor1/multiplicacao/numerosA[3].numerosB[0].multiplicacoes/Unidade_1)| 1     |
+seletor1/multiplicacao/numerosA[3].numerosB[0].multiplicacoes/Unidade_1__and0001(seletor1/multiplicacao/numerosA[3].numerosB[0].multiplicacoes/Unidade_1__and00011:O)| NONE(seletor1/multiplicacao/numerosA[3].numerosB[0].multiplicacoes/Unidade_1)| 1     |
+seletor1/multiplicacao/numerosA[3].numerosB[0].multiplicacoes/Unidade_2__and0000(seletor1/multiplicacao/numerosA[3].numerosB[0].multiplicacoes/Unidade_2__and00001:O)| NONE(seletor1/multiplicacao/numerosA[3].numerosB[0].multiplicacoes/Unidade_2)| 1     |
+seletor1/multiplicacao/numerosA[3].numerosB[0].multiplicacoes/Unidade_2__and0001(seletor1/multiplicacao/numerosA[3].numerosB[0].multiplicacoes/Unidade_2__and00011:O)| NONE(seletor1/multiplicacao/numerosA[3].numerosB[0].multiplicacoes/Unidade_2)| 1     |
+seletor1/multiplicacao/numerosA[3].numerosB[0].multiplicacoes/Unidade_3__and0000(seletor1/multiplicacao/numerosA[3].numerosB[0].multiplicacoes/Unidade_3__and00001:O)| NONE(seletor1/multiplicacao/numerosA[3].numerosB[0].multiplicacoes/Unidade_3)| 1     |
+seletor1/multiplicacao/numerosA[3].numerosB[0].multiplicacoes/Unidade_3__and0001(seletor1/multiplicacao/numerosA[3].numerosB[0].multiplicacoes/Unidade_3__and00011:O)| NONE(seletor1/multiplicacao/numerosA[3].numerosB[0].multiplicacoes/Unidade_3)| 1     |
+seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Dezena_0__or0000(seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Dezena_0__or00001:O)    | NONE(seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Dezena_0) | 1     |
+seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Dezena_0__or0001(seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Dezena_0__or00011:O)    | NONE(seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Dezena_0) | 1     |
+seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Dezena_1__and0000(seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Dezena_mux0008<2>2:O)  | NONE(seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Dezena_1) | 1     |
+seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Dezena_1__or0000(seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Dezena_1__or00001:O)    | NONE(seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Dezena_1) | 1     |
+seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Dezena_2__and0000(seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Dezena_mux0008<1>1:O)  | NONE(seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Dezena_2) | 1     |
+seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Dezena_2__or0000(seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Dezena_2__or00001:O)    | NONE(seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Dezena_2) | 1     |
+seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Dezena_3__or0000(seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Dezena_or00051:O)       | NONE(seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Dezena_3) | 1     |
+seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Unidade_0__and0000(seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Unidade_0__and00001:O)| NONE(seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Unidade_0)| 1     |
+seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Unidade_0__and0001(seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Unidade_0__and00011:O)| NONE(seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Unidade_0)| 1     |
+seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Unidade_1__and0000(seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Unidade_1__and00001:O)| NONE(seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Unidade_1)| 1     |
+seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Unidade_1__and0001(seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Unidade_1__and00011:O)| NONE(seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Unidade_1)| 1     |
+seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Unidade_2__and0000(seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Unidade_2__and00001:O)| NONE(seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Unidade_2)| 1     |
+seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Unidade_2__and0001(seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Unidade_2__and00011:O)| NONE(seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Unidade_2)| 1     |
+seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Unidade_3__and0000(seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Unidade_3__and00001:O)| NONE(seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Unidade_3)| 1     |
+seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Unidade_3__and0001(seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Unidade_3__and00011:O)| NONE(seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Unidade_3)| 1     |
+seletor1/multiplicacao/numerosA[3].numerosB[2].multiplicacoes/Dezena_0__or0000(seletor1/multiplicacao/numerosA[3].numerosB[2].multiplicacoes/Dezena_0__or00001:O)    | NONE(seletor1/multiplicacao/numerosA[3].numerosB[2].multiplicacoes/Dezena_0) | 1     |
+seletor1/multiplicacao/numerosA[3].numerosB[2].multiplicacoes/Dezena_0__or0001(seletor1/multiplicacao/numerosA[3].numerosB[2].multiplicacoes/Dezena_0__or00011:O)    | NONE(seletor1/multiplicacao/numerosA[3].numerosB[2].multiplicacoes/Dezena_0) | 1     |
+seletor1/multiplicacao/numerosA[3].numerosB[2].multiplicacoes/Dezena_1__and0000(seletor1/multiplicacao/numerosA[3].numerosB[2].multiplicacoes/Dezena_mux0008<2>2:O)  | NONE(seletor1/multiplicacao/numerosA[3].numerosB[2].multiplicacoes/Dezena_1) | 1     |
+seletor1/multiplicacao/numerosA[3].numerosB[2].multiplicacoes/Dezena_1__or0000(seletor1/multiplicacao/numerosA[3].numerosB[2].multiplicacoes/Dezena_1__or00001:O)    | NONE(seletor1/multiplicacao/numerosA[3].numerosB[2].multiplicacoes/Dezena_1) | 1     |
+seletor1/multiplicacao/numerosA[3].numerosB[2].multiplicacoes/Dezena_2__and0000(seletor1/multiplicacao/numerosA[3].numerosB[2].multiplicacoes/Dezena_mux0008<1>1:O)  | NONE(seletor1/multiplicacao/numerosA[3].numerosB[2].multiplicacoes/Dezena_2) | 1     |
+seletor1/multiplicacao/numerosA[3].numerosB[2].multiplicacoes/Dezena_2__or0000(seletor1/multiplicacao/numerosA[3].numerosB[2].multiplicacoes/Dezena_2__or00001:O)    | NONE(seletor1/multiplicacao/numerosA[3].numerosB[2].multiplicacoes/Dezena_2) | 1     |
+seletor1/multiplicacao/numerosA[3].numerosB[2].multiplicacoes/Dezena_3__or0000(seletor1/multiplicacao/numerosA[3].numerosB[2].multiplicacoes/Dezena_or00051:O)       | NONE(seletor1/multiplicacao/numerosA[3].numerosB[2].multiplicacoes/Dezena_3) | 1     |
+seletor1/multiplicacao/numerosA[3].numerosB[2].multiplicacoes/Unidade_0__and0000(seletor1/multiplicacao/numerosA[3].numerosB[2].multiplicacoes/Unidade_0__and00001:O)| NONE(seletor1/multiplicacao/numerosA[3].numerosB[2].multiplicacoes/Unidade_0)| 1     |
+seletor1/multiplicacao/numerosA[3].numerosB[2].multiplicacoes/Unidade_0__and0001(seletor1/multiplicacao/numerosA[3].numerosB[2].multiplicacoes/Unidade_0__and00011:O)| NONE(seletor1/multiplicacao/numerosA[3].numerosB[2].multiplicacoes/Unidade_0)| 1     |
+seletor1/multiplicacao/numerosA[3].numerosB[2].multiplicacoes/Unidade_1__and0000(seletor1/multiplicacao/numerosA[3].numerosB[2].multiplicacoes/Unidade_1__and00001:O)| NONE(seletor1/multiplicacao/numerosA[3].numerosB[2].multiplicacoes/Unidade_1)| 1     |
+seletor1/multiplicacao/numerosA[3].numerosB[2].multiplicacoes/Unidade_1__and0001(seletor1/multiplicacao/numerosA[3].numerosB[2].multiplicacoes/Unidade_1__and00011:O)| NONE(seletor1/multiplicacao/numerosA[3].numerosB[2].multiplicacoes/Unidade_1)| 1     |
+seletor1/multiplicacao/numerosA[3].numerosB[2].multiplicacoes/Unidade_2__and0000(seletor1/multiplicacao/numerosA[3].numerosB[2].multiplicacoes/Unidade_2__and00001:O)| NONE(seletor1/multiplicacao/numerosA[3].numerosB[2].multiplicacoes/Unidade_2)| 1     |
+seletor1/multiplicacao/numerosA[3].numerosB[2].multiplicacoes/Unidade_2__and0001(seletor1/multiplicacao/numerosA[3].numerosB[2].multiplicacoes/Unidade_2__and00011:O)| NONE(seletor1/multiplicacao/numerosA[3].numerosB[2].multiplicacoes/Unidade_2)| 1     |
+seletor1/multiplicacao/numerosA[3].numerosB[2].multiplicacoes/Unidade_3__and0000(seletor1/multiplicacao/numerosA[3].numerosB[2].multiplicacoes/Unidade_3__and00001:O)| NONE(seletor1/multiplicacao/numerosA[3].numerosB[2].multiplicacoes/Unidade_3)| 1     |
+seletor1/multiplicacao/numerosA[3].numerosB[2].multiplicacoes/Unidade_3__and0001(seletor1/multiplicacao/numerosA[3].numerosB[2].multiplicacoes/Unidade_3__and00011:O)| NONE(seletor1/multiplicacao/numerosA[3].numerosB[2].multiplicacoes/Unidade_3)| 1     |
+seletor1/multiplicacao/numerosA[3].numerosB[3].multiplicacoes/Dezena_0__or0000(seletor1/multiplicacao/numerosA[3].numerosB[3].multiplicacoes/Dezena_0__or00001:O)    | NONE(seletor1/multiplicacao/numerosA[3].numerosB[3].multiplicacoes/Dezena_0) | 1     |
+seletor1/multiplicacao/numerosA[3].numerosB[3].multiplicacoes/Dezena_0__or0001(seletor1/multiplicacao/numerosA[3].numerosB[3].multiplicacoes/Dezena_0__or00011:O)    | NONE(seletor1/multiplicacao/numerosA[3].numerosB[3].multiplicacoes/Dezena_0) | 1     |
+seletor1/multiplicacao/numerosA[3].numerosB[3].multiplicacoes/Dezena_1__and0000(seletor1/multiplicacao/numerosA[3].numerosB[3].multiplicacoes/Dezena_mux0008<2>2:O)  | NONE(seletor1/multiplicacao/numerosA[3].numerosB[3].multiplicacoes/Dezena_1) | 1     |
+seletor1/multiplicacao/numerosA[3].numerosB[3].multiplicacoes/Dezena_1__or0000(seletor1/multiplicacao/numerosA[3].numerosB[3].multiplicacoes/Dezena_1__or00001:O)    | NONE(seletor1/multiplicacao/numerosA[3].numerosB[3].multiplicacoes/Dezena_1) | 1     |
+seletor1/multiplicacao/numerosA[3].numerosB[3].multiplicacoes/Dezena_2__and0000(seletor1/multiplicacao/numerosA[3].numerosB[3].multiplicacoes/Dezena_mux0008<1>1:O)  | NONE(seletor1/multiplicacao/numerosA[3].numerosB[3].multiplicacoes/Dezena_2) | 1     |
+seletor1/multiplicacao/numerosA[3].numerosB[3].multiplicacoes/Dezena_2__or0000(seletor1/multiplicacao/numerosA[3].numerosB[3].multiplicacoes/Dezena_2__or00001:O)    | NONE(seletor1/multiplicacao/numerosA[3].numerosB[3].multiplicacoes/Dezena_2) | 1     |
+seletor1/multiplicacao/numerosA[3].numerosB[3].multiplicacoes/Dezena_3__or0000(seletor1/multiplicacao/numerosA[3].numerosB[3].multiplicacoes/Dezena_or00051:O)       | NONE(seletor1/multiplicacao/numerosA[3].numerosB[3].multiplicacoes/Dezena_3) | 1     |
+seletor1/multiplicacao/numerosA[3].numerosB[3].multiplicacoes/Unidade_0__and0000(seletor1/multiplicacao/numerosA[3].numerosB[3].multiplicacoes/Unidade_0__and00001:O)| NONE(seletor1/multiplicacao/numerosA[3].numerosB[3].multiplicacoes/Unidade_0)| 1     |
+seletor1/multiplicacao/numerosA[3].numerosB[3].multiplicacoes/Unidade_0__and0001(seletor1/multiplicacao/numerosA[3].numerosB[3].multiplicacoes/Unidade_0__and00011:O)| NONE(seletor1/multiplicacao/numerosA[3].numerosB[3].multiplicacoes/Unidade_0)| 1     |
+seletor1/multiplicacao/numerosA[3].numerosB[3].multiplicacoes/Unidade_1__and0000(seletor1/multiplicacao/numerosA[3].numerosB[3].multiplicacoes/Unidade_1__and00001:O)| NONE(seletor1/multiplicacao/numerosA[3].numerosB[3].multiplicacoes/Unidade_1)| 1     |
+seletor1/multiplicacao/numerosA[3].numerosB[3].multiplicacoes/Unidade_1__and0001(seletor1/multiplicacao/numerosA[3].numerosB[3].multiplicacoes/Unidade_1__and00011:O)| NONE(seletor1/multiplicacao/numerosA[3].numerosB[3].multiplicacoes/Unidade_1)| 1     |
+seletor1/multiplicacao/numerosA[3].numerosB[3].multiplicacoes/Unidade_2__and0000(seletor1/multiplicacao/numerosA[3].numerosB[3].multiplicacoes/Unidade_2__and00001:O)| NONE(seletor1/multiplicacao/numerosA[3].numerosB[3].multiplicacoes/Unidade_2)| 1     |
+seletor1/multiplicacao/numerosA[3].numerosB[3].multiplicacoes/Unidade_2__and0001(seletor1/multiplicacao/numerosA[3].numerosB[3].multiplicacoes/Unidade_2__and00011:O)| NONE(seletor1/multiplicacao/numerosA[3].numerosB[3].multiplicacoes/Unidade_2)| 1     |
+seletor1/multiplicacao/numerosA[3].numerosB[3].multiplicacoes/Unidade_3__and0000(seletor1/multiplicacao/numerosA[3].numerosB[3].multiplicacoes/Unidade_3__and00001:O)| NONE(seletor1/multiplicacao/numerosA[3].numerosB[3].multiplicacoes/Unidade_3)| 1     |
+seletor1/multiplicacao/numerosA[3].numerosB[3].multiplicacoes/Unidade_3__and0001(seletor1/multiplicacao/numerosA[3].numerosB[3].multiplicacoes/Unidade_3__and00011:O)| NONE(seletor1/multiplicacao/numerosA[3].numerosB[3].multiplicacoes/Unidade_3)| 1     |
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 12.968ns (Maximum Frequency: 77.113MHz)
+   Minimum input arrival time before clock: 3.154ns
+   Maximum output required time after clock: 5.531ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 12.968ns (frequency: 77.113MHz)
+  Total number of paths / destination ports: 43523 / 280
+-------------------------------------------------------------------------
+Delay:               12.968ns (Levels of Logic = 11)
+  Source:            a0_2 (FF)
+  Destination:       lz3_1 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: a0_2 to lz3_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               8   0.591   0.789  a0_2 (a0_2)
+     LUT4:I2->O            1   0.648   0.423  seletor1/soma/somador1/Madd_parcial_Madd_lut<3>1 (seletor1/soma/somador1/Madd_parcial_Madd_lut<3>)
+     LUT4:I3->O            9   0.648   0.823  seletor1/soma/somador1/Madd_parcial_Madd_xor<3>11 (seletor1/soma/somador1/Madd_Unidade_addsub0000_lut<3>)
+     LUT4:I3->O            1   0.648   0.000  seletor1/soma/somador1/Dezena<0>_SW4_F (N563)
+     MUXF5:I0->O           1   0.276   0.423  seletor1/soma/somador1/Dezena<0>_SW4 (N521)
+     LUT4:I3->O            4   0.648   0.590  seletor1/soma/somador2/Madd_parcial_Madd_xor<3>11 (seletor1/soma/somador2/Madd_Unidade_addsub0000_lut<3>)
+     LUT4:I3->O            6   0.648   0.672  seletor1/soma/somador2/Dezena<0> (seletor1/soma/carry1<0>)
+     LUT4:I3->O            4   0.648   0.619  seletor1/soma/somador3/Madd_parcial_Madd_xor<1>11 (seletor1/soma/somador3/Madd_Unidade_addsub0000_cy<1>)
+     LUT4:I2->O            6   0.648   0.672  seletor1/soma/somador3/Dezena<0> (seletor1/soma/carry2<0>)
+     LUT4:I3->O            4   0.648   0.730  seletor1/soma/somador4/Madd_parcial_Madd_xor<1>11 (seletor1/soma/somador4/Madd_Unidade_addsub0000_cy<1>)
+     LUT4:I0->O            1   0.648   0.000  seletor1/Z3<1>_F (N683)
+     MUXF5:I0->O           1   0.276   0.000  seletor1/Z3<1> (z3<1>)
+     FDE:D                     0.252          lz3_1
+    ----------------------------------------
+    Total                     12.968ns (7.227ns logic, 5.741ns route)
+                                       (55.7% logic, 44.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 40 / 38
+-------------------------------------------------------------------------
+Offset:              3.154ns (Levels of Logic = 2)
+  Source:            seletor (PAD)
+  Destination:       lz0_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: seletor to lz0_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            32   0.849   1.405  seletor_IBUF (seletor_IBUF)
+     LUT4:I0->O            1   0.648   0.000  seletor1/Z6<2>1 (z6<2>)
+     FDE:D                     0.252          lz6_2
+    ----------------------------------------
+    Total                      3.154ns (1.749ns logic, 1.405ns route)
+                                       (55.4% logic, 44.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 32 / 32
+-------------------------------------------------------------------------
+Offset:              5.531ns (Levels of Logic = 1)
+  Source:            lz0_3 (FF)
+  Destination:       lz0<3> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: lz0_3 to lz0<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              1   0.591   0.420  lz0_3 (lz0_3)
+     OBUF:I->O                 4.520          lz0_3_OBUF (lz0<3>)
+    ----------------------------------------
+    Total                      5.531ns (5.111ns logic, 0.420ns route)
+                                       (92.4% logic, 7.6% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 37.00 secs
+Total CPU time to Xst completion: 33.94 secs
+ 
+--> 
+
+
+Total memory usage is 646068 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   31 (   0 filtered)
+Number of infos    :   18 (   0 filtered)
+

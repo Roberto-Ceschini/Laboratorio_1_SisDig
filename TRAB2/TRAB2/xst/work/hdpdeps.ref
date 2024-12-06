@@ -1,0 +1,73 @@
+V3 44
+FL /home/ise/compart/TRAB2/CODIGO_TOP_LEVEL_TECLADO.vhd 2024/12/02.21:49:18 P.20131013
+EN work/kb_code 1733456643 \
+      FL /home/ise/compart/TRAB2/CODIGO_TOP_LEVEL_TECLADO.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/kb_code/arch 1733456644 \
+      FL /home/ise/compart/TRAB2/CODIGO_TOP_LEVEL_TECLADO.vhd EN work/kb_code 1733456643 \
+      AR work/ps2_rx/arch 1733456638 AR work/fifo/arch 1733456640 \
+      AR work/key2ascii/arch 1733456642
+FL /home/ise/compart/TRAB2/fifo.vhd 2024/12/02.21:49:18 P.20131013
+EN work/fifo 1733456639 FL /home/ise/compart/TRAB2/fifo.vhd PB ieee/std_logic_1164 1381692176 \
+      PB ieee/NUMERIC_STD 1381692181
+AR work/fifo/arch 1733456640 \
+      FL /home/ise/compart/TRAB2/fifo.vhd EN work/fifo 1733456639
+FL /home/ise/compart/TRAB2/list_ch08_01_ps2_rx.vhd 2024/12/02.21:49:18 P.20131013
+EN work/ps2_rx 1733456637 FL /home/ise/compart/TRAB2/list_ch08_01_ps2_rx.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/ps2_rx/arch 1733456638 \
+      FL /home/ise/compart/TRAB2/list_ch08_01_ps2_rx.vhd EN work/ps2_rx 1733456637
+FL /home/ise/compart/TRAB2/list_ch08_04_key2ascii.vhd 2024/12/02.21:49:18 P.20131013
+EN work/key2ascii 1733456641 \
+      FL /home/ise/compart/TRAB2/list_ch08_04_key2ascii.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/key2ascii/arch 1733456642 \
+      FL /home/ise/compart/TRAB2/list_ch08_04_key2ascii.vhd EN work/key2ascii 1733456641
+FL /home/ise/compart/TRAB2/Multiplicador1Alg.vhd 2024/12/02.21:49:18 P.20131013
+EN work/Multiplicador1Alg 1733456631 \
+      FL /home/ise/compart/TRAB2/Multiplicador1Alg.vhd PB ieee/std_logic_1164 1381692176 \
+      PB ieee/NUMERIC_STD 1381692181
+AR work/Multiplicador1Alg/Behavioral 1733456632 \
+      FL /home/ise/compart/TRAB2/Multiplicador1Alg.vhd EN work/Multiplicador1Alg 1733456631
+FL /home/ise/compart/TRAB2/MultiplicadorCompleto_BCD.vhd 2024/12/04.22:24:50 P.20131013
+EN work/MultiplicadorCompleto_BCD 1733456635 \
+      FL /home/ise/compart/TRAB2/MultiplicadorCompleto_BCD.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/MultiplicadorCompleto_BCD/Behavioral 1733456636 \
+      FL /home/ise/compart/TRAB2/MultiplicadorCompleto_BCD.vhd \
+      EN work/MultiplicadorCompleto_BCD 1733456635 CP Multiplicador1Alg \
+      CP SomadorCompleto_BCD
+FL /home/ise/compart/TRAB2/Numeros_teclado.vhd 2024/12/06.03:33:03 P.20131013
+EN work/Numeros_teclado 1733456647 FL /home/ise/compart/TRAB2/Numeros_teclado.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/Numeros_teclado/Behavioral 1733456648 \
+      FL /home/ise/compart/TRAB2/Numeros_teclado.vhd EN work/Numeros_teclado 1733456647 \
+      AR work/kb_code/arch 1733456644 AR work/SeletorOperacao/behavioral 1733456646
+FL /home/ise/compart/TRAB2/SeletorOperacao.vhd 2024/12/02.21:49:18 P.20131013
+EN work/SeletorOperacao 1733456645 FL /home/ise/compart/TRAB2/SeletorOperacao.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/SeletorOperacao/behavioral 1733456646 \
+      FL /home/ise/compart/TRAB2/SeletorOperacao.vhd EN work/SeletorOperacao 1733456645 \
+      CP SomadorCompleto_BCD CP MultiplicadorCompleto_BCD
+FL /home/ise/compart/TRAB2/somador1Alg.vhd 2024/10/23.19:17:50 P.20131013
+EN work/somador1Alg 1733456629 FL /home/ise/compart/TRAB2/somador1Alg.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/somador1Alg/comportamento 1733456630 \
+      FL /home/ise/compart/TRAB2/somador1Alg.vhd EN work/somador1Alg 1733456629
+FL /home/ise/compart/TRAB2/SomadorCompleto_BCD.vhd 2024/12/02.21:49:18 P.20131013
+EN work/SomadorCompleto_BCD 1733456633 \
+      FL /home/ise/compart/TRAB2/SomadorCompleto_BCD.vhd PB ieee/std_logic_1164 1381692176 \
+      PB ieee/NUMERIC_STD 1381692181
+AR work/SomadorCompleto_BCD/Behavioral 1733456634 \
+      FL /home/ise/compart/TRAB2/SomadorCompleto_BCD.vhd \
+      EN work/SomadorCompleto_BCD 1733456633 CP somador1Alg
+FL /home/ise/TRAB2/CODIGO_TOP_LEVEL_TECLADO.vhd 2024/12/02.21:49:18 P.20131013
+FL /home/ise/TRAB2/fifo.vhd 2024/12/02.21:49:18 P.20131013
+FL /home/ise/TRAB2/list_ch08_01_ps2_rx.vhd 2024/12/02.21:49:18 P.20131013
+FL /home/ise/TRAB2/list_ch08_04_key2ascii.vhd 2024/12/02.21:49:18 P.20131013
+FL /home/ise/TRAB2/Multiplicador1Alg.vhd 2024/12/02.21:49:18 P.20131013
+FL /home/ise/TRAB2/MultiplicadorCompleto_BCD.vhd 2024/12/04.22:24:50 P.20131013
+FL /home/ise/TRAB2/Numeros_teclado.vhd 2024/12/06.03:33:03 P.20131013
+FL /home/ise/TRAB2/SeletorOperacao.vhd 2024/12/02.21:49:18 P.20131013
+FL /home/ise/TRAB2/somador1Alg.vhd 2024/10/23.19:17:50 P.20131013
+FL /home/ise/TRAB2/SomadorCompleto_BCD.vhd 2024/12/02.21:49:18 P.20131013

@@ -1,0 +1,17 @@
+xst -intstyle ise -ifn "/home/ise/TRAB2/Numeros_teclado.xst" -ofn "/home/ise/TRAB2/Numeros_teclado.syr" 
+xst -intstyle ise -ifn "/home/ise/TRAB2/Numeros_teclado.xst" -ofn "/home/ise/TRAB2/Numeros_teclado.syr" 
+xst -intstyle ise -ifn "/home/ise/TRAB2/Numeros_teclado.xst" -ofn "/home/ise/TRAB2/Numeros_teclado.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc PINAGEM_TECLADO.ucf -p xa7a100t-csg324-2I Numeros_teclado.ngc Numeros_teclado.ngd  
+map -intstyle ise -p xa7a100t-csg324-2I -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o Numeros_teclado_map.ncd Numeros_teclado.ngd Numeros_teclado.pcf 
+xst -intstyle ise -ifn "/home/ise/TRAB2/Numeros_teclado.xst" -ofn "/home/ise/TRAB2/Numeros_teclado.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc PINAGEM_TECLADO.ucf -p xc3s700an-fgg484-4 Numeros_teclado.ngc Numeros_teclado.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o Numeros_teclado_map.ncd Numeros_teclado.ngd Numeros_teclado.pcf 
+par -w -intstyle ise -ol high -t 1 Numeros_teclado_map.ncd Numeros_teclado.ncd Numeros_teclado.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Numeros_teclado.twx Numeros_teclado.ncd -o Numeros_teclado.twr Numeros_teclado.pcf -ucf PINAGEM_TECLADO.ucf 
+bitgen -intstyle ise -f Numeros_teclado.ut Numeros_teclado.ncd 
+xst -intstyle ise -ifn "/home/ise/compart/TRAB2/Numeros_teclado.xst" -ofn "/home/ise/compart/TRAB2/Numeros_teclado.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc PINAGEM_TECLADO.ucf -p xc3s700an-fgg484-4 Numeros_teclado.ngc Numeros_teclado.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o Numeros_teclado_map.ncd Numeros_teclado.ngd Numeros_teclado.pcf 
+par -w -intstyle ise -ol high -t 1 Numeros_teclado_map.ncd Numeros_teclado.ncd Numeros_teclado.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Numeros_teclado.twx Numeros_teclado.ncd -o Numeros_teclado.twr Numeros_teclado.pcf -ucf PINAGEM_TECLADO.ucf 
+bitgen -intstyle ise -f Numeros_teclado.ut Numeros_teclado.ncd 

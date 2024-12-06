@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/ise/compart/TRAB2/Numeros_teclado.ncd
+OUTFILE=/home/ise/compart/TRAB2/Numeros_teclado.bit
+FAMILY=Spartan3A and Spartan3AN
+PART=xc3s700an-4fgg484
+WORKINGDIR=/home/ise/compart/TRAB2
+LICENSE=ISE
+USER_INFO=8416_11442_1478797146_620

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/Numeros_teclado</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">/home/ise/TRAB2/Numeros_teclado.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">/home/ise/compart/TRAB2/Numeros_teclado.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/Numeros_teclado/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">/home/ise/TRAB2/Numeros_teclado.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">/home/ise/compart/TRAB2/Numeros_teclado.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/kb_code</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">/home/ise/TRAB2/CODIGO_TOP_LEVEL_TECLADO.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">/home/ise/compart/TRAB2/CODIGO_TOP_LEVEL_TECLADO.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/kb_code/arch</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">/home/ise/TRAB2/CODIGO_TOP_LEVEL_TECLADO.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">/home/ise/compart/TRAB2/CODIGO_TOP_LEVEL_TECLADO.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/SeletorOperacao</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">/home/ise/TRAB2/SeletorOperacao.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">/home/ise/compart/TRAB2/SeletorOperacao.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/SeletorOperacao/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">/home/ise/TRAB2/SeletorOperacao.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">/home/ise/compart/TRAB2/SeletorOperacao.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/fifo</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">/home/ise/TRAB2/fifo.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">/home/ise/compart/TRAB2/fifo.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/fifo/arch</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">/home/ise/TRAB2/fifo.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">/home/ise/compart/TRAB2/fifo.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/ps2_rx</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">/home/ise/TRAB2/list_ch08_01_ps2_rx.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">/home/ise/compart/TRAB2/list_ch08_01_ps2_rx.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/ps2_rx/arch</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">/home/ise/TRAB2/list_ch08_01_ps2_rx.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">/home/ise/compart/TRAB2/list_ch08_01_ps2_rx.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/key2ascii</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">/home/ise/TRAB2/list_ch08_04_key2ascii.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">/home/ise/compart/TRAB2/list_ch08_04_key2ascii.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/key2ascii/arch</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">/home/ise/TRAB2/list_ch08_04_key2ascii.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">/home/ise/compart/TRAB2/list_ch08_04_key2ascii.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/MultiplicadorCompleto_BCD</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">/home/ise/TRAB2/MultiplicadorCompleto_BCD.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">/home/ise/compart/TRAB2/MultiplicadorCompleto_BCD.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/MultiplicadorCompleto_BCD/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">/home/ise/TRAB2/MultiplicadorCompleto_BCD.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">/home/ise/compart/TRAB2/MultiplicadorCompleto_BCD.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/Multiplicador1Alg</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">/home/ise/TRAB2/Multiplicador1Alg.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">/home/ise/compart/TRAB2/Multiplicador1Alg.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/Multiplicador1Alg/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">/home/ise/TRAB2/Multiplicador1Alg.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">/home/ise/compart/TRAB2/Multiplicador1Alg.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/SomadorCompleto_BCD</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">/home/ise/TRAB2/SomadorCompleto_BCD.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">/home/ise/compart/TRAB2/SomadorCompleto_BCD.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/SomadorCompleto_BCD/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">/home/ise/TRAB2/SomadorCompleto_BCD.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">/home/ise/compart/TRAB2/SomadorCompleto_BCD.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/somador1Alg</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">/home/ise/TRAB2/somador1Alg.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">/home/ise/compart/TRAB2/somador1Alg.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/somador1Alg/comportamento</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">/home/ise/TRAB2/somador1Alg.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">/home/ise/compart/TRAB2/somador1Alg.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">/home/ise/compart/TRAB2/CODIGO_TOP_LEVEL_TECLADO.vhd</arg>&quot; line <arg fmt="%d" index="2">36</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">full</arg>&apos; of component &apos;<arg fmt="%s" index="4">fifo</arg>&apos;.
+</msg>
+
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">/home/ise/compart/TRAB2/MultiplicadorCompleto_BCD.vhd</arg>&quot; line <arg fmt="%d" index="2">127</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">Z4</arg>&apos; of component &apos;<arg fmt="%s" index="4">SomadorCompleto_BCD</arg>&apos;.
+</msg>
+
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">/home/ise/compart/TRAB2/MultiplicadorCompleto_BCD.vhd</arg>&quot; line <arg fmt="%d" index="2">158</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">Z4</arg>&apos; of component &apos;<arg fmt="%s" index="4">SomadorCompleto_BCD</arg>&apos;.
+</msg>
+
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">/home/ise/compart/TRAB2/MultiplicadorCompleto_BCD.vhd</arg>&quot; line <arg fmt="%d" index="2">190</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">Z4</arg>&apos; of component &apos;<arg fmt="%s" index="4">SomadorCompleto_BCD</arg>&apos;.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">b_reg&lt;0&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">4</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">Unidade</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">4</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">Dezena</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">w_data</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">reset</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="info" file="Xst" num="1767" delta="old" >HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">b_reg_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ps2_rx_unit</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="2385" delta="old" >HDL ADVISOR - You can improve the performance of the multiplier <arg fmt="%s" index="1">seletor1/multiplicacao/numerosA[3].numerosB[3].multiplicacoes/Mmult_parcial_mult0000</arg> by adding <arg fmt="%d" index="2">1</arg> register level(s).
+</msg>
+
+<msg type="info" file="Xst" num="2385" delta="old" >HDL ADVISOR - You can improve the performance of the multiplier <arg fmt="%s" index="1">seletor1/multiplicacao/numerosA[3].numerosB[2].multiplicacoes/Mmult_parcial_mult0000</arg> by adding <arg fmt="%d" index="2">1</arg> register level(s).
+</msg>
+
+<msg type="info" file="Xst" num="2385" delta="old" >HDL ADVISOR - You can improve the performance of the multiplier <arg fmt="%s" index="1">seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Mmult_parcial_mult0000</arg> by adding <arg fmt="%d" index="2">1</arg> register level(s).
+</msg>
+
+<msg type="info" file="Xst" num="2385" delta="old" >HDL ADVISOR - You can improve the performance of the multiplier <arg fmt="%s" index="1">seletor1/multiplicacao/numerosA[3].numerosB[0].multiplicacoes/Mmult_parcial_mult0000</arg> by adding <arg fmt="%d" index="2">1</arg> register level(s).
+</msg>
+
+<msg type="info" file="Xst" num="2385" delta="old" >HDL ADVISOR - You can improve the performance of the multiplier <arg fmt="%s" index="1">seletor1/multiplicacao/numerosA[2].numerosB[3].multiplicacoes/Mmult_parcial_mult0000</arg> by adding <arg fmt="%d" index="2">1</arg> register level(s).
+</msg>
+
+<msg type="info" file="Xst" num="2385" delta="old" >HDL ADVISOR - You can improve the performance of the multiplier <arg fmt="%s" index="1">seletor1/multiplicacao/numerosA[2].numerosB[2].multiplicacoes/Mmult_parcial_mult0000</arg> by adding <arg fmt="%d" index="2">1</arg> register level(s).
+</msg>
+
+<msg type="info" file="Xst" num="2385" delta="old" >HDL ADVISOR - You can improve the performance of the multiplier <arg fmt="%s" index="1">seletor1/multiplicacao/numerosA[2].numerosB[1].multiplicacoes/Mmult_parcial_mult0000</arg> by adding <arg fmt="%d" index="2">1</arg> register level(s).
+</msg>
+
+<msg type="info" file="Xst" num="2385" delta="old" >HDL ADVISOR - You can improve the performance of the multiplier <arg fmt="%s" index="1">seletor1/multiplicacao/numerosA[2].numerosB[0].multiplicacoes/Mmult_parcial_mult0000</arg> by adding <arg fmt="%d" index="2">1</arg> register level(s).
+</msg>
+
+<msg type="info" file="Xst" num="2385" delta="old" >HDL ADVISOR - You can improve the performance of the multiplier <arg fmt="%s" index="1">seletor1/multiplicacao/numerosA[1].numerosB[3].multiplicacoes/Mmult_parcial_mult0000</arg> by adding <arg fmt="%d" index="2">1</arg> register level(s).
+</msg>
+
+<msg type="info" file="Xst" num="2385" delta="old" >HDL ADVISOR - You can improve the performance of the multiplier <arg fmt="%s" index="1">seletor1/multiplicacao/numerosA[1].numerosB[2].multiplicacoes/Mmult_parcial_mult0000</arg> by adding <arg fmt="%d" index="2">1</arg> register level(s).
+</msg>
+
+<msg type="info" file="Xst" num="2385" delta="old" >HDL ADVISOR - You can improve the performance of the multiplier <arg fmt="%s" index="1">seletor1/multiplicacao/numerosA[1].numerosB[1].multiplicacoes/Mmult_parcial_mult0000</arg> by adding <arg fmt="%d" index="2">1</arg> register level(s).
+</msg>
+
+<msg type="info" file="Xst" num="2385" delta="old" >HDL ADVISOR - You can improve the performance of the multiplier <arg fmt="%s" index="1">seletor1/multiplicacao/numerosA[1].numerosB[0].multiplicacoes/Mmult_parcial_mult0000</arg> by adding <arg fmt="%d" index="2">1</arg> register level(s).
+</msg>
+
+<msg type="info" file="Xst" num="2385" delta="old" >HDL ADVISOR - You can improve the performance of the multiplier <arg fmt="%s" index="1">seletor1/multiplicacao/numerosA[0].numerosB[3].multiplicacoes/Mmult_parcial_mult0000</arg> by adding <arg fmt="%d" index="2">1</arg> register level(s).
+</msg>
+
+<msg type="info" file="Xst" num="2385" delta="old" >HDL ADVISOR - You can improve the performance of the multiplier <arg fmt="%s" index="1">seletor1/multiplicacao/numerosA[0].numerosB[2].multiplicacoes/Mmult_parcial_mult0000</arg> by adding <arg fmt="%d" index="2">1</arg> register level(s).
+</msg>
+
+<msg type="info" file="Xst" num="2385" delta="old" >HDL ADVISOR - You can improve the performance of the multiplier <arg fmt="%s" index="1">seletor1/multiplicacao/numerosA[0].numerosB[1].multiplicacoes/Mmult_parcial_mult0000</arg> by adding <arg fmt="%d" index="2">1</arg> register level(s).
+</msg>
+
+<msg type="info" file="Xst" num="2385" delta="old" >HDL ADVISOR - You can improve the performance of the multiplier <arg fmt="%s" index="1">seletor1/multiplicacao/numerosA[0].numerosB[0].multiplicacoes/Mmult_parcial_mult0000</arg> by adding <arg fmt="%d" index="2">1</arg> register level(s).
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">b_reg_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ps2_rx</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="2169" delta="old" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+</msg>
+
+</messages>
+

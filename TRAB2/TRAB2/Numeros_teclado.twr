@@ -1,0 +1,559 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/trce -intstyle ise -v 3 -s 4 -n
+3 -fastpaths -xml Numeros_teclado.twx Numeros_teclado.ncd -o
+Numeros_teclado.twr Numeros_teclado.pcf -ucf PINAGEM_TECLADO.ucf
+
+Design file:              Numeros_teclado.ncd
+Physical constraint file: Numeros_teclado.pcf
+Device,package,speed:     xc3s700an,fgg484,-4 (PRODUCTION 1.42 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+================================================================================
+Timing constraint: NET "clk_BUFGP/IBUFG" PERIOD = 20 ns HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 43523 paths analyzed, 504 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is  17.745ns.
+--------------------------------------------------------------------------------
+
+Paths for end point seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Mmult_parcial_mult0000 (MULT18X18_X0Y3.B0), 83 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     2.255ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               teclado/fifo_key_unit/r_ptr_reg_0 (FF)
+  Destination:          seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Mmult_parcial_mult0000 (MULT)
+  Requirement:          20.000ns
+  Data Path Delay:      17.676ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.069ns (0.581 - 0.650)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: teclado/fifo_key_unit/r_ptr_reg_0 to seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Mmult_parcial_mult0000
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X46Y31.YQ      Tcko                  0.676   teclado/fifo_key_unit/r_ptr_reg<0>
+                                                       teclado/fifo_key_unit/r_ptr_reg_0
+    SLICE_X44Y36.G2      net (fanout=15)       0.979   teclado/fifo_key_unit/r_ptr_reg<0>
+    SLICE_X44Y36.Y       Tilo                  0.707   N569
+                                                       teclado/fifo_key_unit/r_data<4>1
+    SLICE_X42Y36.F1      net (fanout=10)       0.889   teclado/key_code<4>
+    SLICE_X42Y36.X       Tilo                  0.692   estado_cmp_eq00007
+                                                       estado_cmp_eq00007
+    SLICE_X41Y45.F1      net (fanout=7)        1.037   estado_cmp_eq00007
+    SLICE_X41Y45.X       Tilo                  0.643   estado_FSM_FFd2
+                                                       estado_FSM_FFd1-In11
+    SLICE_X37Y63.G4      net (fanout=30)       3.208   lz0_not0001
+    SLICE_X37Y63.Y       Tilo                  0.648   b3<3>
+                                                       b0_mux0000<0>21
+    SLICE_X46Y30.G1      net (fanout=16)       3.409   N02
+    SLICE_X46Y30.Y       Tilo                  0.707   b1<1>
+                                                       b1_mux0000<0>1
+    MULT18X18_X0Y3.B0    net (fanout=4)        4.081   b1_mux0000<0>
+    MULT18X18_X0Y3.CLK   Tmsdck_B              0.000   seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Mmult_parcial_mult0000
+                                                       seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Mmult_parcial_mult0000
+    -------------------------------------------------  ---------------------------
+    Total                                     17.676ns (4.073ns logic, 13.603ns route)
+                                                       (23.0% logic, 77.0% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     2.256ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               teclado/fifo_key_unit/r_ptr_reg_0 (FF)
+  Destination:          seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Mmult_parcial_mult0000 (MULT)
+  Requirement:          20.000ns
+  Data Path Delay:      17.675ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.069ns (0.581 - 0.650)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: teclado/fifo_key_unit/r_ptr_reg_0 to seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Mmult_parcial_mult0000
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X46Y31.YQ      Tcko                  0.676   teclado/fifo_key_unit/r_ptr_reg<0>
+                                                       teclado/fifo_key_unit/r_ptr_reg_0
+    SLICE_X46Y31.F4      net (fanout=15)       0.922   teclado/fifo_key_unit/r_ptr_reg<0>
+    SLICE_X46Y31.X       Tilo                  0.692   teclado/fifo_key_unit/r_ptr_reg<0>
+                                                       teclado/fifo_key_unit/r_data<7>1
+    SLICE_X45Y36.F2      net (fanout=4)        0.850   teclado/key_code<7>
+    SLICE_X45Y36.X       Tilo                  0.643   estado_cmp_eq000019
+                                                       estado_cmp_eq000019
+    SLICE_X41Y45.F3      net (fanout=7)        1.196   estado_cmp_eq000019
+    SLICE_X41Y45.X       Tilo                  0.643   estado_FSM_FFd2
+                                                       estado_FSM_FFd1-In11
+    SLICE_X37Y63.G4      net (fanout=30)       3.208   lz0_not0001
+    SLICE_X37Y63.Y       Tilo                  0.648   b3<3>
+                                                       b0_mux0000<0>21
+    SLICE_X46Y30.G1      net (fanout=16)       3.409   N02
+    SLICE_X46Y30.Y       Tilo                  0.707   b1<1>
+                                                       b1_mux0000<0>1
+    MULT18X18_X0Y3.B0    net (fanout=4)        4.081   b1_mux0000<0>
+    MULT18X18_X0Y3.CLK   Tmsdck_B              0.000   seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Mmult_parcial_mult0000
+                                                       seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Mmult_parcial_mult0000
+    -------------------------------------------------  ---------------------------
+    Total                                     17.675ns (4.009ns logic, 13.666ns route)
+                                                       (22.7% logic, 77.3% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     2.461ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               teclado/fifo_key_unit/r_ptr_reg_0 (FF)
+  Destination:          seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Mmult_parcial_mult0000 (MULT)
+  Requirement:          20.000ns
+  Data Path Delay:      17.470ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.069ns (0.581 - 0.650)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: teclado/fifo_key_unit/r_ptr_reg_0 to seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Mmult_parcial_mult0000
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X46Y31.YQ      Tcko                  0.676   teclado/fifo_key_unit/r_ptr_reg<0>
+                                                       teclado/fifo_key_unit/r_ptr_reg_0
+    SLICE_X47Y35.G4      net (fanout=15)       0.921   teclado/fifo_key_unit/r_ptr_reg<0>
+    SLICE_X47Y35.Y       Tilo                  0.648   teclado/conv_number/ascii_code<2>53
+                                                       teclado/fifo_key_unit/r_data<2>1
+    SLICE_X45Y36.F1      net (fanout=7)        0.690   teclado/key_code<2>
+    SLICE_X45Y36.X       Tilo                  0.643   estado_cmp_eq000019
+                                                       estado_cmp_eq000019
+    SLICE_X41Y45.F3      net (fanout=7)        1.196   estado_cmp_eq000019
+    SLICE_X41Y45.X       Tilo                  0.643   estado_FSM_FFd2
+                                                       estado_FSM_FFd1-In11
+    SLICE_X37Y63.G4      net (fanout=30)       3.208   lz0_not0001
+    SLICE_X37Y63.Y       Tilo                  0.648   b3<3>
+                                                       b0_mux0000<0>21
+    SLICE_X46Y30.G1      net (fanout=16)       3.409   N02
+    SLICE_X46Y30.Y       Tilo                  0.707   b1<1>
+                                                       b1_mux0000<0>1
+    MULT18X18_X0Y3.B0    net (fanout=4)        4.081   b1_mux0000<0>
+    MULT18X18_X0Y3.CLK   Tmsdck_B              0.000   seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Mmult_parcial_mult0000
+                                                       seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Mmult_parcial_mult0000
+    -------------------------------------------------  ---------------------------
+    Total                                     17.470ns (3.965ns logic, 13.505ns route)
+                                                       (22.7% logic, 77.3% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Mmult_parcial_mult0000 (MULT18X18_X0Y3.B3), 83 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     2.515ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               teclado/fifo_key_unit/r_ptr_reg_0 (FF)
+  Destination:          seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Mmult_parcial_mult0000 (MULT)
+  Requirement:          20.000ns
+  Data Path Delay:      17.416ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.069ns (0.581 - 0.650)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: teclado/fifo_key_unit/r_ptr_reg_0 to seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Mmult_parcial_mult0000
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X46Y31.YQ      Tcko                  0.676   teclado/fifo_key_unit/r_ptr_reg<0>
+                                                       teclado/fifo_key_unit/r_ptr_reg_0
+    SLICE_X44Y36.G2      net (fanout=15)       0.979   teclado/fifo_key_unit/r_ptr_reg<0>
+    SLICE_X44Y36.Y       Tilo                  0.707   N569
+                                                       teclado/fifo_key_unit/r_data<4>1
+    SLICE_X42Y36.F1      net (fanout=10)       0.889   teclado/key_code<4>
+    SLICE_X42Y36.X       Tilo                  0.692   estado_cmp_eq00007
+                                                       estado_cmp_eq00007
+    SLICE_X41Y45.F1      net (fanout=7)        1.037   estado_cmp_eq00007
+    SLICE_X41Y45.X       Tilo                  0.643   estado_FSM_FFd2
+                                                       estado_FSM_FFd1-In11
+    SLICE_X37Y63.G4      net (fanout=30)       3.208   lz0_not0001
+    SLICE_X37Y63.Y       Tilo                  0.648   b3<3>
+                                                       b0_mux0000<0>21
+    SLICE_X47Y31.F2      net (fanout=16)       3.077   N02
+    SLICE_X47Y31.X       Tilo                  0.643   b1<3>
+                                                       b1_mux0000<3>1
+    MULT18X18_X0Y3.B3    net (fanout=4)        4.217   b1_mux0000<3>
+    MULT18X18_X0Y3.CLK   Tmsdck_B              0.000   seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Mmult_parcial_mult0000
+                                                       seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Mmult_parcial_mult0000
+    -------------------------------------------------  ---------------------------
+    Total                                     17.416ns (4.009ns logic, 13.407ns route)
+                                                       (23.0% logic, 77.0% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     2.516ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               teclado/fifo_key_unit/r_ptr_reg_0 (FF)
+  Destination:          seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Mmult_parcial_mult0000 (MULT)
+  Requirement:          20.000ns
+  Data Path Delay:      17.415ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.069ns (0.581 - 0.650)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: teclado/fifo_key_unit/r_ptr_reg_0 to seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Mmult_parcial_mult0000
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X46Y31.YQ      Tcko                  0.676   teclado/fifo_key_unit/r_ptr_reg<0>
+                                                       teclado/fifo_key_unit/r_ptr_reg_0
+    SLICE_X46Y31.F4      net (fanout=15)       0.922   teclado/fifo_key_unit/r_ptr_reg<0>
+    SLICE_X46Y31.X       Tilo                  0.692   teclado/fifo_key_unit/r_ptr_reg<0>
+                                                       teclado/fifo_key_unit/r_data<7>1
+    SLICE_X45Y36.F2      net (fanout=4)        0.850   teclado/key_code<7>
+    SLICE_X45Y36.X       Tilo                  0.643   estado_cmp_eq000019
+                                                       estado_cmp_eq000019
+    SLICE_X41Y45.F3      net (fanout=7)        1.196   estado_cmp_eq000019
+    SLICE_X41Y45.X       Tilo                  0.643   estado_FSM_FFd2
+                                                       estado_FSM_FFd1-In11
+    SLICE_X37Y63.G4      net (fanout=30)       3.208   lz0_not0001
+    SLICE_X37Y63.Y       Tilo                  0.648   b3<3>
+                                                       b0_mux0000<0>21
+    SLICE_X47Y31.F2      net (fanout=16)       3.077   N02
+    SLICE_X47Y31.X       Tilo                  0.643   b1<3>
+                                                       b1_mux0000<3>1
+    MULT18X18_X0Y3.B3    net (fanout=4)        4.217   b1_mux0000<3>
+    MULT18X18_X0Y3.CLK   Tmsdck_B              0.000   seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Mmult_parcial_mult0000
+                                                       seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Mmult_parcial_mult0000
+    -------------------------------------------------  ---------------------------
+    Total                                     17.415ns (3.945ns logic, 13.470ns route)
+                                                       (22.7% logic, 77.3% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     2.721ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               teclado/fifo_key_unit/r_ptr_reg_0 (FF)
+  Destination:          seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Mmult_parcial_mult0000 (MULT)
+  Requirement:          20.000ns
+  Data Path Delay:      17.210ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.069ns (0.581 - 0.650)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: teclado/fifo_key_unit/r_ptr_reg_0 to seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Mmult_parcial_mult0000
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X46Y31.YQ      Tcko                  0.676   teclado/fifo_key_unit/r_ptr_reg<0>
+                                                       teclado/fifo_key_unit/r_ptr_reg_0
+    SLICE_X47Y35.G4      net (fanout=15)       0.921   teclado/fifo_key_unit/r_ptr_reg<0>
+    SLICE_X47Y35.Y       Tilo                  0.648   teclado/conv_number/ascii_code<2>53
+                                                       teclado/fifo_key_unit/r_data<2>1
+    SLICE_X45Y36.F1      net (fanout=7)        0.690   teclado/key_code<2>
+    SLICE_X45Y36.X       Tilo                  0.643   estado_cmp_eq000019
+                                                       estado_cmp_eq000019
+    SLICE_X41Y45.F3      net (fanout=7)        1.196   estado_cmp_eq000019
+    SLICE_X41Y45.X       Tilo                  0.643   estado_FSM_FFd2
+                                                       estado_FSM_FFd1-In11
+    SLICE_X37Y63.G4      net (fanout=30)       3.208   lz0_not0001
+    SLICE_X37Y63.Y       Tilo                  0.648   b3<3>
+                                                       b0_mux0000<0>21
+    SLICE_X47Y31.F2      net (fanout=16)       3.077   N02
+    SLICE_X47Y31.X       Tilo                  0.643   b1<3>
+                                                       b1_mux0000<3>1
+    MULT18X18_X0Y3.B3    net (fanout=4)        4.217   b1_mux0000<3>
+    MULT18X18_X0Y3.CLK   Tmsdck_B              0.000   seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Mmult_parcial_mult0000
+                                                       seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Mmult_parcial_mult0000
+    -------------------------------------------------  ---------------------------
+    Total                                     17.210ns (3.901ns logic, 13.309ns route)
+                                                       (22.7% logic, 77.3% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Mmult_parcial_mult0000 (MULT18X18_X0Y3.B1), 83 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     2.612ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               teclado/fifo_key_unit/r_ptr_reg_0 (FF)
+  Destination:          seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Mmult_parcial_mult0000 (MULT)
+  Requirement:          20.000ns
+  Data Path Delay:      17.319ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.069ns (0.581 - 0.650)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: teclado/fifo_key_unit/r_ptr_reg_0 to seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Mmult_parcial_mult0000
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X46Y31.YQ      Tcko                  0.676   teclado/fifo_key_unit/r_ptr_reg<0>
+                                                       teclado/fifo_key_unit/r_ptr_reg_0
+    SLICE_X44Y36.G2      net (fanout=15)       0.979   teclado/fifo_key_unit/r_ptr_reg<0>
+    SLICE_X44Y36.Y       Tilo                  0.707   N569
+                                                       teclado/fifo_key_unit/r_data<4>1
+    SLICE_X42Y36.F1      net (fanout=10)       0.889   teclado/key_code<4>
+    SLICE_X42Y36.X       Tilo                  0.692   estado_cmp_eq00007
+                                                       estado_cmp_eq00007
+    SLICE_X41Y45.F1      net (fanout=7)        1.037   estado_cmp_eq00007
+    SLICE_X41Y45.X       Tilo                  0.643   estado_FSM_FFd2
+                                                       estado_FSM_FFd1-In11
+    SLICE_X37Y63.G4      net (fanout=30)       3.208   lz0_not0001
+    SLICE_X37Y63.Y       Tilo                  0.648   b3<3>
+                                                       b0_mux0000<0>21
+    SLICE_X46Y30.F3      net (fanout=16)       2.997   N02
+    SLICE_X46Y30.X       Tilo                  0.692   b1<1>
+                                                       b1_mux0000<1>1
+    MULT18X18_X0Y3.B1    net (fanout=4)        4.151   b1_mux0000<1>
+    MULT18X18_X0Y3.CLK   Tmsdck_B              0.000   seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Mmult_parcial_mult0000
+                                                       seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Mmult_parcial_mult0000
+    -------------------------------------------------  ---------------------------
+    Total                                     17.319ns (4.058ns logic, 13.261ns route)
+                                                       (23.4% logic, 76.6% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     2.613ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               teclado/fifo_key_unit/r_ptr_reg_0 (FF)
+  Destination:          seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Mmult_parcial_mult0000 (MULT)
+  Requirement:          20.000ns
+  Data Path Delay:      17.318ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.069ns (0.581 - 0.650)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: teclado/fifo_key_unit/r_ptr_reg_0 to seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Mmult_parcial_mult0000
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X46Y31.YQ      Tcko                  0.676   teclado/fifo_key_unit/r_ptr_reg<0>
+                                                       teclado/fifo_key_unit/r_ptr_reg_0
+    SLICE_X46Y31.F4      net (fanout=15)       0.922   teclado/fifo_key_unit/r_ptr_reg<0>
+    SLICE_X46Y31.X       Tilo                  0.692   teclado/fifo_key_unit/r_ptr_reg<0>
+                                                       teclado/fifo_key_unit/r_data<7>1
+    SLICE_X45Y36.F2      net (fanout=4)        0.850   teclado/key_code<7>
+    SLICE_X45Y36.X       Tilo                  0.643   estado_cmp_eq000019
+                                                       estado_cmp_eq000019
+    SLICE_X41Y45.F3      net (fanout=7)        1.196   estado_cmp_eq000019
+    SLICE_X41Y45.X       Tilo                  0.643   estado_FSM_FFd2
+                                                       estado_FSM_FFd1-In11
+    SLICE_X37Y63.G4      net (fanout=30)       3.208   lz0_not0001
+    SLICE_X37Y63.Y       Tilo                  0.648   b3<3>
+                                                       b0_mux0000<0>21
+    SLICE_X46Y30.F3      net (fanout=16)       2.997   N02
+    SLICE_X46Y30.X       Tilo                  0.692   b1<1>
+                                                       b1_mux0000<1>1
+    MULT18X18_X0Y3.B1    net (fanout=4)        4.151   b1_mux0000<1>
+    MULT18X18_X0Y3.CLK   Tmsdck_B              0.000   seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Mmult_parcial_mult0000
+                                                       seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Mmult_parcial_mult0000
+    -------------------------------------------------  ---------------------------
+    Total                                     17.318ns (3.994ns logic, 13.324ns route)
+                                                       (23.1% logic, 76.9% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     2.818ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               teclado/fifo_key_unit/r_ptr_reg_0 (FF)
+  Destination:          seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Mmult_parcial_mult0000 (MULT)
+  Requirement:          20.000ns
+  Data Path Delay:      17.113ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.069ns (0.581 - 0.650)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: teclado/fifo_key_unit/r_ptr_reg_0 to seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Mmult_parcial_mult0000
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X46Y31.YQ      Tcko                  0.676   teclado/fifo_key_unit/r_ptr_reg<0>
+                                                       teclado/fifo_key_unit/r_ptr_reg_0
+    SLICE_X47Y35.G4      net (fanout=15)       0.921   teclado/fifo_key_unit/r_ptr_reg<0>
+    SLICE_X47Y35.Y       Tilo                  0.648   teclado/conv_number/ascii_code<2>53
+                                                       teclado/fifo_key_unit/r_data<2>1
+    SLICE_X45Y36.F1      net (fanout=7)        0.690   teclado/key_code<2>
+    SLICE_X45Y36.X       Tilo                  0.643   estado_cmp_eq000019
+                                                       estado_cmp_eq000019
+    SLICE_X41Y45.F3      net (fanout=7)        1.196   estado_cmp_eq000019
+    SLICE_X41Y45.X       Tilo                  0.643   estado_FSM_FFd2
+                                                       estado_FSM_FFd1-In11
+    SLICE_X37Y63.G4      net (fanout=30)       3.208   lz0_not0001
+    SLICE_X37Y63.Y       Tilo                  0.648   b3<3>
+                                                       b0_mux0000<0>21
+    SLICE_X46Y30.F3      net (fanout=16)       2.997   N02
+    SLICE_X46Y30.X       Tilo                  0.692   b1<1>
+                                                       b1_mux0000<1>1
+    MULT18X18_X0Y3.B1    net (fanout=4)        4.151   b1_mux0000<1>
+    MULT18X18_X0Y3.CLK   Tmsdck_B              0.000   seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Mmult_parcial_mult0000
+                                                       seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Mmult_parcial_mult0000
+    -------------------------------------------------  ---------------------------
+    Total                                     17.113ns (3.950ns logic, 13.163ns route)
+                                                       (23.1% logic, 76.9% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: NET "clk_BUFGP/IBUFG" PERIOD = 20 ns HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point teclado/fifo_key_unit/array_reg_0_7 (SLICE_X45Y31.BX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.941ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               teclado/ps2_rx_unit/b_reg_8 (FF)
+  Destination:          teclado/fifo_key_unit/array_reg_0_7 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.975ns (Levels of Logic = 0)
+  Clock Path Skew:      0.034ns (0.255 - 0.221)
+  Source Clock:         clk_BUFGP rising at 20.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: teclado/ps2_rx_unit/b_reg_8 to teclado/fifo_key_unit/array_reg_0_7
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X43Y30.XQ      Tcko                  0.473   teclado/ps2_rx_unit/b_reg<8>
+                                                       teclado/ps2_rx_unit/b_reg_8
+    SLICE_X45Y31.BX      net (fanout=5)        0.413   teclado/ps2_rx_unit/b_reg<8>
+    SLICE_X45Y31.CLK     Tckdi       (-Th)    -0.089   teclado/fifo_key_unit/array_reg_0_7
+                                                       teclado/fifo_key_unit/array_reg_0_7
+    -------------------------------------------------  ---------------------------
+    Total                                      0.975ns (0.562ns logic, 0.413ns route)
+                                                       (57.6% logic, 42.4% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point teclado/ps2_rx_unit/filter_reg_5 (SLICE_X39Y24.BX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.955ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               teclado/ps2_rx_unit/filter_reg_6 (FF)
+  Destination:          teclado/ps2_rx_unit/filter_reg_5 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.006ns (Levels of Logic = 0)
+  Clock Path Skew:      0.051ns (0.288 - 0.237)
+  Source Clock:         clk_BUFGP rising at 20.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: teclado/ps2_rx_unit/filter_reg_6 to teclado/ps2_rx_unit/filter_reg_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X36Y24.YQ      Tcko                  0.541   teclado/ps2_rx_unit/filter_reg<7>
+                                                       teclado/ps2_rx_unit/filter_reg_6
+    SLICE_X39Y24.BX      net (fanout=4)        0.376   teclado/ps2_rx_unit/filter_reg<6>
+    SLICE_X39Y24.CLK     Tckdi       (-Th)    -0.089   teclado/ps2_rx_unit/filter_reg<5>
+                                                       teclado/ps2_rx_unit/filter_reg_5
+    -------------------------------------------------  ---------------------------
+    Total                                      1.006ns (0.630ns logic, 0.376ns route)
+                                                       (62.6% logic, 37.4% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point teclado/ps2_rx_unit/filter_reg_4 (SLICE_X39Y24.BY), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.028ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               teclado/ps2_rx_unit/filter_reg_5 (FF)
+  Destination:          teclado/ps2_rx_unit/filter_reg_4 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.028ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 20.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: teclado/ps2_rx_unit/filter_reg_5 to teclado/ps2_rx_unit/filter_reg_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X39Y24.XQ      Tcko                  0.473   teclado/ps2_rx_unit/filter_reg<5>
+                                                       teclado/ps2_rx_unit/filter_reg_5
+    SLICE_X39Y24.BY      net (fanout=4)        0.415   teclado/ps2_rx_unit/filter_reg<5>
+    SLICE_X39Y24.CLK     Tckdi       (-Th)    -0.140   teclado/ps2_rx_unit/filter_reg<5>
+                                                       teclado/ps2_rx_unit/filter_reg_4
+    -------------------------------------------------  ---------------------------
+    Total                                      1.028ns (0.613ns logic, 0.415ns route)
+                                                       (59.6% logic, 40.4% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: NET "clk_BUFGP/IBUFG" PERIOD = 20 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 18.398ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 20.000ns
+  Low pulse: 10.000ns
+  Low pulse limit: 0.801ns (Tcl)
+  Physical resource: lz0_2/CLK
+  Logical resource: lz0_2/CK
+  Location pin: SLICE_X58Y20.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 18.398ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 20.000ns
+  High pulse: 10.000ns
+  High pulse limit: 0.801ns (Tch)
+  Physical resource: lz0_2/CLK
+  Logical resource: lz0_2/CK
+  Location pin: SLICE_X58Y20.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 18.398ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 1.602ns (624.220MHz) (Tcp)
+  Physical resource: lz0_2/CLK
+  Logical resource: lz0_2/CK
+  Location pin: SLICE_X58Y20.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |   17.745|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 43523 paths, 0 nets, and 1140 connections
+
+Design statistics:
+   Minimum period:  17.745ns{1}   (Maximum frequency:  56.354MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Fri Dec  6 03:45:49 2024 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 395 MB
+
+
+

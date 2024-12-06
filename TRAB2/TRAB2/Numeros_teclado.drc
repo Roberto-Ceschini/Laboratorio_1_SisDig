@@ -1,0 +1,75 @@
+Release 14.7 Drc P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Fri Dec  6 03:45:57 2024
+
+drc -z Numeros_teclado.ncd Numeros_teclado.pcf
+
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   seletor1/multiplicacao/numerosA[1].numerosB[3].multiplicacoes/Unidade_cmp_lt0
+   000 is sourced by a combinatorial pin. This is not good design practice. Use
+   the CE pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   seletor1/multiplicacao/numerosA[2].numerosB[1].multiplicacoes/Unidade_cmp_lt0
+   000 is sourced by a combinatorial pin. This is not good design practice. Use
+   the CE pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   seletor1/multiplicacao/numerosA[2].numerosB[2].multiplicacoes/Unidade_cmp_lt0
+   000 is sourced by a combinatorial pin. This is not good design practice. Use
+   the CE pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   seletor1/multiplicacao/numerosA[2].numerosB[3].multiplicacoes/Unidade_cmp_lt0
+   000 is sourced by a combinatorial pin. This is not good design practice. Use
+   the CE pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   seletor1/multiplicacao/numerosA[3].numerosB[1].multiplicacoes/Unidade_cmp_lt0
+   000 is sourced by a combinatorial pin. This is not good design practice. Use
+   the CE pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   seletor1/multiplicacao/numerosA[3].numerosB[2].multiplicacoes/Unidade_cmp_lt0
+   000 is sourced by a combinatorial pin. This is not good design practice. Use
+   the CE pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   seletor1/multiplicacao/numerosA[3].numerosB[3].multiplicacoes/Unidade_cmp_lt0
+   000 is sourced by a combinatorial pin. This is not good design practice. Use
+   the CE pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   seletor1/multiplicacao/numerosA[0].numerosB[0].multiplicacoes/Unidade_cmp_lt0
+   000 is sourced by a combinatorial pin. This is not good design practice. Use
+   the CE pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   seletor1/multiplicacao/numerosA[0].numerosB[1].multiplicacoes/Unidade_cmp_lt0
+   000 is sourced by a combinatorial pin. This is not good design practice. Use
+   the CE pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   seletor1/multiplicacao/numerosA[0].numerosB[2].multiplicacoes/Unidade_cmp_lt0
+   000 is sourced by a combinatorial pin. This is not good design practice. Use
+   the CE pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   seletor1/multiplicacao/numerosA[0].numerosB[3].multiplicacoes/Unidade_cmp_lt0
+   000 is sourced by a combinatorial pin. This is not good design practice. Use
+   the CE pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   seletor1/multiplicacao/numerosA[1].numerosB[0].multiplicacoes/Unidade_cmp_lt0
+   000 is sourced by a combinatorial pin. This is not good design practice. Use
+   the CE pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   seletor1/multiplicacao/numerosA[1].numerosB[1].multiplicacoes/Unidade_cmp_lt0
+   000 is sourced by a combinatorial pin. This is not good design practice. Use
+   the CE pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   seletor1/multiplicacao/numerosA[1].numerosB[2].multiplicacoes/Unidade_cmp_lt0
+   000 is sourced by a combinatorial pin. This is not good design practice. Use
+   the CE pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   seletor1/multiplicacao/numerosA[2].numerosB[0].multiplicacoes/Unidade_cmp_lt0
+   000 is sourced by a combinatorial pin. This is not good design practice. Use
+   the CE pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   seletor1/multiplicacao/numerosA[3].numerosB[0].multiplicacoes/Unidade_cmp_lt0
+   000 is sourced by a combinatorial pin. This is not good design practice. Use
+   the CE pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:367 - The signal <reset_IBUF> is incomplete. The signal
+   does not drive any load pins in the design.
+DRC detected 0 errors and 17 warnings.  Please see the previously displayed
+individual error or warning messages for more details.
